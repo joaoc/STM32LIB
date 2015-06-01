@@ -1,6 +1,6 @@
 Introduction
 ============
-stm32LIB is a library that i am making to ease my work while programming the SM32F0R8 microcontroller.
+stm32LIB is a library that i am making to ease my work while programming the SM32F030R8 microcontroller.
 
 I'm trying to make it generic, but my main focus is this single chip...
 
