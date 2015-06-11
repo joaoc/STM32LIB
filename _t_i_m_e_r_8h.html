@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>STM32LIB: Main Page</title>
+<title>STM32LIB: stm32Lib/HAL/Timer/TIMER.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,10 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,7 +58,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,15 +78,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_9a2d06c44cf13a80667bb3ea46fd0f15.html">Timer</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">STM32LIB Documentation</div>  </div>
+<div class="title">TIMER.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_peripheral_8h_source.html">Peripheral.h</a>&quot;</code><br/>
+<code>#include &quot;stm32f0xx_tim.h&quot;</code><br/>
+<code>#include &quot;stm32f0xx_rcc.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="signal_8h_source.html">event/signal.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="slot_8h_source.html">event/slot.h</a>&quot;</code><br/>
+</div>
+<p><a href="_t_i_m_e_r_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html">STM32LIB::TIMER</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html" title="TIMER class. ">TIMER</a> class.  <a href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_s_t_m32_l_i_b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_t_m32_l_i_b.html">STM32LIB</a></td></tr>
+<tr class="memdesc:namespace_s_t_m32_l_i_b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A STM32F0xx library to ease the programming. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aeb37c55e00d6f84819db8906d8e217e5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structwink_1_1signal.html">wink::signal</a><br class="typebreak"/>
+&lt; <a class="el" href="structwink_1_1slot.html">wink::slot</a>&lt; void(InterruptType)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_t_i_m_e_r_8h.html#aeb37c55e00d6f84819db8906d8e217e5">signal</a></td></tr>
+<tr class="separator:aeb37c55e00d6f84819db8906d8e217e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="aeb37c55e00d6f84819db8906d8e217e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structwink_1_1signal.html">wink::signal</a>&lt;<a class="el" href="structwink_1_1slot.html">wink::slot</a>&lt;void (InterruptType)&gt; &gt; <a class="el" href="_t_i_m_e_r_8h.html#aeb37c55e00d6f84819db8906d8e217e5">signal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 11 2015 21:00:26 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 11 2015 21:00:23 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
