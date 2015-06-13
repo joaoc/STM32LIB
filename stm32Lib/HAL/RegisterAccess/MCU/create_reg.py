@@ -7,21 +7,32 @@ def write_file(chip):
 
     print "Creating the file "+chip.name+".hpp"
     with open(".\\hpp\\"+chip.name+".hpp", 'w') as f:
+        f.write("/*!\n"
+                "   \\brief Register declaration for access.\n"
+                "   \\details   Based on the work of:<br>\n"
+                "               https://github.com/kensmith/cortex-from-scratch <br>\n"
+                "               https://yogiken.files.wordpress.com/2010/02/c-register-access.pdf\n"
+                "*/\n")
         f.write("// AUTHOR: JC\n")
         f.write("#include \"reg_t.hpp\"\n")
         f.write("#include \"rw_t.hpp\"\n")
         f.write("#include \"ro_t.hpp\"\n")
         f.write("#include \"wo_t.hpp\"\n\n\n")
         f.write("namespace STM32LIB{\n")
+        f.write("\t/*!\n\t namespace for storing the register declaration\n\t*/\n")
+        f.write("\t namespace reg{\n\n")
 
         for ph in chip.Peripherals:
             if len(ph.description) != 0:
-                f.write("\t/*!\n\t"+ph.description+"\n\t*/\n")
-            f.write("\tnamespace "+ph.name+"{\n")
+                f.write("\n\t\t/*!\n\t\t\\brief "+ph.description+"\n\t\t*/\n")
+            f.write("\t\tstruct "+ph.name+"{\n")
             baseAddress = ph.baseAddress
             for reg in ph.registers:
-                f.write("\t\t/*!\n\t\t"+reg.description+"\n\t\t*/\n")
-                f.write("\t\tnamespace "+reg.name+"{\n")
+                f.write("\n\t\t\t/*!\n\t\t\t\\brief "+reg.description+"\n\t\t\t*/\n")
+                if len(reg.fields) == 1 and reg.name == reg.fields[0].name:
+                    f.write("")
+                else:
+                    f.write("\t\t\tstruct "+reg.name+"{\n")
                 if reg.access != "FieldBased":
                     acess = reg.access
                     if acess == "read-write":
@@ -44,11 +55,14 @@ def write_file(chip):
                     bitWidth = field.bitWidth
                     addr = int(baseAddress, 16)+int(reg_addressOffset, 16)
                     addr = format(addr, '#10X')
-                    f.write("\t\t\tusing "+field.name+" \t= reg_t<"+reg_opt+", "+addr+", "+bitOffset+", "+bitWidth+">;\t /*!<"+field.description +" */\n")
+                    f.write("\t\t\t\tusing "+field.name+" \t= reg_t<"+reg_opt+", "+addr+", "+bitOffset+", "+bitWidth+">;\t /*!< \\brief "+field.description +" */\n")
 
-
-                f.write("\t\t}\n")
-            f.write("\t}\n")
+                if len(reg.fields) == 1 and reg.name == reg.fields[0].name:
+                    f.write("")
+                else:
+                    f.write("\t\t\t};\n")
+            f.write("\t\t};\n")
+        f.write("\t}\n")
         f.write("}\n")
     f.closed
 
