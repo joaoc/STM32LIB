@@ -7,9 +7,9 @@ def write_file(chip):
 
     print "Creating the file "+chip.name+".hpp"
     with open(".\\hpp\\"+chip.name+".hpp", 'w') as f:
-        f.write("/*!\n"
-                "   \\brief Register declaration for access.\n"
-                "   \\details   Based on the work of:<br>\n"
+        f.write("/*! \\file "+chip.name+".hpp \n"
+                "    \\brief Register declaration for access.\n"
+                "    \\details   Based on the work of:<br>\n"
                 "               https://github.com/kensmith/cortex-from-scratch <br>\n"
                 "               https://yogiken.files.wordpress.com/2010/02/c-register-access.pdf\n"
                 "*/\n")
@@ -61,6 +61,8 @@ def write_file(chip):
                     f.write("")
                 else:
                     f.write("\t\t\t};\n")
+                if len(reg.fields) != 1:
+                     f.write("\t\t\tusing "+reg.name+"_D \t= reg_t<"+reg_opt+", "+addr+", 0, 32>;\t /*!< \\brief "+reg.name +" register direct access */\n")
             f.write("\t\t};\n")
         f.write("\t}\n")
         f.write("}\n")

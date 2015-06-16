@@ -1,6 +1,6 @@
-/*!
-   \brief Register declaration for access.
-   \details   Based on the work of:<br>
+/*! \file STM32F030.hpp 
+    \brief Register declaration for access.
+    \details   Based on the work of:<br>
                https://github.com/kensmith/cortex-from-scratch <br>
                https://yogiken.files.wordpress.com/2010/02/c-register-access.pdf
 */
@@ -41,6 +41,7 @@ namespace STM32LIB{
 				using REV_IN 	= reg_t<rw_t, 0X40023008, 5, 2>;	 /*!< \brief Reverse input data */
 				using REV_OUT 	= reg_t<rw_t, 0X40023008, 7, 1>;	 /*!< \brief Reverse output data */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40023008, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief Initial CRC value
@@ -74,6 +75,7 @@ namespace STM32LIB{
 				using MODER1 	= reg_t<rw_t, 0X48001400, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using MODER0 	= reg_t<rw_t, 0X48001400, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using MODER_D 	= reg_t<rw_t, 0X48001400, 0, 32>;	 /*!< \brief MODER register direct access */
 
 			/*!
 			\brief GPIO port output type register
@@ -96,6 +98,7 @@ namespace STM32LIB{
 				using OT1 	= reg_t<rw_t, 0X48001404, 1, 1>;	 /*!< \brief Port x configuration bit 1 */
 				using OT0 	= reg_t<rw_t, 0X48001404, 0, 1>;	 /*!< \brief Port x configuration bit 0 */
 			};
+			using OTYPER_D 	= reg_t<rw_t, 0X48001404, 0, 32>;	 /*!< \brief OTYPER register direct access */
 
 			/*!
 			\brief GPIO port output speed register
@@ -118,6 +121,7 @@ namespace STM32LIB{
 				using OSPEEDR1 	= reg_t<rw_t, 0X48001408, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OSPEEDR0 	= reg_t<rw_t, 0X48001408, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OSPEEDR_D 	= reg_t<rw_t, 0X48001408, 0, 32>;	 /*!< \brief OSPEEDR register direct access */
 
 			/*!
 			\brief GPIO port pull-up/pull-down register
@@ -140,6 +144,7 @@ namespace STM32LIB{
 				using PUPDR1 	= reg_t<rw_t, 0X4800140C, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using PUPDR0 	= reg_t<rw_t, 0X4800140C, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using PUPDR_D 	= reg_t<rw_t, 0X4800140C, 0, 32>;	 /*!< \brief PUPDR register direct access */
 
 			/*!
 			\brief GPIO port input data register
@@ -162,6 +167,7 @@ namespace STM32LIB{
 				using IDR1 	= reg_t<ro_t, 0X48001410, 1, 1>;	 /*!< \brief Port input data (y = 0..15) */
 				using IDR0 	= reg_t<ro_t, 0X48001410, 0, 1>;	 /*!< \brief Port input data (y = 0..15) */
 			};
+			using IDR_D 	= reg_t<ro_t, 0X48001410, 0, 32>;	 /*!< \brief IDR register direct access */
 
 			/*!
 			\brief GPIO port output data register
@@ -184,6 +190,7 @@ namespace STM32LIB{
 				using ODR1 	= reg_t<rw_t, 0X48001414, 1, 1>;	 /*!< \brief Port output data (y = 0..15) */
 				using ODR0 	= reg_t<rw_t, 0X48001414, 0, 1>;	 /*!< \brief Port output data (y = 0..15) */
 			};
+			using ODR_D 	= reg_t<rw_t, 0X48001414, 0, 32>;	 /*!< \brief ODR register direct access */
 
 			/*!
 			\brief GPIO port bit set/reset register
@@ -222,6 +229,7 @@ namespace STM32LIB{
 				using BS1 	= reg_t<wo_t, 0X48001418, 1, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 				using BS0 	= reg_t<wo_t, 0X48001418, 0, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 			};
+			using BSRR_D 	= reg_t<wo_t, 0X48001418, 0, 32>;	 /*!< \brief BSRR register direct access */
 
 			/*!
 			\brief GPIO port configuration lock register
@@ -245,6 +253,7 @@ namespace STM32LIB{
 				using LCK1 	= reg_t<rw_t, 0X4800141C, 1, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 				using LCK0 	= reg_t<rw_t, 0X4800141C, 0, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 			};
+			using LCKR_D 	= reg_t<rw_t, 0X4800141C, 0, 32>;	 /*!< \brief LCKR register direct access */
 
 			/*!
 			\brief GPIO alternate function low register
@@ -259,6 +268,7 @@ namespace STM32LIB{
 				using AFRL1 	= reg_t<rw_t, 0X48001420, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 				using AFRL0 	= reg_t<rw_t, 0X48001420, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 			};
+			using AFRL_D 	= reg_t<rw_t, 0X48001420, 0, 32>;	 /*!< \brief AFRL register direct access */
 
 			/*!
 			\brief GPIO alternate function high register
@@ -273,6 +283,7 @@ namespace STM32LIB{
 				using AFRH9 	= reg_t<rw_t, 0X48001424, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 				using AFRH8 	= reg_t<rw_t, 0X48001424, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 			};
+			using AFRH_D 	= reg_t<rw_t, 0X48001424, 0, 32>;	 /*!< \brief AFRH register direct access */
 
 			/*!
 			\brief Port bit reset register
@@ -295,6 +306,7 @@ namespace STM32LIB{
 				using BR14 	= reg_t<wo_t, 0X48001428, 14, 1>;	 /*!< \brief Port x Reset bit y */
 				using BR15 	= reg_t<wo_t, 0X48001428, 15, 1>;	 /*!< \brief Port x Reset bit y */
 			};
+			using BRR_D 	= reg_t<wo_t, 0X48001428, 0, 32>;	 /*!< \brief BRR register direct access */
 		};
 
 		/*!
@@ -324,6 +336,7 @@ namespace STM32LIB{
 				using MODER1 	= reg_t<rw_t, 0X48000C00, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using MODER0 	= reg_t<rw_t, 0X48000C00, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using MODER_D 	= reg_t<rw_t, 0X48000C00, 0, 32>;	 /*!< \brief MODER register direct access */
 
 			/*!
 			\brief GPIO port output type register
@@ -346,6 +359,7 @@ namespace STM32LIB{
 				using OT1 	= reg_t<rw_t, 0X48000C04, 1, 1>;	 /*!< \brief Port x configuration bit 1 */
 				using OT0 	= reg_t<rw_t, 0X48000C04, 0, 1>;	 /*!< \brief Port x configuration bit 0 */
 			};
+			using OTYPER_D 	= reg_t<rw_t, 0X48000C04, 0, 32>;	 /*!< \brief OTYPER register direct access */
 
 			/*!
 			\brief GPIO port output speed register
@@ -368,6 +382,7 @@ namespace STM32LIB{
 				using OSPEEDR1 	= reg_t<rw_t, 0X48000C08, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OSPEEDR0 	= reg_t<rw_t, 0X48000C08, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OSPEEDR_D 	= reg_t<rw_t, 0X48000C08, 0, 32>;	 /*!< \brief OSPEEDR register direct access */
 
 			/*!
 			\brief GPIO port pull-up/pull-down register
@@ -390,6 +405,7 @@ namespace STM32LIB{
 				using PUPDR1 	= reg_t<rw_t, 0X48000C0C, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using PUPDR0 	= reg_t<rw_t, 0X48000C0C, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using PUPDR_D 	= reg_t<rw_t, 0X48000C0C, 0, 32>;	 /*!< \brief PUPDR register direct access */
 
 			/*!
 			\brief GPIO port input data register
@@ -412,6 +428,7 @@ namespace STM32LIB{
 				using IDR1 	= reg_t<ro_t, 0X48000C10, 1, 1>;	 /*!< \brief Port input data (y = 0..15) */
 				using IDR0 	= reg_t<ro_t, 0X48000C10, 0, 1>;	 /*!< \brief Port input data (y = 0..15) */
 			};
+			using IDR_D 	= reg_t<ro_t, 0X48000C10, 0, 32>;	 /*!< \brief IDR register direct access */
 
 			/*!
 			\brief GPIO port output data register
@@ -434,6 +451,7 @@ namespace STM32LIB{
 				using ODR1 	= reg_t<rw_t, 0X48000C14, 1, 1>;	 /*!< \brief Port output data (y = 0..15) */
 				using ODR0 	= reg_t<rw_t, 0X48000C14, 0, 1>;	 /*!< \brief Port output data (y = 0..15) */
 			};
+			using ODR_D 	= reg_t<rw_t, 0X48000C14, 0, 32>;	 /*!< \brief ODR register direct access */
 
 			/*!
 			\brief GPIO port bit set/reset register
@@ -472,6 +490,7 @@ namespace STM32LIB{
 				using BS1 	= reg_t<wo_t, 0X48000C18, 1, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 				using BS0 	= reg_t<wo_t, 0X48000C18, 0, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 			};
+			using BSRR_D 	= reg_t<wo_t, 0X48000C18, 0, 32>;	 /*!< \brief BSRR register direct access */
 
 			/*!
 			\brief GPIO port configuration lock register
@@ -495,6 +514,7 @@ namespace STM32LIB{
 				using LCK1 	= reg_t<rw_t, 0X48000C1C, 1, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 				using LCK0 	= reg_t<rw_t, 0X48000C1C, 0, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 			};
+			using LCKR_D 	= reg_t<rw_t, 0X48000C1C, 0, 32>;	 /*!< \brief LCKR register direct access */
 
 			/*!
 			\brief GPIO alternate function low register
@@ -509,6 +529,7 @@ namespace STM32LIB{
 				using AFRL1 	= reg_t<rw_t, 0X48000C20, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 				using AFRL0 	= reg_t<rw_t, 0X48000C20, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 			};
+			using AFRL_D 	= reg_t<rw_t, 0X48000C20, 0, 32>;	 /*!< \brief AFRL register direct access */
 
 			/*!
 			\brief GPIO alternate function high register
@@ -523,6 +544,7 @@ namespace STM32LIB{
 				using AFRH9 	= reg_t<rw_t, 0X48000C24, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 				using AFRH8 	= reg_t<rw_t, 0X48000C24, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 			};
+			using AFRH_D 	= reg_t<rw_t, 0X48000C24, 0, 32>;	 /*!< \brief AFRH register direct access */
 
 			/*!
 			\brief Port bit reset register
@@ -545,6 +567,7 @@ namespace STM32LIB{
 				using BR14 	= reg_t<wo_t, 0X48000C28, 14, 1>;	 /*!< \brief Port x Reset bit y */
 				using BR15 	= reg_t<wo_t, 0X48000C28, 15, 1>;	 /*!< \brief Port x Reset bit y */
 			};
+			using BRR_D 	= reg_t<wo_t, 0X48000C28, 0, 32>;	 /*!< \brief BRR register direct access */
 		};
 
 		/*!
@@ -574,6 +597,7 @@ namespace STM32LIB{
 				using MODER1 	= reg_t<rw_t, 0X48000800, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using MODER0 	= reg_t<rw_t, 0X48000800, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using MODER_D 	= reg_t<rw_t, 0X48000800, 0, 32>;	 /*!< \brief MODER register direct access */
 
 			/*!
 			\brief GPIO port output type register
@@ -596,6 +620,7 @@ namespace STM32LIB{
 				using OT1 	= reg_t<rw_t, 0X48000804, 1, 1>;	 /*!< \brief Port x configuration bit 1 */
 				using OT0 	= reg_t<rw_t, 0X48000804, 0, 1>;	 /*!< \brief Port x configuration bit 0 */
 			};
+			using OTYPER_D 	= reg_t<rw_t, 0X48000804, 0, 32>;	 /*!< \brief OTYPER register direct access */
 
 			/*!
 			\brief GPIO port output speed register
@@ -618,6 +643,7 @@ namespace STM32LIB{
 				using OSPEEDR1 	= reg_t<rw_t, 0X48000808, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OSPEEDR0 	= reg_t<rw_t, 0X48000808, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OSPEEDR_D 	= reg_t<rw_t, 0X48000808, 0, 32>;	 /*!< \brief OSPEEDR register direct access */
 
 			/*!
 			\brief GPIO port pull-up/pull-down register
@@ -640,6 +666,7 @@ namespace STM32LIB{
 				using PUPDR1 	= reg_t<rw_t, 0X4800080C, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using PUPDR0 	= reg_t<rw_t, 0X4800080C, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using PUPDR_D 	= reg_t<rw_t, 0X4800080C, 0, 32>;	 /*!< \brief PUPDR register direct access */
 
 			/*!
 			\brief GPIO port input data register
@@ -662,6 +689,7 @@ namespace STM32LIB{
 				using IDR1 	= reg_t<ro_t, 0X48000810, 1, 1>;	 /*!< \brief Port input data (y = 0..15) */
 				using IDR0 	= reg_t<ro_t, 0X48000810, 0, 1>;	 /*!< \brief Port input data (y = 0..15) */
 			};
+			using IDR_D 	= reg_t<ro_t, 0X48000810, 0, 32>;	 /*!< \brief IDR register direct access */
 
 			/*!
 			\brief GPIO port output data register
@@ -684,6 +712,7 @@ namespace STM32LIB{
 				using ODR1 	= reg_t<rw_t, 0X48000814, 1, 1>;	 /*!< \brief Port output data (y = 0..15) */
 				using ODR0 	= reg_t<rw_t, 0X48000814, 0, 1>;	 /*!< \brief Port output data (y = 0..15) */
 			};
+			using ODR_D 	= reg_t<rw_t, 0X48000814, 0, 32>;	 /*!< \brief ODR register direct access */
 
 			/*!
 			\brief GPIO port bit set/reset register
@@ -722,6 +751,7 @@ namespace STM32LIB{
 				using BS1 	= reg_t<wo_t, 0X48000818, 1, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 				using BS0 	= reg_t<wo_t, 0X48000818, 0, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 			};
+			using BSRR_D 	= reg_t<wo_t, 0X48000818, 0, 32>;	 /*!< \brief BSRR register direct access */
 
 			/*!
 			\brief GPIO port configuration lock register
@@ -745,6 +775,7 @@ namespace STM32LIB{
 				using LCK1 	= reg_t<rw_t, 0X4800081C, 1, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 				using LCK0 	= reg_t<rw_t, 0X4800081C, 0, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 			};
+			using LCKR_D 	= reg_t<rw_t, 0X4800081C, 0, 32>;	 /*!< \brief LCKR register direct access */
 
 			/*!
 			\brief GPIO alternate function low register
@@ -759,6 +790,7 @@ namespace STM32LIB{
 				using AFRL1 	= reg_t<rw_t, 0X48000820, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 				using AFRL0 	= reg_t<rw_t, 0X48000820, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 			};
+			using AFRL_D 	= reg_t<rw_t, 0X48000820, 0, 32>;	 /*!< \brief AFRL register direct access */
 
 			/*!
 			\brief GPIO alternate function high register
@@ -773,6 +805,7 @@ namespace STM32LIB{
 				using AFRH9 	= reg_t<rw_t, 0X48000824, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 				using AFRH8 	= reg_t<rw_t, 0X48000824, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 			};
+			using AFRH_D 	= reg_t<rw_t, 0X48000824, 0, 32>;	 /*!< \brief AFRH register direct access */
 
 			/*!
 			\brief Port bit reset register
@@ -795,6 +828,7 @@ namespace STM32LIB{
 				using BR14 	= reg_t<wo_t, 0X48000828, 14, 1>;	 /*!< \brief Port x Reset bit y */
 				using BR15 	= reg_t<wo_t, 0X48000828, 15, 1>;	 /*!< \brief Port x Reset bit y */
 			};
+			using BRR_D 	= reg_t<wo_t, 0X48000828, 0, 32>;	 /*!< \brief BRR register direct access */
 		};
 
 		/*!
@@ -824,6 +858,7 @@ namespace STM32LIB{
 				using MODER1 	= reg_t<rw_t, 0X48000400, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using MODER0 	= reg_t<rw_t, 0X48000400, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using MODER_D 	= reg_t<rw_t, 0X48000400, 0, 32>;	 /*!< \brief MODER register direct access */
 
 			/*!
 			\brief GPIO port output type register
@@ -846,6 +881,7 @@ namespace STM32LIB{
 				using OT1 	= reg_t<rw_t, 0X48000404, 1, 1>;	 /*!< \brief Port x configuration bit 1 */
 				using OT0 	= reg_t<rw_t, 0X48000404, 0, 1>;	 /*!< \brief Port x configuration bit 0 */
 			};
+			using OTYPER_D 	= reg_t<rw_t, 0X48000404, 0, 32>;	 /*!< \brief OTYPER register direct access */
 
 			/*!
 			\brief GPIO port output speed register
@@ -868,6 +904,7 @@ namespace STM32LIB{
 				using OSPEEDR1 	= reg_t<rw_t, 0X48000408, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OSPEEDR0 	= reg_t<rw_t, 0X48000408, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OSPEEDR_D 	= reg_t<rw_t, 0X48000408, 0, 32>;	 /*!< \brief OSPEEDR register direct access */
 
 			/*!
 			\brief GPIO port pull-up/pull-down register
@@ -890,6 +927,7 @@ namespace STM32LIB{
 				using PUPDR1 	= reg_t<rw_t, 0X4800040C, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using PUPDR0 	= reg_t<rw_t, 0X4800040C, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using PUPDR_D 	= reg_t<rw_t, 0X4800040C, 0, 32>;	 /*!< \brief PUPDR register direct access */
 
 			/*!
 			\brief GPIO port input data register
@@ -912,6 +950,7 @@ namespace STM32LIB{
 				using IDR1 	= reg_t<ro_t, 0X48000410, 1, 1>;	 /*!< \brief Port input data (y = 0..15) */
 				using IDR0 	= reg_t<ro_t, 0X48000410, 0, 1>;	 /*!< \brief Port input data (y = 0..15) */
 			};
+			using IDR_D 	= reg_t<ro_t, 0X48000410, 0, 32>;	 /*!< \brief IDR register direct access */
 
 			/*!
 			\brief GPIO port output data register
@@ -934,6 +973,7 @@ namespace STM32LIB{
 				using ODR1 	= reg_t<rw_t, 0X48000414, 1, 1>;	 /*!< \brief Port output data (y = 0..15) */
 				using ODR0 	= reg_t<rw_t, 0X48000414, 0, 1>;	 /*!< \brief Port output data (y = 0..15) */
 			};
+			using ODR_D 	= reg_t<rw_t, 0X48000414, 0, 32>;	 /*!< \brief ODR register direct access */
 
 			/*!
 			\brief GPIO port bit set/reset register
@@ -972,6 +1012,7 @@ namespace STM32LIB{
 				using BS1 	= reg_t<wo_t, 0X48000418, 1, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 				using BS0 	= reg_t<wo_t, 0X48000418, 0, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 			};
+			using BSRR_D 	= reg_t<wo_t, 0X48000418, 0, 32>;	 /*!< \brief BSRR register direct access */
 
 			/*!
 			\brief GPIO port configuration lock register
@@ -995,6 +1036,7 @@ namespace STM32LIB{
 				using LCK1 	= reg_t<rw_t, 0X4800041C, 1, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 				using LCK0 	= reg_t<rw_t, 0X4800041C, 0, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 			};
+			using LCKR_D 	= reg_t<rw_t, 0X4800041C, 0, 32>;	 /*!< \brief LCKR register direct access */
 
 			/*!
 			\brief GPIO alternate function low register
@@ -1009,6 +1051,7 @@ namespace STM32LIB{
 				using AFRL1 	= reg_t<rw_t, 0X48000420, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 				using AFRL0 	= reg_t<rw_t, 0X48000420, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 			};
+			using AFRL_D 	= reg_t<rw_t, 0X48000420, 0, 32>;	 /*!< \brief AFRL register direct access */
 
 			/*!
 			\brief GPIO alternate function high register
@@ -1023,6 +1066,7 @@ namespace STM32LIB{
 				using AFRH9 	= reg_t<rw_t, 0X48000424, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 				using AFRH8 	= reg_t<rw_t, 0X48000424, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 			};
+			using AFRH_D 	= reg_t<rw_t, 0X48000424, 0, 32>;	 /*!< \brief AFRH register direct access */
 
 			/*!
 			\brief Port bit reset register
@@ -1045,6 +1089,7 @@ namespace STM32LIB{
 				using BR14 	= reg_t<wo_t, 0X48000428, 14, 1>;	 /*!< \brief Port x Reset bit y */
 				using BR15 	= reg_t<wo_t, 0X48000428, 15, 1>;	 /*!< \brief Port x Reset bit y */
 			};
+			using BRR_D 	= reg_t<wo_t, 0X48000428, 0, 32>;	 /*!< \brief BRR register direct access */
 		};
 
 		/*!
@@ -1073,6 +1118,7 @@ namespace STM32LIB{
 				using MODER1 	= reg_t<rw_t, 0X48000000, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using MODER0 	= reg_t<rw_t, 0X48000000, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using MODER_D 	= reg_t<rw_t, 0X48000000, 0, 32>;	 /*!< \brief MODER register direct access */
 
 			/*!
 			\brief GPIO port output type register
@@ -1095,6 +1141,7 @@ namespace STM32LIB{
 				using OT1 	= reg_t<rw_t, 0X48000004, 1, 1>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OT0 	= reg_t<rw_t, 0X48000004, 0, 1>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OTYPER_D 	= reg_t<rw_t, 0X48000004, 0, 32>;	 /*!< \brief OTYPER register direct access */
 
 			/*!
 			\brief GPIO port output speed register
@@ -1117,6 +1164,7 @@ namespace STM32LIB{
 				using OSPEEDR1 	= reg_t<rw_t, 0X48000008, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using OSPEEDR0 	= reg_t<rw_t, 0X48000008, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using OSPEEDR_D 	= reg_t<rw_t, 0X48000008, 0, 32>;	 /*!< \brief OSPEEDR register direct access */
 
 			/*!
 			\brief GPIO port pull-up/pull-down register
@@ -1139,6 +1187,7 @@ namespace STM32LIB{
 				using PUPDR1 	= reg_t<rw_t, 0X4800000C, 2, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 				using PUPDR0 	= reg_t<rw_t, 0X4800000C, 0, 2>;	 /*!< \brief Port x configuration bits (y = 0..15) */
 			};
+			using PUPDR_D 	= reg_t<rw_t, 0X4800000C, 0, 32>;	 /*!< \brief PUPDR register direct access */
 
 			/*!
 			\brief GPIO port input data register
@@ -1161,6 +1210,7 @@ namespace STM32LIB{
 				using IDR1 	= reg_t<ro_t, 0X48000010, 1, 1>;	 /*!< \brief Port input data (y = 0..15) */
 				using IDR0 	= reg_t<ro_t, 0X48000010, 0, 1>;	 /*!< \brief Port input data (y = 0..15) */
 			};
+			using IDR_D 	= reg_t<ro_t, 0X48000010, 0, 32>;	 /*!< \brief IDR register direct access */
 
 			/*!
 			\brief GPIO port output data register
@@ -1183,6 +1233,7 @@ namespace STM32LIB{
 				using ODR1 	= reg_t<rw_t, 0X48000014, 1, 1>;	 /*!< \brief Port output data (y = 0..15) */
 				using ODR0 	= reg_t<rw_t, 0X48000014, 0, 1>;	 /*!< \brief Port output data (y = 0..15) */
 			};
+			using ODR_D 	= reg_t<rw_t, 0X48000014, 0, 32>;	 /*!< \brief ODR register direct access */
 
 			/*!
 			\brief GPIO port bit set/reset register
@@ -1221,6 +1272,7 @@ namespace STM32LIB{
 				using BS1 	= reg_t<wo_t, 0X48000018, 1, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 				using BS0 	= reg_t<wo_t, 0X48000018, 0, 1>;	 /*!< \brief Port x set bit y (y= 0..15) */
 			};
+			using BSRR_D 	= reg_t<wo_t, 0X48000018, 0, 32>;	 /*!< \brief BSRR register direct access */
 
 			/*!
 			\brief GPIO port configuration lock register
@@ -1244,6 +1296,7 @@ namespace STM32LIB{
 				using LCK1 	= reg_t<rw_t, 0X4800001C, 1, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 				using LCK0 	= reg_t<rw_t, 0X4800001C, 0, 1>;	 /*!< \brief Port x lock bit y (y= 0..15) */
 			};
+			using LCKR_D 	= reg_t<rw_t, 0X4800001C, 0, 32>;	 /*!< \brief LCKR register direct access */
 
 			/*!
 			\brief GPIO alternate function low register
@@ -1258,6 +1311,7 @@ namespace STM32LIB{
 				using AFRL1 	= reg_t<rw_t, 0X48000020, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 				using AFRL0 	= reg_t<rw_t, 0X48000020, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 0..7) */
 			};
+			using AFRL_D 	= reg_t<rw_t, 0X48000020, 0, 32>;	 /*!< \brief AFRL register direct access */
 
 			/*!
 			\brief GPIO alternate function high register
@@ -1272,6 +1326,7 @@ namespace STM32LIB{
 				using AFRH9 	= reg_t<rw_t, 0X48000024, 4, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 				using AFRH8 	= reg_t<rw_t, 0X48000024, 0, 4>;	 /*!< \brief Alternate function selection for port x bit y (y = 8..15) */
 			};
+			using AFRH_D 	= reg_t<rw_t, 0X48000024, 0, 32>;	 /*!< \brief AFRH register direct access */
 
 			/*!
 			\brief Port bit reset register
@@ -1294,6 +1349,7 @@ namespace STM32LIB{
 				using BR14 	= reg_t<wo_t, 0X48000028, 14, 1>;	 /*!< \brief Port x Reset bit y */
 				using BR15 	= reg_t<wo_t, 0X48000028, 15, 1>;	 /*!< \brief Port x Reset bit y */
 			};
+			using BRR_D 	= reg_t<wo_t, 0X48000028, 0, 32>;	 /*!< \brief BRR register direct access */
 		};
 
 		/*!
@@ -1320,6 +1376,7 @@ namespace STM32LIB{
 				using CPOL 	= reg_t<rw_t, 0X40013000, 1, 1>;	 /*!< \brief Clock polarity */
 				using CPHA 	= reg_t<rw_t, 0X40013000, 0, 1>;	 /*!< \brief Clock phase */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40013000, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -1338,6 +1395,7 @@ namespace STM32LIB{
 				using LDMA_RX 	= reg_t<rw_t, 0X40013004, 13, 1>;	 /*!< \brief Last DMA transfer for reception */
 				using LDMA_TX 	= reg_t<rw_t, 0X40013004, 14, 1>;	 /*!< \brief Last DMA transfer for transmission */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40013004, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief status register
@@ -1355,6 +1413,7 @@ namespace STM32LIB{
 				using FRLVL 	= reg_t<ro_t, 0X40013008, 9, 2>;	 /*!< \brief FIFO reception level */
 				using FTLVL 	= reg_t<ro_t, 0X40013008, 11, 2>;	 /*!< \brief FIFO transmission level */
 			};
+			using SR_D 	= reg_t<ro_t, 0X40013008, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief data register
@@ -1395,6 +1454,7 @@ namespace STM32LIB{
 				using DATLEN 	= reg_t<rw_t, 0X4001301C, 1, 2>;	 /*!< \brief Data length to be transferred */
 				using CHLEN 	= reg_t<rw_t, 0X4001301C, 0, 1>;	 /*!< \brief Channel length (number of bits per audio channel) */
 			};
+			using I2SCFGR_D 	= reg_t<rw_t, 0X4001301C, 0, 32>;	 /*!< \brief I2SCFGR register direct access */
 
 			/*!
 			\brief I2S prescaler register
@@ -1404,6 +1464,7 @@ namespace STM32LIB{
 				using ODD 	= reg_t<rw_t, 0X40013020, 8, 1>;	 /*!< \brief Odd factor for the prescaler */
 				using I2SDIV 	= reg_t<rw_t, 0X40013020, 0, 8>;	 /*!< \brief I2S Linear prescaler */
 			};
+			using I2SPR_D 	= reg_t<rw_t, 0X40013020, 0, 32>;	 /*!< \brief I2SPR register direct access */
 		};
 
 		/*!
@@ -1431,6 +1492,7 @@ namespace STM32LIB{
 				using CPOL 	= reg_t<rw_t, 0X40003800, 1, 1>;	 /*!< \brief Clock polarity */
 				using CPHA 	= reg_t<rw_t, 0X40003800, 0, 1>;	 /*!< \brief Clock phase */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40003800, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -1449,6 +1511,7 @@ namespace STM32LIB{
 				using LDMA_RX 	= reg_t<rw_t, 0X40003804, 13, 1>;	 /*!< \brief Last DMA transfer for reception */
 				using LDMA_TX 	= reg_t<rw_t, 0X40003804, 14, 1>;	 /*!< \brief Last DMA transfer for transmission */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40003804, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief status register
@@ -1466,6 +1529,7 @@ namespace STM32LIB{
 				using FRLVL 	= reg_t<ro_t, 0X40003808, 9, 2>;	 /*!< \brief FIFO reception level */
 				using FTLVL 	= reg_t<ro_t, 0X40003808, 11, 2>;	 /*!< \brief FIFO transmission level */
 			};
+			using SR_D 	= reg_t<ro_t, 0X40003808, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief data register
@@ -1506,6 +1570,7 @@ namespace STM32LIB{
 				using DATLEN 	= reg_t<rw_t, 0X4000381C, 1, 2>;	 /*!< \brief Data length to be transferred */
 				using CHLEN 	= reg_t<rw_t, 0X4000381C, 0, 1>;	 /*!< \brief Channel length (number of bits per audio channel) */
 			};
+			using I2SCFGR_D 	= reg_t<rw_t, 0X4000381C, 0, 32>;	 /*!< \brief I2SCFGR register direct access */
 
 			/*!
 			\brief I2S prescaler register
@@ -1515,6 +1580,7 @@ namespace STM32LIB{
 				using ODD 	= reg_t<rw_t, 0X40003820, 8, 1>;	 /*!< \brief Odd factor for the prescaler */
 				using I2SDIV 	= reg_t<rw_t, 0X40003820, 0, 8>;	 /*!< \brief I2S Linear prescaler */
 			};
+			using I2SPR_D 	= reg_t<rw_t, 0X40003820, 0, 32>;	 /*!< \brief I2SPR register direct access */
 		};
 
 		/*!
@@ -1535,6 +1601,7 @@ namespace STM32LIB{
 				using PDDS 	= reg_t<rw_t, 0X40007000, 1, 1>;	 /*!< \brief Power down deepsleep */
 				using LPDS 	= reg_t<rw_t, 0X40007000, 0, 1>;	 /*!< \brief Low-power deep sleep */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40007000, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief power control/status register
@@ -1547,6 +1614,7 @@ namespace STM32LIB{
 				using SBF 	= reg_t<ro_t, 0X40007004, 1, 1>;	 /*!< \brief Standby flag */
 				using WUF 	= reg_t<ro_t, 0X40007004, 0, 1>;	 /*!< \brief Wakeup flag */
 			};
+			using CSR_D 	= reg_t<ro_t, 0X40007004, 0, 32>;	 /*!< \brief CSR register direct access */
 		};
 
 		/*!
@@ -1580,6 +1648,7 @@ namespace STM32LIB{
 				using ALERTEN 	= reg_t<rw_t, 0X40005400, 22, 1>;	 /*!< \brief SMBUS alert enable */
 				using PECEN 	= reg_t<rw_t, 0X40005400, 23, 1>;	 /*!< \brief PEC enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40005400, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief Control register 2
@@ -1599,6 +1668,7 @@ namespace STM32LIB{
 				using SADD1 	= reg_t<rw_t, 0X40005404, 1, 7>;	 /*!< \brief Slave address bit 7:1 (master mode) */
 				using SADD0 	= reg_t<rw_t, 0X40005404, 0, 1>;	 /*!< \brief Slave address bit 0 (master mode) */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40005404, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief Own address register 1
@@ -1610,6 +1680,7 @@ namespace STM32LIB{
 				using OA1MODE 	= reg_t<rw_t, 0X40005408, 10, 1>;	 /*!< \brief Own Address 1 10-bit mode */
 				using OA1EN 	= reg_t<rw_t, 0X40005408, 15, 1>;	 /*!< \brief Own Address 1 enable */
 			};
+			using OAR1_D 	= reg_t<rw_t, 0X40005408, 0, 32>;	 /*!< \brief OAR1 register direct access */
 
 			/*!
 			\brief Own address register 2
@@ -1619,6 +1690,7 @@ namespace STM32LIB{
 				using OA2MSK 	= reg_t<rw_t, 0X4000540C, 8, 3>;	 /*!< \brief Own Address 2 masks */
 				using OA2EN 	= reg_t<rw_t, 0X4000540C, 15, 1>;	 /*!< \brief Own Address 2 enable */
 			};
+			using OAR2_D 	= reg_t<rw_t, 0X4000540C, 0, 32>;	 /*!< \brief OAR2 register direct access */
 
 			/*!
 			\brief Timing register
@@ -1630,6 +1702,7 @@ namespace STM32LIB{
 				using SCLDEL 	= reg_t<rw_t, 0X40005410, 20, 4>;	 /*!< \brief Data setup time */
 				using PRESC 	= reg_t<rw_t, 0X40005410, 28, 4>;	 /*!< \brief Timing prescaler */
 			};
+			using TIMINGR_D 	= reg_t<rw_t, 0X40005410, 0, 32>;	 /*!< \brief TIMINGR register direct access */
 
 			/*!
 			\brief Status register 1
@@ -1641,6 +1714,7 @@ namespace STM32LIB{
 				using TIMEOUTB 	= reg_t<rw_t, 0X40005414, 16, 12>;	 /*!< \brief Bus timeout B */
 				using TEXTEN 	= reg_t<rw_t, 0X40005414, 31, 1>;	 /*!< \brief Extended clock timeout enable */
 			};
+			using TIMEOUTR_D 	= reg_t<rw_t, 0X40005414, 0, 32>;	 /*!< \brief TIMEOUTR register direct access */
 
 			/*!
 			\brief Interrupt and Status register
@@ -1664,6 +1738,7 @@ namespace STM32LIB{
 				using TXIS 	= reg_t<rw_t, 0X40005418, 1, 1>;	 /*!< \brief Transmit interrupt status (transmitters) */
 				using TXE 	= reg_t<rw_t, 0X40005418, 0, 1>;	 /*!< \brief Transmit data register empty (transmitters) */
 			};
+			using ISR_D 	= reg_t<rw_t, 0X40005418, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief Interrupt clear register
@@ -1679,6 +1754,7 @@ namespace STM32LIB{
 				using NACKCF 	= reg_t<wo_t, 0X4000541C, 4, 1>;	 /*!< \brief Not Acknowledge flag clear */
 				using ADDRCF 	= reg_t<wo_t, 0X4000541C, 3, 1>;	 /*!< \brief Address Matched flag clear */
 			};
+			using ICR_D 	= reg_t<wo_t, 0X4000541C, 0, 32>;	 /*!< \brief ICR register direct access */
 
 			/*!
 			\brief PEC register
@@ -1734,6 +1810,7 @@ namespace STM32LIB{
 				using ALERTEN 	= reg_t<rw_t, 0X40005800, 22, 1>;	 /*!< \brief SMBUS alert enable */
 				using PECEN 	= reg_t<rw_t, 0X40005800, 23, 1>;	 /*!< \brief PEC enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40005800, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief Control register 2
@@ -1753,6 +1830,7 @@ namespace STM32LIB{
 				using SADD1 	= reg_t<rw_t, 0X40005804, 1, 7>;	 /*!< \brief Slave address bit 7:1 (master mode) */
 				using SADD0 	= reg_t<rw_t, 0X40005804, 0, 1>;	 /*!< \brief Slave address bit 0 (master mode) */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40005804, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief Own address register 1
@@ -1764,6 +1842,7 @@ namespace STM32LIB{
 				using OA1MODE 	= reg_t<rw_t, 0X40005808, 10, 1>;	 /*!< \brief Own Address 1 10-bit mode */
 				using OA1EN 	= reg_t<rw_t, 0X40005808, 15, 1>;	 /*!< \brief Own Address 1 enable */
 			};
+			using OAR1_D 	= reg_t<rw_t, 0X40005808, 0, 32>;	 /*!< \brief OAR1 register direct access */
 
 			/*!
 			\brief Own address register 2
@@ -1773,6 +1852,7 @@ namespace STM32LIB{
 				using OA2MSK 	= reg_t<rw_t, 0X4000580C, 8, 3>;	 /*!< \brief Own Address 2 masks */
 				using OA2EN 	= reg_t<rw_t, 0X4000580C, 15, 1>;	 /*!< \brief Own Address 2 enable */
 			};
+			using OAR2_D 	= reg_t<rw_t, 0X4000580C, 0, 32>;	 /*!< \brief OAR2 register direct access */
 
 			/*!
 			\brief Timing register
@@ -1784,6 +1864,7 @@ namespace STM32LIB{
 				using SCLDEL 	= reg_t<rw_t, 0X40005810, 20, 4>;	 /*!< \brief Data setup time */
 				using PRESC 	= reg_t<rw_t, 0X40005810, 28, 4>;	 /*!< \brief Timing prescaler */
 			};
+			using TIMINGR_D 	= reg_t<rw_t, 0X40005810, 0, 32>;	 /*!< \brief TIMINGR register direct access */
 
 			/*!
 			\brief Status register 1
@@ -1795,6 +1876,7 @@ namespace STM32LIB{
 				using TIMEOUTB 	= reg_t<rw_t, 0X40005814, 16, 12>;	 /*!< \brief Bus timeout B */
 				using TEXTEN 	= reg_t<rw_t, 0X40005814, 31, 1>;	 /*!< \brief Extended clock timeout enable */
 			};
+			using TIMEOUTR_D 	= reg_t<rw_t, 0X40005814, 0, 32>;	 /*!< \brief TIMEOUTR register direct access */
 
 			/*!
 			\brief Interrupt and Status register
@@ -1818,6 +1900,7 @@ namespace STM32LIB{
 				using TXIS 	= reg_t<rw_t, 0X40005818, 1, 1>;	 /*!< \brief Transmit interrupt status (transmitters) */
 				using TXE 	= reg_t<rw_t, 0X40005818, 0, 1>;	 /*!< \brief Transmit data register empty (transmitters) */
 			};
+			using ISR_D 	= reg_t<rw_t, 0X40005818, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief Interrupt clear register
@@ -1833,6 +1916,7 @@ namespace STM32LIB{
 				using NACKCF 	= reg_t<wo_t, 0X4000581C, 4, 1>;	 /*!< \brief Not Acknowledge flag clear */
 				using ADDRCF 	= reg_t<wo_t, 0X4000581C, 3, 1>;	 /*!< \brief Address Matched flag clear */
 			};
+			using ICR_D 	= reg_t<wo_t, 0X4000581C, 0, 32>;	 /*!< \brief ICR register direct access */
 
 			/*!
 			\brief PEC register
@@ -1888,6 +1972,7 @@ namespace STM32LIB{
 				using RVU 	= reg_t<ro_t, 0X4000300C, 1, 1>;	 /*!< \brief Watchdog counter reload value update */
 				using WVU 	= reg_t<ro_t, 0X4000300C, 2, 1>;	 /*!< \brief Watchdog counter window value update */
 			};
+			using SR_D 	= reg_t<ro_t, 0X4000300C, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief Window register
@@ -1909,6 +1994,7 @@ namespace STM32LIB{
 				using WDGA 	= reg_t<rw_t, 0X40002C00, 7, 1>;	 /*!< \brief Activation bit */
 				using T 	= reg_t<rw_t, 0X40002C00, 0, 7>;	 /*!< \brief 7-bit counter */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40002C00, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief Configuration register
@@ -1918,6 +2004,7 @@ namespace STM32LIB{
 				using WDGTB 	= reg_t<rw_t, 0X40002C04, 7, 2>;	 /*!< \brief Timer base */
 				using W 	= reg_t<rw_t, 0X40002C04, 0, 7>;	 /*!< \brief 7-bit window value */
 			};
+			using CFR_D 	= reg_t<rw_t, 0X40002C04, 0, 32>;	 /*!< \brief CFR register direct access */
 
 			/*!
 			\brief Status register
@@ -1945,6 +2032,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40012C00, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40012C00, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40012C00, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -1963,6 +2051,7 @@ namespace STM32LIB{
 				using CCUS 	= reg_t<rw_t, 0X40012C04, 2, 1>;	 /*!< \brief Capture/compare control update selection */
 				using CCPC 	= reg_t<rw_t, 0X40012C04, 0, 1>;	 /*!< \brief Capture/compare preloaded control */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40012C04, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief slave mode control register
@@ -1976,6 +2065,7 @@ namespace STM32LIB{
 				using TS 	= reg_t<rw_t, 0X40012C08, 4, 3>;	 /*!< \brief Trigger selection */
 				using SMS 	= reg_t<rw_t, 0X40012C08, 0, 3>;	 /*!< \brief Slave mode selection */
 			};
+			using SMCR_D 	= reg_t<rw_t, 0X40012C08, 0, 32>;	 /*!< \brief SMCR register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -1997,6 +2087,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X40012C0C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X40012C0C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X40012C0C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -2015,6 +2106,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40012C10, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40012C10, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40012C10, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -2029,6 +2121,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40012C14, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40012C14, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40012C14, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -2045,6 +2138,7 @@ namespace STM32LIB{
 				using OC1FE 	= reg_t<rw_t, 0X40012C18, 2, 1>;	 /*!< \brief Output Compare 1 fast enable */
 				using CC1S 	= reg_t<rw_t, 0X40012C18, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40012C18, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (input mode)
@@ -2057,6 +2151,7 @@ namespace STM32LIB{
 				using IC1PCS 	= reg_t<rw_t, 0X40012C18, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40012C18, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40012C18, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -2073,6 +2168,7 @@ namespace STM32LIB{
 				using OC3FE 	= reg_t<rw_t, 0X40012C1C, 2, 1>;	 /*!< \brief Output compare 3 fast enable */
 				using CC3S 	= reg_t<rw_t, 0X40012C1C, 0, 2>;	 /*!< \brief Capture/Compare 3 selection */
 			};
+			using CCMR2_Output_D 	= reg_t<rw_t, 0X40012C1C, 0, 32>;	 /*!< \brief CCMR2_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 2 (input mode)
@@ -2085,6 +2181,7 @@ namespace STM32LIB{
 				using IC3PSC 	= reg_t<rw_t, 0X40012C1C, 2, 2>;	 /*!< \brief Input capture 3 prescaler */
 				using CC3S 	= reg_t<rw_t, 0X40012C1C, 0, 2>;	 /*!< \brief Capture/compare 3 selection */
 			};
+			using CCMR2_Input_D 	= reg_t<rw_t, 0X40012C1C, 0, 32>;	 /*!< \brief CCMR2_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -2105,6 +2202,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40012C20, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40012C20, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40012C20, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -2161,6 +2259,7 @@ namespace STM32LIB{
 				using LOCK 	= reg_t<rw_t, 0X40012C44, 8, 2>;	 /*!< \brief Lock configuration */
 				using DTG 	= reg_t<rw_t, 0X40012C44, 0, 8>;	 /*!< \brief Dead-time generator setup */
 			};
+			using BDTR_D 	= reg_t<rw_t, 0X40012C44, 0, 32>;	 /*!< \brief BDTR register direct access */
 
 			/*!
 			\brief DMA control register
@@ -2169,6 +2268,7 @@ namespace STM32LIB{
 				using DBL 	= reg_t<rw_t, 0X40012C48, 8, 5>;	 /*!< \brief DMA burst length */
 				using DBA 	= reg_t<rw_t, 0X40012C48, 0, 5>;	 /*!< \brief DMA base address */
 			};
+			using DCR_D 	= reg_t<rw_t, 0X40012C48, 0, 32>;	 /*!< \brief DCR register direct access */
 
 			/*!
 			\brief DMA address for full transfer
@@ -2196,6 +2296,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40000400, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40000400, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40000400, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -2205,6 +2306,7 @@ namespace STM32LIB{
 				using MMS 	= reg_t<rw_t, 0X40000404, 4, 3>;	 /*!< \brief Master mode selection */
 				using CCDS 	= reg_t<rw_t, 0X40000404, 3, 1>;	 /*!< \brief Capture/compare DMA selection */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40000404, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief slave mode control register
@@ -2218,6 +2320,7 @@ namespace STM32LIB{
 				using TS 	= reg_t<rw_t, 0X40000408, 4, 3>;	 /*!< \brief Trigger selection */
 				using SMS 	= reg_t<rw_t, 0X40000408, 0, 3>;	 /*!< \brief Slave mode selection */
 			};
+			using SMCR_D 	= reg_t<rw_t, 0X40000408, 0, 32>;	 /*!< \brief SMCR register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -2237,6 +2340,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X4000040C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X4000040C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4000040C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -2253,6 +2357,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40000410, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40000410, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40000410, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -2265,6 +2370,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40000414, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40000414, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40000414, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (output mode)
@@ -2281,6 +2387,7 @@ namespace STM32LIB{
 				using OC1FE 	= reg_t<rw_t, 0X40000418, 2, 1>;	 /*!< \brief Output compare 1 fast enable */
 				using CC1S 	= reg_t<rw_t, 0X40000418, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40000418, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (input mode)
@@ -2293,6 +2400,7 @@ namespace STM32LIB{
 				using IC1PSC 	= reg_t<rw_t, 0X40000418, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40000418, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40000418, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare mode register 2 (output mode)
@@ -2309,6 +2417,7 @@ namespace STM32LIB{
 				using OC3FE 	= reg_t<rw_t, 0X4000041C, 2, 1>;	 /*!< \brief Output compare 3 fast enable */
 				using CC3S 	= reg_t<rw_t, 0X4000041C, 0, 2>;	 /*!< \brief Capture/Compare 3 selection */
 			};
+			using CCMR2_Output_D 	= reg_t<rw_t, 0X4000041C, 0, 32>;	 /*!< \brief CCMR2_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 2 (input mode)
@@ -2321,6 +2430,7 @@ namespace STM32LIB{
 				using IC3PSC 	= reg_t<rw_t, 0X4000041C, 2, 2>;	 /*!< \brief Input capture 3 prescaler */
 				using CC3S 	= reg_t<rw_t, 0X4000041C, 0, 2>;	 /*!< \brief Capture/Compare 3 selection */
 			};
+			using CCMR2_Input_D 	= reg_t<rw_t, 0X4000041C, 0, 32>;	 /*!< \brief CCMR2_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -2339,6 +2449,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40000420, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40000420, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40000420, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -2347,6 +2458,7 @@ namespace STM32LIB{
 				using CNT_H 	= reg_t<rw_t, 0X40000424, 16, 16>;	 /*!< \brief High counter value (TIM2 only) */
 				using CNT_L 	= reg_t<rw_t, 0X40000424, 0, 16>;	 /*!< \brief Low counter value */
 			};
+			using CNT_D 	= reg_t<rw_t, 0X40000424, 0, 32>;	 /*!< \brief CNT register direct access */
 
 			/*!
 			\brief prescaler
@@ -2360,6 +2472,7 @@ namespace STM32LIB{
 				using ARR_H 	= reg_t<rw_t, 0X4000042C, 16, 16>;	 /*!< \brief High Auto-reload value (TIM2 only) */
 				using ARR_L 	= reg_t<rw_t, 0X4000042C, 0, 16>;	 /*!< \brief Low Auto-reload value */
 			};
+			using ARR_D 	= reg_t<rw_t, 0X4000042C, 0, 32>;	 /*!< \brief ARR register direct access */
 
 			/*!
 			\brief capture/compare register 1
@@ -2368,6 +2481,7 @@ namespace STM32LIB{
 				using CCR1_H 	= reg_t<rw_t, 0X40000434, 16, 16>;	 /*!< \brief High Capture/Compare 1 value (TIM2 only) */
 				using CCR1_L 	= reg_t<rw_t, 0X40000434, 0, 16>;	 /*!< \brief Low Capture/Compare 1 value */
 			};
+			using CCR1_D 	= reg_t<rw_t, 0X40000434, 0, 32>;	 /*!< \brief CCR1 register direct access */
 
 			/*!
 			\brief capture/compare register 2
@@ -2376,6 +2490,7 @@ namespace STM32LIB{
 				using CCR2_H 	= reg_t<rw_t, 0X40000438, 16, 16>;	 /*!< \brief High Capture/Compare 2 value (TIM2 only) */
 				using CCR2_L 	= reg_t<rw_t, 0X40000438, 0, 16>;	 /*!< \brief Low Capture/Compare 2 value */
 			};
+			using CCR2_D 	= reg_t<rw_t, 0X40000438, 0, 32>;	 /*!< \brief CCR2 register direct access */
 
 			/*!
 			\brief capture/compare register 3
@@ -2384,6 +2499,7 @@ namespace STM32LIB{
 				using CCR3_H 	= reg_t<rw_t, 0X4000043C, 16, 16>;	 /*!< \brief High Capture/Compare value (TIM2 only) */
 				using CCR3_L 	= reg_t<rw_t, 0X4000043C, 0, 16>;	 /*!< \brief Low Capture/Compare value */
 			};
+			using CCR3_D 	= reg_t<rw_t, 0X4000043C, 0, 32>;	 /*!< \brief CCR3 register direct access */
 
 			/*!
 			\brief capture/compare register 4
@@ -2392,6 +2508,7 @@ namespace STM32LIB{
 				using CCR4_H 	= reg_t<rw_t, 0X40000440, 16, 16>;	 /*!< \brief High Capture/Compare value (TIM2 only) */
 				using CCR4_L 	= reg_t<rw_t, 0X40000440, 0, 16>;	 /*!< \brief Low Capture/Compare value */
 			};
+			using CCR4_D 	= reg_t<rw_t, 0X40000440, 0, 32>;	 /*!< \brief CCR4 register direct access */
 
 			/*!
 			\brief DMA control register
@@ -2400,6 +2517,7 @@ namespace STM32LIB{
 				using DBL 	= reg_t<rw_t, 0X40000448, 8, 5>;	 /*!< \brief DMA burst length */
 				using DBA 	= reg_t<rw_t, 0X40000448, 0, 5>;	 /*!< \brief DMA base address */
 			};
+			using DCR_D 	= reg_t<rw_t, 0X40000448, 0, 32>;	 /*!< \brief DCR register direct access */
 
 			/*!
 			\brief DMA address for full transfer
@@ -2422,6 +2540,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40002000, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40002000, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40002000, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -2430,6 +2549,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X4000200C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X4000200C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4000200C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -2439,6 +2559,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40002010, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40002010, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40002010, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -2447,6 +2568,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40002014, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40002014, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40002014, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -2457,6 +2579,7 @@ namespace STM32LIB{
 				using OC1PE 	= reg_t<rw_t, 0X40002018, 3, 1>;	 /*!< \brief Output Compare 1 preload enable */
 				using OC1M 	= reg_t<rw_t, 0X40002018, 4, 3>;	 /*!< \brief Output Compare 1 mode */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40002018, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register (input mode)
@@ -2466,6 +2589,7 @@ namespace STM32LIB{
 				using IC1PSC 	= reg_t<rw_t, 0X40002018, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40002018, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40002018, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -2475,6 +2599,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40002020, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40002020, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40002020, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -2519,6 +2644,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40001000, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40001000, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40001000, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -2534,6 +2660,7 @@ namespace STM32LIB{
 				using UDE 	= reg_t<rw_t, 0X4000100C, 8, 1>;	 /*!< \brief Update DMA request enable */
 				using UIE 	= reg_t<rw_t, 0X4000100C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4000100C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -2603,6 +2730,7 @@ namespace STM32LIB{
 				using MR26 	= reg_t<rw_t, 0X40010400, 26, 1>;	 /*!< \brief Interrupt Mask on line 26 */
 				using MR27 	= reg_t<rw_t, 0X40010400, 27, 1>;	 /*!< \brief Interrupt Mask on line 27 */
 			};
+			using IMR_D 	= reg_t<rw_t, 0X40010400, 0, 32>;	 /*!< \brief IMR register direct access */
 
 			/*!
 			\brief Event mask register (EXTI_EMR)
@@ -2637,6 +2765,7 @@ namespace STM32LIB{
 				using MR26 	= reg_t<rw_t, 0X40010404, 26, 1>;	 /*!< \brief Event Mask on line 26 */
 				using MR27 	= reg_t<rw_t, 0X40010404, 27, 1>;	 /*!< \brief Event Mask on line 27 */
 			};
+			using EMR_D 	= reg_t<rw_t, 0X40010404, 0, 32>;	 /*!< \brief EMR register direct access */
 
 			/*!
 			\brief Rising Trigger selection register (EXTI_RTSR)
@@ -2662,6 +2791,7 @@ namespace STM32LIB{
 				using TR17 	= reg_t<rw_t, 0X40010408, 17, 1>;	 /*!< \brief Rising trigger event configuration of line 17 */
 				using TR19 	= reg_t<rw_t, 0X40010408, 19, 1>;	 /*!< \brief Rising trigger event configuration of line 19 */
 			};
+			using RTSR_D 	= reg_t<rw_t, 0X40010408, 0, 32>;	 /*!< \brief RTSR register direct access */
 
 			/*!
 			\brief Falling Trigger selection register (EXTI_FTSR)
@@ -2687,6 +2817,7 @@ namespace STM32LIB{
 				using TR17 	= reg_t<rw_t, 0X4001040C, 17, 1>;	 /*!< \brief Falling trigger event configuration of line 17 */
 				using TR19 	= reg_t<rw_t, 0X4001040C, 19, 1>;	 /*!< \brief Falling trigger event configuration of line 19 */
 			};
+			using FTSR_D 	= reg_t<rw_t, 0X4001040C, 0, 32>;	 /*!< \brief FTSR register direct access */
 
 			/*!
 			\brief Software interrupt event register (EXTI_SWIER)
@@ -2712,6 +2843,7 @@ namespace STM32LIB{
 				using SWIER17 	= reg_t<rw_t, 0X40010410, 17, 1>;	 /*!< \brief Software Interrupt on line 17 */
 				using SWIER19 	= reg_t<rw_t, 0X40010410, 19, 1>;	 /*!< \brief Software Interrupt on line 19 */
 			};
+			using SWIER_D 	= reg_t<rw_t, 0X40010410, 0, 32>;	 /*!< \brief SWIER register direct access */
 
 			/*!
 			\brief Pending register (EXTI_PR)
@@ -2737,6 +2869,7 @@ namespace STM32LIB{
 				using PR17 	= reg_t<rw_t, 0X40010414, 17, 1>;	 /*!< \brief Pending bit 17 */
 				using PR19 	= reg_t<rw_t, 0X40010414, 19, 1>;	 /*!< \brief Pending bit 19 */
 			};
+			using PR_D 	= reg_t<rw_t, 0X40010414, 0, 32>;	 /*!< \brief PR register direct access */
 		};
 
 		/*!
@@ -2781,6 +2914,7 @@ namespace STM32LIB{
 				using PRI_02 	= reg_t<rw_t, 0XE000E400, 22, 2>;	 /*!< \brief PRI_02 */
 				using PRI_03 	= reg_t<rw_t, 0XE000E400, 30, 2>;	 /*!< \brief PRI_03 */
 			};
+			using IPR0_D 	= reg_t<rw_t, 0XE000E400, 0, 32>;	 /*!< \brief IPR0 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 1
@@ -2791,6 +2925,7 @@ namespace STM32LIB{
 				using PRI_42 	= reg_t<rw_t, 0XE000E404, 22, 2>;	 /*!< \brief PRI_42 */
 				using PRI_43 	= reg_t<rw_t, 0XE000E404, 30, 2>;	 /*!< \brief PRI_43 */
 			};
+			using IPR1_D 	= reg_t<rw_t, 0XE000E404, 0, 32>;	 /*!< \brief IPR1 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 2
@@ -2801,6 +2936,7 @@ namespace STM32LIB{
 				using PRI_82 	= reg_t<rw_t, 0XE000E408, 22, 2>;	 /*!< \brief PRI_82 */
 				using PRI_83 	= reg_t<rw_t, 0XE000E408, 30, 2>;	 /*!< \brief PRI_83 */
 			};
+			using IPR2_D 	= reg_t<rw_t, 0XE000E408, 0, 32>;	 /*!< \brief IPR2 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 3
@@ -2811,6 +2947,7 @@ namespace STM32LIB{
 				using PRI_122 	= reg_t<rw_t, 0XE000E40C, 22, 2>;	 /*!< \brief PRI_122 */
 				using PRI_123 	= reg_t<rw_t, 0XE000E40C, 30, 2>;	 /*!< \brief PRI_123 */
 			};
+			using IPR3_D 	= reg_t<rw_t, 0XE000E40C, 0, 32>;	 /*!< \brief IPR3 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 4
@@ -2821,6 +2958,7 @@ namespace STM32LIB{
 				using PRI_162 	= reg_t<rw_t, 0XE000E410, 22, 2>;	 /*!< \brief PRI_162 */
 				using PRI_163 	= reg_t<rw_t, 0XE000E410, 30, 2>;	 /*!< \brief PRI_163 */
 			};
+			using IPR4_D 	= reg_t<rw_t, 0XE000E410, 0, 32>;	 /*!< \brief IPR4 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 5
@@ -2831,6 +2969,7 @@ namespace STM32LIB{
 				using PRI_202 	= reg_t<rw_t, 0XE000E414, 22, 2>;	 /*!< \brief PRI_202 */
 				using PRI_203 	= reg_t<rw_t, 0XE000E414, 30, 2>;	 /*!< \brief PRI_203 */
 			};
+			using IPR5_D 	= reg_t<rw_t, 0XE000E414, 0, 32>;	 /*!< \brief IPR5 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 6
@@ -2841,6 +2980,7 @@ namespace STM32LIB{
 				using PRI_242 	= reg_t<rw_t, 0XE000E418, 22, 2>;	 /*!< \brief PRI_242 */
 				using PRI_243 	= reg_t<rw_t, 0XE000E418, 30, 2>;	 /*!< \brief PRI_243 */
 			};
+			using IPR6_D 	= reg_t<rw_t, 0XE000E418, 0, 32>;	 /*!< \brief IPR6 register direct access */
 
 			/*!
 			\brief Interrupt Priority Register 7
@@ -2851,6 +2991,7 @@ namespace STM32LIB{
 				using PRI_282 	= reg_t<rw_t, 0XE000E41C, 22, 2>;	 /*!< \brief PRI_282 */
 				using PRI_283 	= reg_t<rw_t, 0XE000E41C, 30, 2>;	 /*!< \brief PRI_283 */
 			};
+			using IPR7_D 	= reg_t<rw_t, 0XE000E41C, 0, 32>;	 /*!< \brief IPR7 register direct access */
 		};
 
 		/*!
@@ -2891,6 +3032,7 @@ namespace STM32LIB{
 				using HTIF7 	= reg_t<ro_t, 0X40020000, 26, 1>;	 /*!< \brief Channel 7 Half Transfer Complete flag */
 				using TEIF7 	= reg_t<ro_t, 0X40020000, 27, 1>;	 /*!< \brief Channel 7 Transfer Error flag */
 			};
+			using ISR_D 	= reg_t<ro_t, 0X40020000, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief DMA interrupt flag clear register (DMA_IFCR)
@@ -2925,6 +3067,7 @@ namespace STM32LIB{
 				using CHTIF7 	= reg_t<wo_t, 0X40020004, 26, 1>;	 /*!< \brief Channel 7 Half Transfer clear */
 				using CTEIF7 	= reg_t<wo_t, 0X40020004, 27, 1>;	 /*!< \brief Channel 7 Transfer Error clear */
 			};
+			using IFCR_D 	= reg_t<wo_t, 0X40020004, 0, 32>;	 /*!< \brief IFCR register direct access */
 
 			/*!
 			\brief DMA channel configuration register (DMA_CCR)
@@ -2943,6 +3086,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X40020008, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X40020008, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR1_D 	= reg_t<rw_t, 0X40020008, 0, 32>;	 /*!< \brief CCR1 register direct access */
 
 			/*!
 			\brief DMA channel 1 number of data register
@@ -2982,6 +3126,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X4002001C, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X4002001C, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR2_D 	= reg_t<rw_t, 0X4002001C, 0, 32>;	 /*!< \brief CCR2 register direct access */
 
 			/*!
 			\brief DMA channel 2 number of data register
@@ -3021,6 +3166,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X40020030, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X40020030, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR3_D 	= reg_t<rw_t, 0X40020030, 0, 32>;	 /*!< \brief CCR3 register direct access */
 
 			/*!
 			\brief DMA channel 3 number of data register
@@ -3060,6 +3206,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X40020044, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X40020044, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR4_D 	= reg_t<rw_t, 0X40020044, 0, 32>;	 /*!< \brief CCR4 register direct access */
 
 			/*!
 			\brief DMA channel 4 number of data register
@@ -3099,6 +3246,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X40020058, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X40020058, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR5_D 	= reg_t<rw_t, 0X40020058, 0, 32>;	 /*!< \brief CCR5 register direct access */
 
 			/*!
 			\brief DMA channel 5 number of data register
@@ -3138,6 +3286,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X4002006C, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X4002006C, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR6_D 	= reg_t<rw_t, 0X4002006C, 0, 32>;	 /*!< \brief CCR6 register direct access */
 
 			/*!
 			\brief DMA channel 6 number of data register
@@ -3177,6 +3326,7 @@ namespace STM32LIB{
 				using PL 	= reg_t<rw_t, 0X40020080, 12, 2>;	 /*!< \brief Channel Priority level */
 				using MEM2MEM 	= reg_t<rw_t, 0X40020080, 14, 1>;	 /*!< \brief Memory to memory mode */
 			};
+			using CCR7_D 	= reg_t<rw_t, 0X40020080, 0, 32>;	 /*!< \brief CCR7 register direct access */
 
 			/*!
 			\brief DMA channel 7 number of data register
@@ -3220,6 +3370,7 @@ namespace STM32LIB{
 				using PLLON 	= reg_t<rw_t, 0X40021000, 24, 1>;	 /*!< \brief PLL enable */
 				using PLLRDY 	= reg_t<ro_t, 0X40021000, 25, 1>;	 /*!< \brief PLL clock ready flag */
 			};
+			using CR_D 	= reg_t<ro_t, 0X40021000, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief Clock configuration register (RCC_CFGR)
@@ -3237,6 +3388,7 @@ namespace STM32LIB{
 				using MCOPRE 	= reg_t<rw_t, 0X40021004, 28, 3>;	 /*!< \brief Microcontroller Clock Output Prescaler */
 				using PLLNODIV 	= reg_t<rw_t, 0X40021004, 31, 1>;	 /*!< \brief PLL clock not divided for MCO */
 			};
+			using CFGR_D 	= reg_t<rw_t, 0X40021004, 0, 32>;	 /*!< \brief CFGR register direct access */
 
 			/*!
 			\brief Clock interrupt register (RCC_CIR)
@@ -3266,6 +3418,7 @@ namespace STM32LIB{
 				using HSI48RDYC 	= reg_t<wo_t, 0X40021008, 22, 1>;	 /*!< \brief HSI48 Ready Interrupt Clear */
 				using CSSC 	= reg_t<wo_t, 0X40021008, 23, 1>;	 /*!< \brief Clock security system interrupt clear */
 			};
+			using CIR_D 	= reg_t<wo_t, 0X40021008, 0, 32>;	 /*!< \brief CIR register direct access */
 
 			/*!
 			\brief APB2 peripheral reset register (RCC_APB2RSTR)
@@ -3281,6 +3434,7 @@ namespace STM32LIB{
 				using TIM17RST 	= reg_t<rw_t, 0X4002100C, 18, 1>;	 /*!< \brief TIM17 timer reset */
 				using DBGMCURST 	= reg_t<rw_t, 0X4002100C, 22, 1>;	 /*!< \brief Debug MCU reset */
 			};
+			using APB2RSTR_D 	= reg_t<rw_t, 0X4002100C, 0, 32>;	 /*!< \brief APB2RSTR register direct access */
 
 			/*!
 			\brief APB1 peripheral reset register (RCC_APB1RSTR)
@@ -3296,6 +3450,7 @@ namespace STM32LIB{
 				using I2C2RST 	= reg_t<rw_t, 0X40021010, 22, 1>;	 /*!< \brief I2C2 reset */
 				using PWRRST 	= reg_t<rw_t, 0X40021010, 28, 1>;	 /*!< \brief Power interface reset */
 			};
+			using APB1RSTR_D 	= reg_t<rw_t, 0X40021010, 0, 32>;	 /*!< \brief APB1RSTR register direct access */
 
 			/*!
 			\brief AHB Peripheral Clock enable register (RCC_AHBENR)
@@ -3311,6 +3466,7 @@ namespace STM32LIB{
 				using IOPDEN 	= reg_t<rw_t, 0X40021014, 20, 1>;	 /*!< \brief I/O port D clock enable */
 				using IOPFEN 	= reg_t<rw_t, 0X40021014, 22, 1>;	 /*!< \brief I/O port F clock enable */
 			};
+			using AHBENR_D 	= reg_t<rw_t, 0X40021014, 0, 32>;	 /*!< \brief AHBENR register direct access */
 
 			/*!
 			\brief APB2 peripheral clock enable register (RCC_APB2ENR)
@@ -3326,6 +3482,7 @@ namespace STM32LIB{
 				using TIM17EN 	= reg_t<rw_t, 0X40021018, 18, 1>;	 /*!< \brief TIM17 timer clock enable */
 				using DBGMCUEN 	= reg_t<rw_t, 0X40021018, 22, 1>;	 /*!< \brief MCU debug module clock enable */
 			};
+			using APB2ENR_D 	= reg_t<rw_t, 0X40021018, 0, 32>;	 /*!< \brief APB2ENR register direct access */
 
 			/*!
 			\brief APB1 peripheral clock enable register (RCC_APB1ENR)
@@ -3341,6 +3498,7 @@ namespace STM32LIB{
 				using I2C2EN 	= reg_t<rw_t, 0X4002101C, 22, 1>;	 /*!< \brief I2C 2 clock enable */
 				using PWREN 	= reg_t<rw_t, 0X4002101C, 28, 1>;	 /*!< \brief Power interface clock enable */
 			};
+			using APB1ENR_D 	= reg_t<rw_t, 0X4002101C, 0, 32>;	 /*!< \brief APB1ENR register direct access */
 
 			/*!
 			\brief Backup domain control register (RCC_BDCR)
@@ -3354,6 +3512,7 @@ namespace STM32LIB{
 				using RTCEN 	= reg_t<rw_t, 0X40021020, 15, 1>;	 /*!< \brief RTC clock enable */
 				using BDRST 	= reg_t<rw_t, 0X40021020, 16, 1>;	 /*!< \brief Backup domain software reset */
 			};
+			using BDCR_D 	= reg_t<rw_t, 0X40021020, 0, 32>;	 /*!< \brief BDCR register direct access */
 
 			/*!
 			\brief Control/status register (RCC_CSR)
@@ -3370,6 +3529,7 @@ namespace STM32LIB{
 				using WWDGRSTF 	= reg_t<rw_t, 0X40021024, 30, 1>;	 /*!< \brief Window watchdog reset flag */
 				using LPWRRSTF 	= reg_t<rw_t, 0X40021024, 31, 1>;	 /*!< \brief Low-power reset flag */
 			};
+			using CSR_D 	= reg_t<rw_t, 0X40021024, 0, 32>;	 /*!< \brief CSR register direct access */
 
 			/*!
 			\brief AHB peripheral reset register
@@ -3381,6 +3541,7 @@ namespace STM32LIB{
 				using IOPDRST 	= reg_t<rw_t, 0X40021028, 20, 1>;	 /*!< \brief I/O port D reset */
 				using IOPFRST 	= reg_t<rw_t, 0X40021028, 22, 1>;	 /*!< \brief I/O port F reset */
 			};
+			using AHBRSTR_D 	= reg_t<rw_t, 0X40021028, 0, 32>;	 /*!< \brief AHBRSTR register direct access */
 
 			/*!
 			\brief Clock configuration register 2
@@ -3398,6 +3559,7 @@ namespace STM32LIB{
 				using ADCSW 	= reg_t<rw_t, 0X40021030, 8, 1>;	 /*!< \brief ADC clock source selection */
 				using USART2SW 	= reg_t<rw_t, 0X40021030, 16, 2>;	 /*!< \brief USART2 clock source selection */
 			};
+			using CFGR3_D 	= reg_t<rw_t, 0X40021030, 0, 32>;	 /*!< \brief CFGR3 register direct access */
 
 			/*!
 			\brief Clock control register 2
@@ -3412,6 +3574,7 @@ namespace STM32LIB{
 				using HSI48RDY 	= reg_t<ro_t, 0X40021034, 17, 1>;	 /*!< \brief HSI48 clock ready flag */
 				using HSI48CAL 	= reg_t<ro_t, 0X40021034, 24, 1>;	 /*!< \brief HSI48 factory clock calibration */
 			};
+			using CR2_D 	= reg_t<ro_t, 0X40021034, 0, 32>;	 /*!< \brief CR2 register direct access */
 		};
 
 		/*!
@@ -3443,6 +3606,7 @@ namespace STM32LIB{
 				using TIM2_DMA_RMP 	= reg_t<rw_t, 0X40010000, 29, 1>;	 /*!< \brief TIM2 DMA request remapping bit */
 				using TIM3_DMA_RMP 	= reg_t<rw_t, 0X40010000, 30, 1>;	 /*!< \brief TIM3 DMA request remapping bit */
 			};
+			using CFGR1_D 	= reg_t<rw_t, 0X40010000, 0, 32>;	 /*!< \brief CFGR1 register direct access */
 
 			/*!
 			\brief external interrupt configuration register 1
@@ -3453,6 +3617,7 @@ namespace STM32LIB{
 				using EXTI1 	= reg_t<rw_t, 0X40010008, 4, 4>;	 /*!< \brief EXTI 1 configuration bits */
 				using EXTI0 	= reg_t<rw_t, 0X40010008, 0, 4>;	 /*!< \brief EXTI 0 configuration bits */
 			};
+			using EXTICR1_D 	= reg_t<rw_t, 0X40010008, 0, 32>;	 /*!< \brief EXTICR1 register direct access */
 
 			/*!
 			\brief external interrupt configuration register 2
@@ -3463,6 +3628,7 @@ namespace STM32LIB{
 				using EXTI5 	= reg_t<rw_t, 0X4001000C, 4, 4>;	 /*!< \brief EXTI 5 configuration bits */
 				using EXTI4 	= reg_t<rw_t, 0X4001000C, 0, 4>;	 /*!< \brief EXTI 4 configuration bits */
 			};
+			using EXTICR2_D 	= reg_t<rw_t, 0X4001000C, 0, 32>;	 /*!< \brief EXTICR2 register direct access */
 
 			/*!
 			\brief external interrupt configuration register 3
@@ -3473,6 +3639,7 @@ namespace STM32LIB{
 				using EXTI9 	= reg_t<rw_t, 0X40010010, 4, 4>;	 /*!< \brief EXTI 9 configuration bits */
 				using EXTI8 	= reg_t<rw_t, 0X40010010, 0, 4>;	 /*!< \brief EXTI 8 configuration bits */
 			};
+			using EXTICR3_D 	= reg_t<rw_t, 0X40010010, 0, 32>;	 /*!< \brief EXTICR3 register direct access */
 
 			/*!
 			\brief external interrupt configuration register 4
@@ -3483,6 +3650,7 @@ namespace STM32LIB{
 				using EXTI13 	= reg_t<rw_t, 0X40010014, 4, 4>;	 /*!< \brief EXTI 13 configuration bits */
 				using EXTI12 	= reg_t<rw_t, 0X40010014, 0, 4>;	 /*!< \brief EXTI 12 configuration bits */
 			};
+			using EXTICR4_D 	= reg_t<rw_t, 0X40010014, 0, 32>;	 /*!< \brief EXTICR4 register direct access */
 
 			/*!
 			\brief configuration register 2
@@ -3493,6 +3661,7 @@ namespace STM32LIB{
 				using SRAM_PARITY_LOCK 	= reg_t<rw_t, 0X40010018, 1, 1>;	 /*!< \brief SRAM parity lock bit */
 				using LOCUP_LOCK 	= reg_t<rw_t, 0X40010018, 0, 1>;	 /*!< \brief Cortex-M0 LOCKUP bit enable bit */
 			};
+			using CFGR2_D 	= reg_t<rw_t, 0X40010018, 0, 32>;	 /*!< \brief CFGR2 register direct access */
 		};
 
 		/*!
@@ -3511,6 +3680,7 @@ namespace STM32LIB{
 				using EOSMP 	= reg_t<rw_t, 0X40012400, 1, 1>;	 /*!< \brief End of sampling flag */
 				using ADRDY 	= reg_t<rw_t, 0X40012400, 0, 1>;	 /*!< \brief ADC ready */
 			};
+			using ISR_D 	= reg_t<rw_t, 0X40012400, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief interrupt enable register
@@ -3523,6 +3693,7 @@ namespace STM32LIB{
 				using EOSMPIE 	= reg_t<rw_t, 0X40012404, 1, 1>;	 /*!< \brief End of sampling flag interrupt enable */
 				using ADRDYIE 	= reg_t<rw_t, 0X40012404, 0, 1>;	 /*!< \brief ADC ready interrupt enable */
 			};
+			using IER_D 	= reg_t<rw_t, 0X40012404, 0, 32>;	 /*!< \brief IER register direct access */
 
 			/*!
 			\brief control register
@@ -3534,6 +3705,7 @@ namespace STM32LIB{
 				using ADDIS 	= reg_t<rw_t, 0X40012408, 1, 1>;	 /*!< \brief ADC disable command */
 				using ADEN 	= reg_t<rw_t, 0X40012408, 0, 1>;	 /*!< \brief ADC enable command */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40012408, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief configuration register 1
@@ -3555,6 +3727,7 @@ namespace STM32LIB{
 				using DMACFG 	= reg_t<rw_t, 0X4001240C, 1, 1>;	 /*!< \brief Direct memery access configuration */
 				using DMAEN 	= reg_t<rw_t, 0X4001240C, 0, 1>;	 /*!< \brief Direct memory access enable */
 			};
+			using CFGR1_D 	= reg_t<rw_t, 0X4001240C, 0, 32>;	 /*!< \brief CFGR1 register direct access */
 
 			/*!
 			\brief configuration register 2
@@ -3563,6 +3736,7 @@ namespace STM32LIB{
 				using JITOFF_D4 	= reg_t<rw_t, 0X40012410, 31, 1>;	 /*!< \brief JITOFF_D4 */
 				using JITOFF_D2 	= reg_t<rw_t, 0X40012410, 30, 1>;	 /*!< \brief JITOFF_D2 */
 			};
+			using CFGR2_D 	= reg_t<rw_t, 0X40012410, 0, 32>;	 /*!< \brief CFGR2 register direct access */
 
 			/*!
 			\brief sampling time register
@@ -3576,6 +3750,7 @@ namespace STM32LIB{
 				using HT 	= reg_t<rw_t, 0X40012420, 16, 12>;	 /*!< \brief Analog watchdog higher threshold */
 				using LT 	= reg_t<rw_t, 0X40012420, 0, 12>;	 /*!< \brief Analog watchdog lower threshold */
 			};
+			using TR_D 	= reg_t<rw_t, 0X40012420, 0, 32>;	 /*!< \brief TR register direct access */
 
 			/*!
 			\brief channel selection register
@@ -3601,6 +3776,7 @@ namespace STM32LIB{
 				using CHSEL1 	= reg_t<rw_t, 0X40012428, 1, 1>;	 /*!< \brief Channel-x selection */
 				using CHSEL0 	= reg_t<rw_t, 0X40012428, 0, 1>;	 /*!< \brief Channel-x selection */
 			};
+			using CHSELR_D 	= reg_t<rw_t, 0X40012428, 0, 32>;	 /*!< \brief CHSELR register direct access */
 
 			/*!
 			\brief data register
@@ -3617,6 +3793,7 @@ namespace STM32LIB{
 				using TSEN 	= reg_t<rw_t, 0X40012708, 23, 1>;	 /*!< \brief Temperature sensor enable */
 				using VREFEN 	= reg_t<rw_t, 0X40012708, 22, 1>;	 /*!< \brief Temperature sensor and VREFINT enable */
 			};
+			using CCR_D 	= reg_t<rw_t, 0X40012708, 0, 32>;	 /*!< \brief CCR register direct access */
 		};
 
 		/*!
@@ -3650,6 +3827,7 @@ namespace STM32LIB{
 				using EOBIE 	= reg_t<rw_t, 0X40013800, 27, 1>;	 /*!< \brief End of Block interrupt enable */
 				using M1 	= reg_t<rw_t, 0X40013800, 28, 1>;	 /*!< \brief Word length */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40013800, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief Control register 2
@@ -3675,6 +3853,7 @@ namespace STM32LIB{
 				using LBDL 	= reg_t<rw_t, 0X40013804, 5, 1>;	 /*!< \brief LIN break detection length */
 				using ADDM7 	= reg_t<rw_t, 0X40013804, 4, 1>;	 /*!< \brief 7-bit Address Detection/4-bit Address Detection */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40013804, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief Control register 3
@@ -3700,6 +3879,7 @@ namespace STM32LIB{
 				using IREN 	= reg_t<rw_t, 0X40013808, 1, 1>;	 /*!< \brief IrDA mode enable */
 				using EIE 	= reg_t<rw_t, 0X40013808, 0, 1>;	 /*!< \brief Error interrupt enable */
 			};
+			using CR3_D 	= reg_t<rw_t, 0X40013808, 0, 32>;	 /*!< \brief CR3 register direct access */
 
 			/*!
 			\brief Baud rate register
@@ -3708,6 +3888,7 @@ namespace STM32LIB{
 				using DIV_Mantissa 	= reg_t<rw_t, 0X4001380C, 4, 12>;	 /*!< \brief mantissa of USARTDIV */
 				using DIV_Fraction 	= reg_t<rw_t, 0X4001380C, 0, 4>;	 /*!< \brief fraction of USARTDIV */
 			};
+			using BRR_D 	= reg_t<rw_t, 0X4001380C, 0, 32>;	 /*!< \brief BRR register direct access */
 
 			/*!
 			\brief Guard time and prescaler register
@@ -3716,6 +3897,7 @@ namespace STM32LIB{
 				using GT 	= reg_t<rw_t, 0X40013810, 8, 8>;	 /*!< \brief Guard time value */
 				using PSC 	= reg_t<rw_t, 0X40013810, 0, 8>;	 /*!< \brief Prescaler value */
 			};
+			using GTPR_D 	= reg_t<rw_t, 0X40013810, 0, 32>;	 /*!< \brief GTPR register direct access */
 
 			/*!
 			\brief Receiver timeout register
@@ -3724,6 +3906,7 @@ namespace STM32LIB{
 				using BLEN 	= reg_t<rw_t, 0X40013814, 24, 8>;	 /*!< \brief Block Length */
 				using RTO 	= reg_t<rw_t, 0X40013814, 0, 24>;	 /*!< \brief Receiver timeout value */
 			};
+			using RTOR_D 	= reg_t<rw_t, 0X40013814, 0, 32>;	 /*!< \brief RTOR register direct access */
 
 			/*!
 			\brief Request register
@@ -3735,6 +3918,7 @@ namespace STM32LIB{
 				using SBKRQ 	= reg_t<rw_t, 0X40013818, 1, 1>;	 /*!< \brief Send break request */
 				using ABRRQ 	= reg_t<rw_t, 0X40013818, 0, 1>;	 /*!< \brief Auto baud rate request */
 			};
+			using RQR_D 	= reg_t<rw_t, 0X40013818, 0, 32>;	 /*!< \brief RQR register direct access */
 
 			/*!
 			\brief Interrupt & status register
@@ -3763,6 +3947,7 @@ namespace STM32LIB{
 				using FE 	= reg_t<ro_t, 0X4001381C, 1, 1>;	 /*!< \brief Framing error */
 				using PE 	= reg_t<ro_t, 0X4001381C, 0, 1>;	 /*!< \brief Parity error */
 			};
+			using ISR_D 	= reg_t<ro_t, 0X4001381C, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief Interrupt flag clear register
@@ -3781,6 +3966,7 @@ namespace STM32LIB{
 				using FECF 	= reg_t<rw_t, 0X40013820, 1, 1>;	 /*!< \brief Framing error clear flag */
 				using PECF 	= reg_t<rw_t, 0X40013820, 0, 1>;	 /*!< \brief Parity error clear flag */
 			};
+			using ICR_D 	= reg_t<rw_t, 0X40013820, 0, 32>;	 /*!< \brief ICR register direct access */
 
 			/*!
 			\brief Receive data register
@@ -3825,6 +4011,7 @@ namespace STM32LIB{
 				using EOBIE 	= reg_t<rw_t, 0X40004400, 27, 1>;	 /*!< \brief End of Block interrupt enable */
 				using M1 	= reg_t<rw_t, 0X40004400, 28, 1>;	 /*!< \brief Word length */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40004400, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief Control register 2
@@ -3850,6 +4037,7 @@ namespace STM32LIB{
 				using LBDL 	= reg_t<rw_t, 0X40004404, 5, 1>;	 /*!< \brief LIN break detection length */
 				using ADDM7 	= reg_t<rw_t, 0X40004404, 4, 1>;	 /*!< \brief 7-bit Address Detection/4-bit Address Detection */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40004404, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief Control register 3
@@ -3875,6 +4063,7 @@ namespace STM32LIB{
 				using IREN 	= reg_t<rw_t, 0X40004408, 1, 1>;	 /*!< \brief IrDA mode enable */
 				using EIE 	= reg_t<rw_t, 0X40004408, 0, 1>;	 /*!< \brief Error interrupt enable */
 			};
+			using CR3_D 	= reg_t<rw_t, 0X40004408, 0, 32>;	 /*!< \brief CR3 register direct access */
 
 			/*!
 			\brief Baud rate register
@@ -3883,6 +4072,7 @@ namespace STM32LIB{
 				using DIV_Mantissa 	= reg_t<rw_t, 0X4000440C, 4, 12>;	 /*!< \brief mantissa of USARTDIV */
 				using DIV_Fraction 	= reg_t<rw_t, 0X4000440C, 0, 4>;	 /*!< \brief fraction of USARTDIV */
 			};
+			using BRR_D 	= reg_t<rw_t, 0X4000440C, 0, 32>;	 /*!< \brief BRR register direct access */
 
 			/*!
 			\brief Guard time and prescaler register
@@ -3891,6 +4081,7 @@ namespace STM32LIB{
 				using GT 	= reg_t<rw_t, 0X40004410, 8, 8>;	 /*!< \brief Guard time value */
 				using PSC 	= reg_t<rw_t, 0X40004410, 0, 8>;	 /*!< \brief Prescaler value */
 			};
+			using GTPR_D 	= reg_t<rw_t, 0X40004410, 0, 32>;	 /*!< \brief GTPR register direct access */
 
 			/*!
 			\brief Receiver timeout register
@@ -3899,6 +4090,7 @@ namespace STM32LIB{
 				using BLEN 	= reg_t<rw_t, 0X40004414, 24, 8>;	 /*!< \brief Block Length */
 				using RTO 	= reg_t<rw_t, 0X40004414, 0, 24>;	 /*!< \brief Receiver timeout value */
 			};
+			using RTOR_D 	= reg_t<rw_t, 0X40004414, 0, 32>;	 /*!< \brief RTOR register direct access */
 
 			/*!
 			\brief Request register
@@ -3910,6 +4102,7 @@ namespace STM32LIB{
 				using SBKRQ 	= reg_t<rw_t, 0X40004418, 1, 1>;	 /*!< \brief Send break request */
 				using ABRRQ 	= reg_t<rw_t, 0X40004418, 0, 1>;	 /*!< \brief Auto baud rate request */
 			};
+			using RQR_D 	= reg_t<rw_t, 0X40004418, 0, 32>;	 /*!< \brief RQR register direct access */
 
 			/*!
 			\brief Interrupt & status register
@@ -3938,6 +4131,7 @@ namespace STM32LIB{
 				using FE 	= reg_t<ro_t, 0X4000441C, 1, 1>;	 /*!< \brief Framing error */
 				using PE 	= reg_t<ro_t, 0X4000441C, 0, 1>;	 /*!< \brief Parity error */
 			};
+			using ISR_D 	= reg_t<ro_t, 0X4000441C, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief Interrupt flag clear register
@@ -3956,6 +4150,7 @@ namespace STM32LIB{
 				using FECF 	= reg_t<rw_t, 0X40004420, 1, 1>;	 /*!< \brief Framing error clear flag */
 				using PECF 	= reg_t<rw_t, 0X40004420, 0, 1>;	 /*!< \brief Parity error clear flag */
 			};
+			using ICR_D 	= reg_t<rw_t, 0X40004420, 0, 32>;	 /*!< \brief ICR register direct access */
 
 			/*!
 			\brief Receive data register
@@ -3985,6 +4180,7 @@ namespace STM32LIB{
 				using ST 	= reg_t<rw_t, 0X40002800, 4, 3>;	 /*!< \brief Second tens in BCD format */
 				using SU 	= reg_t<rw_t, 0X40002800, 0, 4>;	 /*!< \brief Second units in BCD format */
 			};
+			using TR_D 	= reg_t<rw_t, 0X40002800, 0, 32>;	 /*!< \brief TR register direct access */
 
 			/*!
 			\brief date register
@@ -3998,6 +4194,7 @@ namespace STM32LIB{
 				using DT 	= reg_t<rw_t, 0X40002804, 4, 2>;	 /*!< \brief Date tens in BCD format */
 				using DU 	= reg_t<rw_t, 0X40002804, 0, 4>;	 /*!< \brief Date units in BCD format */
 			};
+			using DR_D 	= reg_t<rw_t, 0X40002804, 0, 32>;	 /*!< \brief DR register direct access */
 
 			/*!
 			\brief control register
@@ -4019,6 +4216,7 @@ namespace STM32LIB{
 				using OSEL 	= reg_t<rw_t, 0X40002808, 21, 2>;	 /*!< \brief Output selection */
 				using COE 	= reg_t<rw_t, 0X40002808, 23, 1>;	 /*!< \brief Calibration output enable */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40002808, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief initialization and status register
@@ -4037,6 +4235,7 @@ namespace STM32LIB{
 				using TAMP2F 	= reg_t<rw_t, 0X4000280C, 14, 1>;	 /*!< \brief RTC_TAMP2 detection flag */
 				using RECALPF 	= reg_t<ro_t, 0X4000280C, 16, 1>;	 /*!< \brief Recalibration pending Flag */
 			};
+			using ISR_D 	= reg_t<ro_t, 0X4000280C, 0, 32>;	 /*!< \brief ISR register direct access */
 
 			/*!
 			\brief prescaler register
@@ -4045,6 +4244,7 @@ namespace STM32LIB{
 				using PREDIV_A 	= reg_t<rw_t, 0X40002810, 16, 7>;	 /*!< \brief Asynchronous prescaler factor */
 				using PREDIV_S 	= reg_t<rw_t, 0X40002810, 0, 15>;	 /*!< \brief Synchronous prescaler factor */
 			};
+			using PRER_D 	= reg_t<rw_t, 0X40002810, 0, 32>;	 /*!< \brief PRER register direct access */
 
 			/*!
 			\brief alarm A register
@@ -4065,6 +4265,7 @@ namespace STM32LIB{
 				using ST 	= reg_t<rw_t, 0X4000281C, 4, 3>;	 /*!< \brief Second tens in BCD format. */
 				using SU 	= reg_t<rw_t, 0X4000281C, 0, 4>;	 /*!< \brief Second units in BCD format. */
 			};
+			using ALRMAR_D 	= reg_t<rw_t, 0X4000281C, 0, 32>;	 /*!< \brief ALRMAR register direct access */
 
 			/*!
 			\brief write protection register
@@ -4087,6 +4288,7 @@ namespace STM32LIB{
 				using ADD1S 	= reg_t<wo_t, 0X4000282C, 31, 1>;	 /*!< \brief Reserved */
 				using SUBFS 	= reg_t<wo_t, 0X4000282C, 0, 15>;	 /*!< \brief Subtract a fraction of a second */
 			};
+			using SHIFTR_D 	= reg_t<wo_t, 0X4000282C, 0, 32>;	 /*!< \brief SHIFTR register direct access */
 
 			/*!
 			\brief timestamp time register
@@ -4100,6 +4302,7 @@ namespace STM32LIB{
 				using ST 	= reg_t<ro_t, 0X40002830, 4, 3>;	 /*!< \brief Second tens in BCD format. */
 				using SU 	= reg_t<ro_t, 0X40002830, 0, 4>;	 /*!< \brief Second units in BCD format. */
 			};
+			using TSTR_D 	= reg_t<ro_t, 0X40002830, 0, 32>;	 /*!< \brief TSTR register direct access */
 
 			/*!
 			\brief timestamp date register
@@ -4111,6 +4314,7 @@ namespace STM32LIB{
 				using DT 	= reg_t<ro_t, 0X40002834, 4, 2>;	 /*!< \brief Date tens in BCD format */
 				using DU 	= reg_t<ro_t, 0X40002834, 0, 4>;	 /*!< \brief Date units in BCD format */
 			};
+			using TSDR_D 	= reg_t<ro_t, 0X40002834, 0, 32>;	 /*!< \brief TSDR register direct access */
 
 			/*!
 			\brief time-stamp sub second register
@@ -4128,6 +4332,7 @@ namespace STM32LIB{
 				using CALW16 	= reg_t<rw_t, 0X4000283C, 13, 1>;	 /*!< \brief Reserved */
 				using CALM 	= reg_t<rw_t, 0X4000283C, 0, 9>;	 /*!< \brief Calibration minus */
 			};
+			using CALR_D 	= reg_t<rw_t, 0X4000283C, 0, 32>;	 /*!< \brief CALR register direct access */
 
 			/*!
 			\brief tamper and alternate function configuration register
@@ -4150,6 +4355,7 @@ namespace STM32LIB{
 				using TAMP1TRG 	= reg_t<rw_t, 0X40002840, 1, 1>;	 /*!< \brief Active level for RTC_TAMP1 input */
 				using TAMP1E 	= reg_t<rw_t, 0X40002840, 0, 1>;	 /*!< \brief RTC_TAMP1 input detection enable */
 			};
+			using TAFCR_D 	= reg_t<rw_t, 0X40002840, 0, 32>;	 /*!< \brief TAFCR register direct access */
 
 			/*!
 			\brief alarm A sub second register
@@ -4158,6 +4364,7 @@ namespace STM32LIB{
 				using MASKSS 	= reg_t<rw_t, 0X40002844, 24, 4>;	 /*!< \brief Mask the most-significant bits starting at this bit */
 				using SS 	= reg_t<rw_t, 0X40002844, 0, 15>;	 /*!< \brief Sub seconds value */
 			};
+			using ALRMASSR_D 	= reg_t<rw_t, 0X40002844, 0, 32>;	 /*!< \brief ALRMASSR register direct access */
 
 			/*!
 			\brief backup register
@@ -4211,6 +4418,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40014000, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40014000, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40014000, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -4224,6 +4432,7 @@ namespace STM32LIB{
 				using CCUS 	= reg_t<rw_t, 0X40014004, 2, 1>;	 /*!< \brief Capture/compare control update selection */
 				using CCPC 	= reg_t<rw_t, 0X40014004, 0, 1>;	 /*!< \brief Capture/compare preloaded control */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40014004, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief slave mode control register
@@ -4233,6 +4442,7 @@ namespace STM32LIB{
 				using TS 	= reg_t<rw_t, 0X40014008, 4, 3>;	 /*!< \brief Trigger selection */
 				using SMS 	= reg_t<rw_t, 0X40014008, 0, 3>;	 /*!< \brief Slave mode selection */
 			};
+			using SMCR_D 	= reg_t<rw_t, 0X40014008, 0, 32>;	 /*!< \brief SMCR register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -4249,6 +4459,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X4001400C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X4001400C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4001400C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -4263,6 +4474,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40014010, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40014010, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40014010, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -4275,6 +4487,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40014014, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40014014, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40014014, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -4289,6 +4502,7 @@ namespace STM32LIB{
 				using OC1FE 	= reg_t<rw_t, 0X40014018, 2, 1>;	 /*!< \brief Output Compare 1 fast enable */
 				using CC1S 	= reg_t<rw_t, 0X40014018, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40014018, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (input mode)
@@ -4301,6 +4515,7 @@ namespace STM32LIB{
 				using IC1PSC 	= reg_t<rw_t, 0X40014018, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40014018, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40014018, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -4314,6 +4529,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40014020, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40014020, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40014020, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -4360,6 +4576,7 @@ namespace STM32LIB{
 				using LOCK 	= reg_t<rw_t, 0X40014044, 8, 2>;	 /*!< \brief Lock configuration */
 				using DTG 	= reg_t<rw_t, 0X40014044, 0, 8>;	 /*!< \brief Dead-time generator setup */
 			};
+			using BDTR_D 	= reg_t<rw_t, 0X40014044, 0, 32>;	 /*!< \brief BDTR register direct access */
 
 			/*!
 			\brief DMA control register
@@ -4368,6 +4585,7 @@ namespace STM32LIB{
 				using DBL 	= reg_t<rw_t, 0X40014048, 8, 5>;	 /*!< \brief DMA burst length */
 				using DBA 	= reg_t<rw_t, 0X40014048, 0, 5>;	 /*!< \brief DMA base address */
 			};
+			using DCR_D 	= reg_t<rw_t, 0X40014048, 0, 32>;	 /*!< \brief DCR register direct access */
 
 			/*!
 			\brief DMA address for full transfer
@@ -4393,6 +4611,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40014400, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40014400, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40014400, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -4404,6 +4623,7 @@ namespace STM32LIB{
 				using CCUS 	= reg_t<rw_t, 0X40014404, 2, 1>;	 /*!< \brief Capture/compare control update selection */
 				using CCPC 	= reg_t<rw_t, 0X40014404, 0, 1>;	 /*!< \brief Capture/compare preloaded control */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40014404, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -4418,6 +4638,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X4001440C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X4001440C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4001440C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -4430,6 +4651,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40014410, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40014410, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40014410, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -4441,6 +4663,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40014414, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40014414, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40014414, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -4451,6 +4674,7 @@ namespace STM32LIB{
 				using OC1FE 	= reg_t<rw_t, 0X40014418, 2, 1>;	 /*!< \brief Output Compare 1 fast enable */
 				using CC1S 	= reg_t<rw_t, 0X40014418, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40014418, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (input mode)
@@ -4460,6 +4684,7 @@ namespace STM32LIB{
 				using IC1PSC 	= reg_t<rw_t, 0X40014418, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40014418, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40014418, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -4470,6 +4695,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40014420, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40014420, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40014420, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -4511,6 +4737,7 @@ namespace STM32LIB{
 				using LOCK 	= reg_t<rw_t, 0X40014444, 8, 2>;	 /*!< \brief Lock configuration */
 				using DTG 	= reg_t<rw_t, 0X40014444, 0, 8>;	 /*!< \brief Dead-time generator setup */
 			};
+			using BDTR_D 	= reg_t<rw_t, 0X40014444, 0, 32>;	 /*!< \brief BDTR register direct access */
 
 			/*!
 			\brief DMA control register
@@ -4519,6 +4746,7 @@ namespace STM32LIB{
 				using DBL 	= reg_t<rw_t, 0X40014448, 8, 5>;	 /*!< \brief DMA burst length */
 				using DBA 	= reg_t<rw_t, 0X40014448, 0, 5>;	 /*!< \brief DMA base address */
 			};
+			using DCR_D 	= reg_t<rw_t, 0X40014448, 0, 32>;	 /*!< \brief DCR register direct access */
 
 			/*!
 			\brief DMA address for full transfer
@@ -4545,6 +4773,7 @@ namespace STM32LIB{
 				using UDIS 	= reg_t<rw_t, 0X40014800, 1, 1>;	 /*!< \brief Update disable */
 				using CEN 	= reg_t<rw_t, 0X40014800, 0, 1>;	 /*!< \brief Counter enable */
 			};
+			using CR1_D 	= reg_t<rw_t, 0X40014800, 0, 32>;	 /*!< \brief CR1 register direct access */
 
 			/*!
 			\brief control register 2
@@ -4556,6 +4785,7 @@ namespace STM32LIB{
 				using CCUS 	= reg_t<rw_t, 0X40014804, 2, 1>;	 /*!< \brief Capture/compare control update selection */
 				using CCPC 	= reg_t<rw_t, 0X40014804, 0, 1>;	 /*!< \brief Capture/compare preloaded control */
 			};
+			using CR2_D 	= reg_t<rw_t, 0X40014804, 0, 32>;	 /*!< \brief CR2 register direct access */
 
 			/*!
 			\brief DMA/Interrupt enable register
@@ -4570,6 +4800,7 @@ namespace STM32LIB{
 				using CC1IE 	= reg_t<rw_t, 0X4001480C, 1, 1>;	 /*!< \brief Capture/Compare 1 interrupt enable */
 				using UIE 	= reg_t<rw_t, 0X4001480C, 0, 1>;	 /*!< \brief Update interrupt enable */
 			};
+			using DIER_D 	= reg_t<rw_t, 0X4001480C, 0, 32>;	 /*!< \brief DIER register direct access */
 
 			/*!
 			\brief status register
@@ -4582,6 +4813,7 @@ namespace STM32LIB{
 				using CC1IF 	= reg_t<rw_t, 0X40014810, 1, 1>;	 /*!< \brief Capture/compare 1 interrupt flag */
 				using UIF 	= reg_t<rw_t, 0X40014810, 0, 1>;	 /*!< \brief Update interrupt flag */
 			};
+			using SR_D 	= reg_t<rw_t, 0X40014810, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief event generation register
@@ -4593,6 +4825,7 @@ namespace STM32LIB{
 				using CC1G 	= reg_t<wo_t, 0X40014814, 1, 1>;	 /*!< \brief Capture/compare 1 generation */
 				using UG 	= reg_t<wo_t, 0X40014814, 0, 1>;	 /*!< \brief Update generation */
 			};
+			using EGR_D 	= reg_t<wo_t, 0X40014814, 0, 32>;	 /*!< \brief EGR register direct access */
 
 			/*!
 			\brief capture/compare mode register (output mode)
@@ -4603,6 +4836,7 @@ namespace STM32LIB{
 				using OC1FE 	= reg_t<rw_t, 0X40014818, 2, 1>;	 /*!< \brief Output Compare 1 fast enable */
 				using CC1S 	= reg_t<rw_t, 0X40014818, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Output_D 	= reg_t<rw_t, 0X40014818, 0, 32>;	 /*!< \brief CCMR1_Output register direct access */
 
 			/*!
 			\brief capture/compare mode register 1 (input mode)
@@ -4612,6 +4846,7 @@ namespace STM32LIB{
 				using IC1PSC 	= reg_t<rw_t, 0X40014818, 2, 2>;	 /*!< \brief Input capture 1 prescaler */
 				using CC1S 	= reg_t<rw_t, 0X40014818, 0, 2>;	 /*!< \brief Capture/Compare 1 selection */
 			};
+			using CCMR1_Input_D 	= reg_t<rw_t, 0X40014818, 0, 32>;	 /*!< \brief CCMR1_Input register direct access */
 
 			/*!
 			\brief capture/compare enable register
@@ -4622,6 +4857,7 @@ namespace STM32LIB{
 				using CC1P 	= reg_t<rw_t, 0X40014820, 1, 1>;	 /*!< \brief Capture/Compare 1 output Polarity */
 				using CC1E 	= reg_t<rw_t, 0X40014820, 0, 1>;	 /*!< \brief Capture/Compare 1 output enable */
 			};
+			using CCER_D 	= reg_t<rw_t, 0X40014820, 0, 32>;	 /*!< \brief CCER register direct access */
 
 			/*!
 			\brief counter
@@ -4663,6 +4899,7 @@ namespace STM32LIB{
 				using LOCK 	= reg_t<rw_t, 0X40014844, 8, 2>;	 /*!< \brief Lock configuration */
 				using DTG 	= reg_t<rw_t, 0X40014844, 0, 8>;	 /*!< \brief Dead-time generator setup */
 			};
+			using BDTR_D 	= reg_t<rw_t, 0X40014844, 0, 32>;	 /*!< \brief BDTR register direct access */
 
 			/*!
 			\brief DMA control register
@@ -4671,6 +4908,7 @@ namespace STM32LIB{
 				using DBL 	= reg_t<rw_t, 0X40014848, 8, 5>;	 /*!< \brief DMA burst length */
 				using DBA 	= reg_t<rw_t, 0X40014848, 0, 5>;	 /*!< \brief DMA base address */
 			};
+			using DCR_D 	= reg_t<rw_t, 0X40014848, 0, 32>;	 /*!< \brief DCR register direct access */
 
 			/*!
 			\brief DMA address for full transfer
@@ -4693,6 +4931,7 @@ namespace STM32LIB{
 				using PRFTBE 	= reg_t<rw_t, 0X40022000, 4, 1>;	 /*!< \brief PRFTBE */
 				using PRFTBS 	= reg_t<ro_t, 0X40022000, 5, 1>;	 /*!< \brief PRFTBS */
 			};
+			using ACR_D 	= reg_t<ro_t, 0X40022000, 0, 32>;	 /*!< \brief ACR register direct access */
 
 			/*!
 			\brief Flash key register
@@ -4715,6 +4954,7 @@ namespace STM32LIB{
 				using PGERR 	= reg_t<rw_t, 0X4002200C, 2, 1>;	 /*!< \brief Programming error */
 				using BSY 	= reg_t<ro_t, 0X4002200C, 0, 1>;	 /*!< \brief Busy */
 			};
+			using SR_D 	= reg_t<ro_t, 0X4002200C, 0, 32>;	 /*!< \brief SR register direct access */
 
 			/*!
 			\brief Flash control register
@@ -4732,6 +4972,7 @@ namespace STM32LIB{
 				using PER 	= reg_t<rw_t, 0X40022010, 1, 1>;	 /*!< \brief Page erase */
 				using PG 	= reg_t<rw_t, 0X40022010, 0, 1>;	 /*!< \brief Programming */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40022010, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief Flash address register
@@ -4755,6 +4996,7 @@ namespace STM32LIB{
 				using LEVEL1_PROT 	= reg_t<ro_t, 0X4002201C, 1, 1>;	 /*!< \brief Level 1 protection status */
 				using OPTERR 	= reg_t<ro_t, 0X4002201C, 0, 1>;	 /*!< \brief Option byte error */
 			};
+			using OBR_D 	= reg_t<ro_t, 0X4002201C, 0, 32>;	 /*!< \brief OBR register direct access */
 
 			/*!
 			\brief Write protection register
@@ -4777,6 +5019,7 @@ namespace STM32LIB{
 				using DIV_ID 	= reg_t<ro_t, 0X40015800, 12, 4>;	 /*!< \brief Division Identifier */
 				using REV_ID 	= reg_t<ro_t, 0X40015800, 16, 16>;	 /*!< \brief Revision Identifier */
 			};
+			using IDCODE_D 	= reg_t<ro_t, 0X40015800, 0, 32>;	 /*!< \brief IDCODE register direct access */
 
 			/*!
 			\brief Debug MCU Configuration Register
@@ -4785,6 +5028,7 @@ namespace STM32LIB{
 				using DBG_STOP 	= reg_t<rw_t, 0X40015804, 1, 1>;	 /*!< \brief Debug Stop Mode */
 				using DBG_STANDBY 	= reg_t<rw_t, 0X40015804, 2, 1>;	 /*!< \brief Debug Standby Mode */
 			};
+			using CR_D 	= reg_t<rw_t, 0X40015804, 0, 32>;	 /*!< \brief CR register direct access */
 
 			/*!
 			\brief APB Low Freeze Register
@@ -4799,6 +5043,7 @@ namespace STM32LIB{
 				using DBG_IWDG_STOP 	= reg_t<rw_t, 0X40015808, 12, 1>;	 /*!< \brief Debug Independent Wachdog stopped when Core is halted */
 				using I2C1_SMBUS_TIMEOUT 	= reg_t<rw_t, 0X40015808, 21, 1>;	 /*!< \brief SMBUS timeout mode stopped when Core is halted */
 			};
+			using APBLFZ_D 	= reg_t<rw_t, 0X40015808, 0, 32>;	 /*!< \brief APBLFZ register direct access */
 
 			/*!
 			\brief APB High Freeze Register
@@ -4809,6 +5054,7 @@ namespace STM32LIB{
 				using DBG_TIMER16_STO 	= reg_t<rw_t, 0X4001580C, 17, 1>;	 /*!< \brief Debug Timer 16 stopped when Core is halted */
 				using DBG_TIMER17_STO 	= reg_t<rw_t, 0X4001580C, 18, 1>;	 /*!< \brief Debug Timer 17 stopped when Core is halted */
 			};
+			using APBHFZ_D 	= reg_t<rw_t, 0X4001580C, 0, 32>;	 /*!< \brief APBHFZ register direct access */
 		};
 	}
 }
