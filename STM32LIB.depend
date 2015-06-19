@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1434666783 source:c:\users\joao\documents\github\stm32lib\main.cpp
+	"Config/config.h"
+	"RCC/RCC.hpp"
+
+1434662144 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+	<stdint.h>
+	"Peripheral.h"
+	"RegisterAccess/MCU/HPP/STM32F030.hpp"
+	"stm32f0xx_conf.h"
+	<system_stm32f0xx.h>
+
+1433198312 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
+
+1434585769 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\mcu\hpp\stm32f030.hpp
+	"RegisterAccess/reg_t.hpp"
+	"RegisterAccess/rw_t.hpp"
+	"RegisterAccess/ro_t.hpp"
+	"RegisterAccess/wo_t.hpp"
+
+1432671948 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\reg_t.hpp
+	"generate_mask_t.hpp"
+	<limits>
+
+1432672085 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\generate_mask_t.hpp
+	"generate_unshifted_mask_t.hpp"
+
+1432672116 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\generate_unshifted_mask_t.hpp
+
+1432672022 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\rw_t.hpp
+	"ro_t.hpp"
+
+1432671985 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\ro_t.hpp
+
+1432672048 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\wo_t.hpp
+
+1434577863 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx_conf.h
+
+1434575402 c:\users\joao\documents\github\stm32lib\inc\system_stm32f0xx.h
+
+1434749263 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\rcc.hpp
+	"Config/config.h"
+	"RCC/RCC.hpp"
+	"RCC/RCC.hpp"
+

@@ -4,6 +4,8 @@ stm32LIB is a library that i am making to ease my work while programming the SM3
 
 I'm trying to make it generic, but my main focus is this single chip...
 
+The documentation is hosted on GitHub pages (http://joaoc.github.io/STM32LIB)
+
 Other Libraries
 ===============
 

@@ -1,21 +1,21 @@
-/*! \file STM32F030.hpp 
+/*! \file STM32F030.hpp
     \brief Register declaration for access.
     \details   Based on the work of:<br>
                https://github.com/kensmith/cortex-from-scratch <br>
                https://yogiken.files.wordpress.com/2010/02/c-register-access.pdf
 */
 // AUTHOR: JC
-#include "reg_t.hpp"
-#include "rw_t.hpp"
-#include "ro_t.hpp"
-#include "wo_t.hpp"
+#include "RegisterAccess/reg_t.hpp"
+#include "RegisterAccess/rw_t.hpp"
+#include "RegisterAccess/ro_t.hpp"
+#include "RegisterAccess/wo_t.hpp"
 
 
 namespace STM32LIB{
 	/*!
 	 namespace for storing the register declaration
 	*/
-	 namespace reg{
+	 namespace REG{
 
 
 		/*!
