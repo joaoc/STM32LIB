@@ -62,7 +62,7 @@ def write_file(chip):
                 else:
                     f.write("\t\t\t};\n")
                 if len(reg.fields) != 1:
-                     f.write("\t\t\tusing "+reg.name+"_D \t= reg_t<"+reg_opt+", "+addr+", 0, 32>;\t /*!< \\brief "+reg.name +" register direct access */\n")
+                     f.write("\t\t\tusing "+reg.name+"_D \t= reg_t<rw_t,"+addr+", 0, 32>;\t /*!< \\brief "+reg.name +" register direct access */\n")
             f.write("\t\t};\n")
         f.write("\t}\n")
         f.write("}\n")

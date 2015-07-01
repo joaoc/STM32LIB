@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBitz_project_file>
-	<EmBitzVersion release="0.40" revision="0" />
+	<EmBitzVersion release="0.31" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="STM32LIB" />
@@ -72,6 +72,9 @@
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="startup_stm32f0xx.S">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="stm32f030r8_flash.ld" />
 		<Unit filename="stm32f030r8_sram.ld" />
 		<Unit filename="stm32Lib\cmsis\arm_common_tables.h" />
@@ -87,6 +90,11 @@
 		<Unit filename="stm32Lib\HAL\Include\event\slot.h" />
 		<Unit filename="stm32Lib\HAL\Include\GPIO\GPIO.h" />
 		<Unit filename="stm32Lib\HAL\Include\Power\power.hpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\RCC\ClockSource.hpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
@@ -147,6 +155,9 @@
 			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
+		</Unit>
+		<Unit filename="system_stm32f0xx.c">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<code_completion />

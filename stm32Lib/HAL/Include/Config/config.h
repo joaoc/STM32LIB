@@ -87,6 +87,15 @@ enum PeripheralName {
     WWD                     //!< Windows WatchDog
   };
 
+enum ClockName {
+    HSI,                /**< HSI 8 MHz RC oscillator clock  */
+    HSE,                /**< HSE oscillator clock */
+    HSE_EXT,            /**< External HSE oscillator clock (HSE Bypass) */
+    PLL,                /**< PLL CLOCK */
+    LSI,                /**< 40 kHz low speed internal RC (LSI RC) which drives the independent watchdog and optionally the RTC used for Auto-wakeup from Stop/Standby mode. */
+    LSE,                /**< 32.768 kHz low speed external crystal (LSE crystal) which optionally drives the realtime clock (RTCCLK) */
+    HSI14               /**< 14 MHz high speed internal RC (HSI14) dedicated for ADC. */
+};
 
 
 #endif /* CONFIG__STM32LIB_H_INCLUDED */

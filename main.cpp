@@ -1,4 +1,5 @@
 #include "Config/config.h"
+#include "RCC/ClockSource.hpp"
 #include "RCC/RCC.hpp"
 
 using namespace STM32LIB;
