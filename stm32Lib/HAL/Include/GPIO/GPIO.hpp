@@ -1,5 +1,8 @@
+#pragma once
 #ifndef GPIO_STM32LIB_H_INCLUDED
 #define GPIO_STM32LIB_H_INCLUDED
+
+#include "Config/config.h"
 
 #define STM32_PORT(X) (((uint32_t)(X) >> 4) & 0xF)
 #define STM32_PIN(X)  ((uint32_t)(X) & 0xF)
@@ -121,7 +124,7 @@ public:
     } PinSpeed;
 
 private:
-    GPIO_TypeDef* gpioX;
+    using gpiox = STM32LIB::REG::GPIOA;
     PinName pin;
     uint16_t pin_mask; //pin mask
 
@@ -137,7 +140,24 @@ public:
      * \return
      *
      */
-    void init(PinName pin_name, PinDirection dir, PinMode mode, PinSpeed speed);
+    void init(PinName pin_name, PinDirection dir, PinMode mode, PinSpeed speed){
+        uint16_t port, pin_m;
+
+        pin=pin_name;
+        port=STM32_PORT(pin_name);
+        pin_m=1<<STM32_PIN(pin_name);
+
+        switch((PortName)port){
+        case PortA:
+                using gpioX=STM32LIB::REG::GPIOA;
+        }
+
+
+
+
+
+
+    }
 
     /** \brief Read the pin status
      *

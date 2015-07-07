@@ -1,4 +1,4 @@
-/*! \file STM32F030.hpp 
+/*! \file STM32F030.hpp
     \brief Register declaration for access.
     \details   Based on the work of:<br>
                https://github.com/kensmith/cortex-from-scratch <br>
@@ -15,7 +15,7 @@ namespace STM32LIB{
 	/*!
 	 namespace for storing the register declaration
 	*/
-	 namespace reg{
+	 namespace REG{
 
 
 		/*!

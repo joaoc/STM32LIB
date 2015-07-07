@@ -16,10 +16,6 @@
 				<Compiler>
 					<Add option="-O0" />
 					<Add option="-g2" />
-					<Add directory=".\inc" />
-					<Add directory=".\stm32Lib\cmsis" />
-					<Add directory=".\stm32Lib\HAL\Include" />
-					<Add directory=".\stm32Lib\HAL\src" />
 				</Compiler>
 				<Assembler>
 					<Add option="--gdwarf-2" />
@@ -58,6 +54,11 @@
 			<Add symbol="STM32F030R8" />
 			<Add symbol="STM32F0XX" />
 			<Add symbol="USE_STDPERIPH_DRIVER" />
+			<Add directory=".\inc" />
+			<Add directory=".\stm32Lib\cmsis" />
+			<Add directory=".\stm32Lib\HAL\Include" />
+			<Add directory=".\stm32Lib\HAL\src" />
+			<Add directory="stm32Lib\HAL\Include\RegisterAccess" />
 		</Compiler>
 		<Cpp>
 			<Add option="-fno-exceptions" />
@@ -88,7 +89,10 @@
 		<Unit filename="stm32Lib\HAL\Include\event\fd\FastDelegateBind.h" />
 		<Unit filename="stm32Lib\HAL\Include\event\signal.h" />
 		<Unit filename="stm32Lib\HAL\Include\event\slot.h" />
-		<Unit filename="stm32Lib\HAL\Include\GPIO\GPIO.h" />
+		<Unit filename="stm32Lib\HAL\Include\GPIO\GPIO.hpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Power\power.hpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
