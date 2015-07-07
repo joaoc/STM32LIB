@@ -9,6 +9,6 @@ struct ro_t
       volatile unsigned * device,
       unsigned offset,
       unsigned mask
-   )
-   { return (*device & mask) >> offset; } 
+   ) __attribute__((optimize ("O2") ))
+   { return (*device & mask) >> offset; }
 };

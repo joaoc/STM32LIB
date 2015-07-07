@@ -46,7 +46,7 @@ struct reg_t
     * Read the subregister.
     * @return the value
     */
-   static unsigned read()
+   static unsigned read() __attribute__((optimize ("Os") ))
    {
       return
          mutability_policy_t::read(
@@ -60,7 +60,7 @@ struct reg_t
     * Write a subregister.
     * @param value the new value
     */
-   static void write(unsigned value)
+   static void write(unsigned value) __attribute__((optimize ("Os") ))
    {
       mutability_policy_t::write(
          reinterpret_cast<volatile unsigned *>(address),
@@ -73,7 +73,7 @@ struct reg_t
    /**
     * Set all bits in the subregister to one.
     */
-   static void set()
+   static void set() __attribute__((optimize ("Os") ))
    {
       mutability_policy_t::set(
          reinterpret_cast<volatile unsigned *>(address),
@@ -84,7 +84,7 @@ struct reg_t
    /**
     * Clear all bits in the subregister to zero.
     */
-   static void clear()
+   static void clear() __attribute__((optimize ("Os") ))
    {
       mutability_policy_t::clear(
          reinterpret_cast<volatile unsigned *>(address),

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBitz_project_file>
-	<EmBitzVersion release="0.31" revision="0" />
+	<EmBitzVersion release="0.40" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="STM32LIB" />
@@ -28,11 +28,18 @@
 				<Option compiler="armgcc_eb" />
 				<Option projectDeviceOptionsRelation="0" />
 				<Compiler>
-					<Add option="-O2" />
-					<Add option="-g2" />
+					<Add option="-fschedule-insns2" />
+					<Add option="-fschedule-insns" />
 					<Add option="-fdata-sections" />
 					<Add option="-ffunction-sections" />
+					<Add option="-O3" />
+					<Add option="-g2" />
 				</Compiler>
+				<Cpp>
+					<Add option="-fschedule-insns2" />
+					<Add option="-fschedule-insns" />
+					<Add option="-O3" />
+				</Cpp>
 				<Linker>
 					<Add option="-Wl,--gc-sections" />
 				</Linker>
@@ -90,6 +97,7 @@
 		<Unit filename="stm32Lib\HAL\Include\event\signal.h" />
 		<Unit filename="stm32Lib\HAL\Include\event\slot.h" />
 		<Unit filename="stm32Lib\HAL\Include\GPIO\GPIO.hpp">
+			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>

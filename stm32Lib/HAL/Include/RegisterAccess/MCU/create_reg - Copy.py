@@ -20,7 +20,7 @@ def write_file(chip):
         f.write("#include \"wo_t.hpp\"\n\n\n")
         f.write("namespace STM32LIB{\n")
         f.write("\t/*!\n\t namespace for storing the register declaration\n\t*/\n")
-        f.write("\t namespace REG{\n\n")
+        f.write("\t namespace reg{\n\n")
 
         for ph in chip.Peripherals:
             if len(ph.description) != 0:
@@ -55,15 +55,14 @@ def write_file(chip):
                     bitWidth = field.bitWidth
                     addr = int(baseAddress, 16)+int(reg_addressOffset, 16)
                     addr = format(addr, '#10X')
-                    # f.write("\t\t\t\tusing "+field.name+" \t= reg_t<"+reg_opt+", "+addr+", "+bitOffset+", "+bitWidth+">;\t /*!< \\brief "+field.description +" */\n")
-                    f.write("\t\t\t\t static reg_t<"+reg_opt+", "+addr+", "+bitOffset+", "+bitWidth+"> "+field.name+" \t;\t /*!< \\brief "+field.description +" */\n")
+                    f.write("\t\t\t\tusing "+field.name+" \t= reg_t<"+reg_opt+", "+addr+", "+bitOffset+", "+bitWidth+">;\t /*!< \\brief "+field.description +" */\n")
+
                 if len(reg.fields) == 1 and reg.name == reg.fields[0].name:
                     f.write("")
                 else:
                     f.write("\t\t\t};\n")
                 if len(reg.fields) != 1:
-                     #f.write("\t\t\tusing "+reg.name+"_D \t= reg_t<rw_t,"+addr+", 0, 32>;\t /*!< \\brief "+reg.name +" register direct access */\n")
-                     f.write("\t\t\t static reg_t<rw_t,"+addr+", 0, 32> "+reg.name+"_D;\t /*!< \\brief "+reg.name +" register direct access */\n")
+                     f.write("\t\t\tusing "+reg.name+"_D \t= reg_t<rw_t,"+addr+", 0, 32>;\t /*!< \\brief "+reg.name +" register direct access */\n")
             f.write("\t\t};\n")
         f.write("\t}\n")
         f.write("}\n")

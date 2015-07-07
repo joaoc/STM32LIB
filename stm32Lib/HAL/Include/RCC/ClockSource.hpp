@@ -40,7 +40,7 @@ namespace STM32LIB{
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::I2C1SW::write(SOURCE);
+            STM32LIB::REG::RCC::CFGR3::I2C1SW.write(SOURCE);
         }
     };
 
@@ -55,7 +55,7 @@ namespace STM32LIB{
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::USART1SW::write(SOURCE);
+            STM32LIB::REG::RCC::CFGR3::USART1SW.write(SOURCE);
         }
     };
     /// \warning May not be valid. It has no documentation, but the svd file describes this...
@@ -70,7 +70,7 @@ namespace STM32LIB{
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::USART2SW::write(SOURCE);
+            STM32LIB::REG::RCC::CFGR3::USART2SW.write(SOURCE);
         }
     };
 
@@ -89,11 +89,11 @@ namespace STM32LIB{
     template<>
     struct SystemClock<HSI>{
         static void enable(){
-            STM32LIB::REG::RCC::CR::HSION::set(); //Enable the HSI Clcok
+            STM32LIB::REG::RCC::CR::HSION.set(); //Enable the HSI Clcok
             //disable all the other clocks
-            STM32LIB::REG::RCC::CR::HSEON::clear();
-            STM32LIB::REG::RCC::CR::CSSON::clear();
-            STM32LIB::REG::RCC::CR::PLLON::clear();
+            STM32LIB::REG::RCC::CR::HSEON.clear();
+            STM32LIB::REG::RCC::CR::CSSON.clear();
+            STM32LIB::REG::RCC::CR::PLLON.clear();
         }
         static void calibrate(){}
     };

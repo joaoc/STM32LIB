@@ -124,7 +124,7 @@ public:
     } PinSpeed;
 
 private:
-    using gpiox = STM32LIB::REG::GPIOA;
+    void* gpioX;
     PinName pin;
     uint16_t pin_mask; //pin mask
 
@@ -149,7 +149,13 @@ public:
 
         switch((PortName)port){
         case PortA:
-                using gpioX=STM32LIB::REG::GPIOA;
+            STM32LIB::REG::GPIOF::MODER_D.set();
+            struct STM32LIB::REG::GPIOF T;
+            T.MODER_D.set();
+            gpioX = &T;
+            //gpioX = reinterpret_cast<STM32LIB::REG::GPIOF*>(struct STM32LIB::REG::GPIOF);
+            static_cast<STM32LIB::REG::GPIOF*>(gpioX)->MODER_D.set();
+            // TO DO: CRIAR UMA STRUCT GENERICA PARA CADA TIPO DE STRUCT
         }
 
 

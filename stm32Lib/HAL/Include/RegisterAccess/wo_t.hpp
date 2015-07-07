@@ -10,12 +10,12 @@ struct wo_t
       unsigned offset,
       unsigned mask,
       unsigned value
-   )
+   ) __attribute__((optimize ("O2") ))
    { *device = ((value << offset) & mask); }
 
    static void set(
       volatile unsigned * device,
       unsigned mask
-   )
+   ) __attribute__((optimize ("O2") ))
    { *device = mask; }
 };
