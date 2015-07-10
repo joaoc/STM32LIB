@@ -14,7 +14,7 @@
 
 struct a{
         //using I2C1SW = reg_t<rw_t, 0X40021030, 4, 1>;
-        static reg_t<rw_t, 0X40021030, 4, 1> I2C1SW ;
+        //static reg_t<rw_t, 0X40021030, 4, 1> I2C1SW ;
     };
 
 struct b{
@@ -30,7 +30,7 @@ struct b{
     static reg_t<rw_t,0x0000010,1,1> BRR;
 };
 
-struct c:b{
+struct c{
     static reg_t<rw_t,0x1000000,1,1> MODER;
     static reg_t<rw_t,0x1000000,1,1> OTYPER;
     static reg_t<rw_t,0x1000000,1,1> OSPEEDR;
@@ -55,13 +55,12 @@ int main (void){
     //GPIO LED;
     //LED.init(PA_5,GPIO::PIN_OUTPUT,GPIO::PullDefault,GPIO::Slow);
 
-    struct b* pointer_b2c;
-    struct c real_c;
-    //pointer_b2c=(struct b*)(&real_c);
-    //pointer_b2c->BRR.lset();
-    real_c.BRR.lset();
-    pointer_b2c = &real_c;
-    pointer_b2c->BRR.lset();
+    void* pointer;
+    struct b real;
+
+    pointer = (struct b*) &real;
+    (struct b*)pointer->BRR.lset();
+
 
 //    struct c* pointer_c2b;
 //
