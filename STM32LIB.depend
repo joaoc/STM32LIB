@@ -1,18 +1,16 @@
 # depslib dependency file v1.0
-1436284703 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1437439500 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
-	"RCC/ClockSource.hpp"
-	"RCC/RCC.hpp"
-	"GPIO/GPIO.hpp"
+	"RCC/ClockControl.hpp"
 
-1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1437518949 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
-	"RegisterAccess/MCU/HPP/STM32F030.hpp"
 	"stm32f0xx_conf.h"
 	<system_stm32f0xx.h>
+	"stm32f0xx.h"
 
-1433198312 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
+1435688246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
 
 1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\mcu\hpp\stm32f030.hpp
 	"reg_t.hpp"
@@ -49,7 +47,7 @@
 1434223862 source:c:\users\joao\documents\github\stm32lib\system_stm32f0xx.c
 	"stm32f0xx.h"
 
-1435688246 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx.h
+1437411305 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx.h
 	"core_cm0.h"
 	"system_stm32f0xx.h"
 	<stdint.h>
@@ -72,4 +70,8 @@
 
 1436284670 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
 	"Config/config.h"
+
+1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clockcontrol.hpp
+	"Config/config.h"
+	"RCC/ClockControl.hpp"
 

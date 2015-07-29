@@ -32,35 +32,35 @@ namespace STM32LIB{
     };
 
     template<>
-    struct ClockSource<I2C1>{
+    struct ClockSource<PERIPHERAL_I2C1>{
         /// \brief Clock source
         enum _Source{
-            HSI, /**<  HSI clock selected as I2C1 clock source (default) */
-            SYSCLK /**< System clock (SYSCLK) selected as I2C1 clock */
+            HSI = 0, /**<  HSI clock selected as I2C1 clock source (default) */
+            SYSCLK = 1 /**< System clock (SYSCLK) selected as I2C1 clock */
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::I2C1SW.write(SOURCE);
+            BIT_WRITE(RCC->CFGR3,RCC_CFGR3_I2C1SW,SOURCE);
         }
     };
 
     template<>
-    struct ClockSource<USART1>{
+    struct ClockSource<PERIPHERAL_USART1>{
          /// \brief Clock source
         enum _Source{
-            PCLK,   /**<  PCLK selected as USART1 clock source (default) */
-            SYSCLK, /**< System clock (SYSCLK) selected as USART1 clock */
-            LSE,    /**<  LSE clock selected as USART1 clock */
-            HSI     /**<  HSI clock selected as USART1 clock */
+            PCLK = 0,   /**<  PCLK selected as USART1 clock source (default) */
+            SYSCLK = 1, /**< System clock (SYSCLK) selected as USART1 clock */
+            LSE = 2,    /**<  LSE clock selected as USART1 clock */
+            HSI = 3     /**<  HSI clock selected as USART1 clock */
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::USART1SW.write(SOURCE);
+            BIT_WRITE(RCC->CFGR3,RCC_CFGR3_USART1SW,SOURCE);
         }
     };
     /// \warning May not be valid. It has no documentation, but the svd file describes this...
     template<>
-    struct ClockSource<USART2>{
+    struct ClockSource<PERIPHERAL_USART2>{
          /// \brief Clock source
         enum _Source{
             PCLK,   /**<  PCLK selected as USART2 clock source (default) */
@@ -70,7 +70,7 @@ namespace STM32LIB{
         };
         template<_Source SOURCE>
         static void set(){
-            STM32LIB::REG::RCC::CFGR3::USART2SW.write(SOURCE);
+            BIT_WRITE(RCC->CFGR3,RCC_CFGR3_USART2SW,SOURCE);
         }
     };
 
@@ -89,11 +89,12 @@ namespace STM32LIB{
     template<>
     struct SystemClock<HSI>{
         static void enable(){
-            STM32LIB::REG::RCC::CR::HSION.set(); //Enable the HSI Clcok
+            //Enable the HSI Clcok
+            BIT_SET(RCC->CR, RCC_CR_HSION);
             //disable all the other clocks
-            STM32LIB::REG::RCC::CR::HSEON.clear();
-            STM32LIB::REG::RCC::CR::CSSON.clear();
-            STM32LIB::REG::RCC::CR::PLLON.clear();
+            BIT_CLEAR(RCC->CR, RCC_CR_HSEON);
+            BIT_CLEAR(RCC->CR, RCC_CR_CSSON);
+            BIT_CLEAR(RCC->CR, RCC_CR_PLLON);
         }
         static void calibrate(){}
     };

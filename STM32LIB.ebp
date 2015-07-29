@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBitz_project_file>
-	<EmBitzVersion release="0.40" revision="0" />
+	<EmBitzVersion release="0.31" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="STM32LIB" />
@@ -60,7 +60,6 @@
 			<Add option="-ffunction-sections" />
 			<Add symbol="STM32F030R8" />
 			<Add symbol="STM32F0XX" />
-			<Add symbol="USE_STDPERIPH_DRIVER" />
 			<Add directory=".\inc" />
 			<Add directory=".\stm32Lib\cmsis" />
 			<Add directory=".\stm32Lib\HAL\Include" />
@@ -106,47 +105,12 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\RCC\ClockControl.hpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\RCC\ClockSource.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RCC\RCC.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\generate_mask_t.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\generate_unshifted_mask_t.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\MCU\hpp\STM32F030.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\reg_t.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\ro_t.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\rw_t.hpp">
-			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
-		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\RegisterAccess\wo_t.hpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />

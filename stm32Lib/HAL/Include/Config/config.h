@@ -7,84 +7,106 @@
 //For the STM32F0
 #ifdef STM32F0XX
 
-#include "RegisterAccess/MCU/HPP/STM32F030.hpp"
+//#include "RegisterAccess/MCU/HPP/STM32F030.hpp"
 
 #include "stm32f0xx_conf.h"
 #include <system_stm32f0xx.h>
-//#include <stm32f0xx_gpio.h>
-//#include <stm32f0xx_rcc.h>
+#include "stm32f0xx.h"
 
 
 #endif /* STM32F0XX */
 
+
+#define BIT_GET(p,m) ((p) & (m))
+#define BIT_SET(p,m) ((p) |= (m))
+#define BIT_CLEAR(p,m) ((p) &= ~(m))
+#define BIT_TOGGLE(p,m) ((p) ^= (m))
+//#define BIT_WRITE(c,p,m) (c ? bit_set(p,m) : bit_clear(p,m))
+#define BIT_WRITE(p,m,v) ((p) = ((v << GET_OFFSET(m)) & m))
+
+constexpr static const int Mod37BitPosition[] = // map a bit value mod 37 to its position
+{
+  32, 0, 1, 26, 2, 23, 27, 0, 3, 16, 24, 30, 28, 11, 0, 13, 4,
+  7, 17, 0, 25, 22, 31, 15, 29, 10, 12, 6, 0, 21, 14, 9, 5,
+  20, 8, 19, 18
+};
+
+constexpr unsigned long BIT(uint8_t bit){
+    return (unsigned long)0x00000001 << (bit);
+}
+
+constexpr unsigned long GET_OFFSET(uint32_t mask){
+    return (Mod37BitPosition[(-mask & mask) % 37]+1);
+}
+
 enum PeripheralName {
-    ADC1,                //!< PERIPHERAL_ADC1
-    ADC2,                //!< PERIPHERAL_ADC2
-    ADC3,                //!< PERIPHERAL_ADC3
-    BACKUP,              //!< PERIPHERAL_BACKUP
-    CRC,                 //!< PERIPHERAL_CRC
-    DAC1,                //!< PERIPHERAL_DAC1
-    DAC2,                //!< PERIPHERAL_DAC2
-    DEBUG,               //!< PERIPHERAL_MCU_DEBUG
-    DMA1,                //!< PERIPHERAL_DMA1
-    DMA2,                //!< PERIPHERAL_DMA2
-    FLASH,               //!< FLASH Interface
-    FSMC,                //!< PERIPHERAL_FSMC
-    FMC,                 //!< PERIPHERAL_FMC
-    GPIOA,               //!< PERIPHERAL_GPIOA
-    GPIOB,               //!< PERIPHERAL_GPIOB
-    GPIOC,               //!< PERIPHERAL_GPIOC
-    GPIOD,               //!< PERIPHERAL_GPIOD
-    GPIOE,               //!< PERIPHERAL_GPIOE
-    GPIOF,               //!< PERIPHERAL_GPIOF
-    HASH,                //!< PERIPHERAL_HASH
-    I2C1,                //!< PERIPHERAL_I2C1
-    I2C2,                //!< PERIPHERAL_I2C2
-    I2C3,                //!< PERIPHERAL_I2C3
-    I2S2,                //!< PERIPHERAL_I2S2
-    I2S3,                //!< PERIPHERAL_I2S3
-    MAC,                 //!< PERIPHERAL_MAC
-    MAC_REMAP,           //!< PERIPHERAL_MAC_REMAP
-    OTG_FS,              //!< internal OTG FS PHY
-    OTG_HS,              //!< internal OTG HS PHY
-    POWER,               //!< PERIPHERAL_POWER
-    RNG,                 //!< PERIPHERAL_RNG
-    SDIO,                //!< PERIPHERAL_SDIO
-    SPI1,                //!< PERIPHERAL_SPI1
-    SPI1_REMAP,          //!< PERIPHERAL_SPI1_REMAP
-    SPI2,                //!< PERIPHERAL_SPI2
-    SPI3,                //!< PERIPHERAL_SPI3
-    SPI3_REMAP,          //!< PERIPHERAL_SPI3_REMAP
-    SRAM,                //!< SRAM INTERFACE
-    SYSCFG,              //!< PERIPHERAL_SYSCFG
-    TIMER1,              //!< PERIPHERAL_TIMER1
-    TIMER2,              //!< PERIPHERAL_TIMER2
-    TIMER3,              //!< PERIPHERAL_TIMER3
-    TIMER4,              //!< PERIPHERAL_TIMER4
-    TIMER5,              //!< PERIPHERAL_TIMER5
-    TIMER6,              //!< PERIPHERAL_TIMER6
-    TIMER7,              //!< PERIPHERAL_TIMER7
-    TIMER8,              //!< PERIPHERAL_TIMER8
-    TIMER9,              //!< PERIPHERAL_TIMER9
-    TIMER10,             //!< PERIPHERAL_TIMER10
-    TIMER11,             //!< PERIPHERAL_TIMER11
-    TIMER12,             //!< PERIPHERAL_TIMER12
-    TIMER13,             //!< PERIPHERAL_TIMER13
-    TIMER14,             //!< PERIPHERAL_TIMER14
-    TIMER15,             //!< PERIPHERAL_TIMER15
-    TIMER16,             //!< PERIPHERAL_TIMER16
-    TIMER17,             //!< PERIPHERAL_TIMER17
-    USART1,              //!< PERIPHERAL_USART1
-    USART1_REMAP,        //!< PERIPHERAL_USART1_REMAP
-    USART2,              //!< PERIPHERAL_USART2
-    USART2_REMAP,        //!< PERIPHERAL_USART2_REMAP
-    USART3,              //!< PERIPHERAL_USART3
-    USART3_PARTIAL_REMAP,  //!< PERIPHERAL_USART3_PARTIAL_REMAP
-    USART3_FULL_REMAP,   //!< PERIPHERAL_USART3_FULL_REMAP
-    UART4,               //!< PERIPHERAL_UART4
-    UART5,               //!< PERIPHERAL_UART5
-    USART6,               //!< PERIPHERAL_USART6
-    WWD                     //!< Windows WatchDog
+    PERIPHERAL_ADC1,                //!< PERIPHERAL_ADC1
+    PERIPHERAL_ADC2,                //!< PERIPHERAL_ADC2
+    PERIPHERAL_ADC3,                //!< PERIPHERAL_ADC3
+    PERIPHERAL_BACKUP,              //!< PERIPHERAL_BACKUP
+    PERIPHERAL_CRC,                 //!< PERIPHERAL_CRC
+    PERIPHERAL_DAC1,                //!< PERIPHERAL_DAC1
+    PERIPHERAL_DAC2,                //!< PERIPHERAL_DAC2
+    PERIPHERAL_DEBUG,               //!< PERIPHERAL_MCU_DEBUG
+    PERIPHERAL_DMA1,                //!< PERIPHERAL_DMA1
+    PERIPHERAL_DMA2,                //!< PERIPHERAL_DMA2
+    PERIPHERAL_FLASH,               //!< FLASH Interface
+    PERIPHERAL_FSMC,                //!< PERIPHERAL_FSMC
+    PERIPHERAL_FMC,                 //!< PERIPHERAL_FMC
+    PERIPHERAL_GPIOA,               //!< PERIPHERAL_GPIOA
+    PERIPHERAL_GPIOB,               //!< PERIPHERAL_GPIOB
+    PERIPHERAL_GPIOC,               //!< PERIPHERAL_GPIOC
+    PERIPHERAL_GPIOD,               //!< PERIPHERAL_GPIOD
+    PERIPHERAL_GPIOE,               //!< PERIPHERAL_GPIOE
+    PERIPHERAL_GPIOF,               //!< PERIPHERAL_GPIOF
+    PERIPHERAL_HASH,                //!< PERIPHERAL_HASH
+    PERIPHERAL_I2C1,                //!< PERIPHERAL_I2C1
+    PERIPHERAL_I2C2,                //!< PERIPHERAL_I2C2
+    PERIPHERAL_I2C3,                //!< PERIPHERAL_I2C3
+    PERIPHERAL_I2S2,                //!< PERIPHERAL_I2S2
+    PERIPHERAL_I2S3,                //!< PERIPHERAL_I2S3
+    PERIPHERAL_MAC,                 //!< PERIPHERAL_MAC
+    PERIPHERAL_MAC_REMAP,           //!< PERIPHERAL_MAC_REMAP
+    PERIPHERAL_OTG_FS,              //!< internal OTG FS PHY
+    PERIPHERAL_OTG_HS,              //!< internal OTG HS PHY
+    PERIPHERAL_POWER,               //!< PERIPHERAL_POWER
+    PERIPHERAL_RNG,                 //!< PERIPHERAL_RNG
+    PERIPHERAL_SDIO,                //!< PERIPHERAL_SDIO
+    PERIPHERAL_SPI1,                //!< PERIPHERAL_SPI1
+    PERIPHERAL_SPI1_REMAP,          //!< PERIPHERAL_SPI1_REMAP
+    PERIPHERAL_SPI2,                //!< PERIPHERAL_SPI2
+    PERIPHERAL_SPI3,                //!< PERIPHERAL_SPI3
+    PERIPHERAL_SPI3_REMAP,          //!< PERIPHERAL_SPI3_REMAP
+    PERIPHERAL_SRAM,                //!< SRAM INTERFACE
+    PERIPHERAL_SYSCFG,              //!< PERIPHERAL_SYSCFG
+    PERIPHERAL_TIMER1,              //!< PERIPHERAL_TIMER1
+    PERIPHERAL_TIMER2,              //!< PERIPHERAL_TIMER2
+    PERIPHERAL_TIMER3,              //!< PERIPHERAL_TIMER3
+    PERIPHERAL_TIMER4,              //!< PERIPHERAL_TIMER4
+    PERIPHERAL_TIMER5,              //!< PERIPHERAL_TIMER5
+    PERIPHERAL_TIMER6,              //!< PERIPHERAL_TIMER6
+    PERIPHERAL_TIMER7,              //!< PERIPHERAL_TIMER7
+    PERIPHERAL_TIMER8,              //!< PERIPHERAL_TIMER8
+    PERIPHERAL_TIMER9,              //!< PERIPHERAL_TIMER9
+    PERIPHERAL_TIMER10,             //!< PERIPHERAL_TIMER10
+    PERIPHERAL_TIMER11,             //!< PERIPHERAL_TIMER11
+    PERIPHERAL_TIMER12,             //!< PERIPHERAL_TIMER12
+    PERIPHERAL_TIMER13,             //!< PERIPHERAL_TIMER13
+    PERIPHERAL_TIMER14,             //!< PERIPHERAL_TIMER14
+    PERIPHERAL_TIMER15,             //!< PERIPHERAL_TIMER15
+    PERIPHERAL_TIMER16,             //!< PERIPHERAL_TIMER16
+    PERIPHERAL_TIMER17,             //!< PERIPHERAL_TIMER17
+    PERIPHERAL_USART1,              //!< PERIPHERAL_USART1
+    PERIPHERAL_USART1_REMAP,        //!< PERIPHERAL_USART1_REMAP
+    PERIPHERAL_USART2,              //!< PERIPHERAL_USART2
+    PERIPHERAL_USART2_REMAP,        //!< PERIPHERAL_USART2_REMAP
+    PERIPHERAL_USART3,              //!< PERIPHERAL_USART3
+    PERIPHERAL_USART3_PARTIAL_REMAP,  //!< PERIPHERAL_USART3_PARTIAL_REMAP
+    PERIPHERAL_USART3_FULL_REMAP,   //!< PERIPHERAL_USART3_FULL_REMAP
+    PERIPHERAL_UART4,               //!< PERIPHERAL_UART4
+    PERIPHERAL_UART5,               //!< PERIPHERAL_UART5
+    PERIPHERAL_USART6,               //!< PERIPHERAL_USART6
+    PERIPHERAL_WWD                     //!< Windows WatchDog
   };
 
 enum ClockName {

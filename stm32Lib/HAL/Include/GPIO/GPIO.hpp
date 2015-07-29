@@ -4,8 +4,6 @@
 
 #include "Config/config.h"
 
-#define STM32_PORT(X) (((uint32_t)(X) >> 4) & 0xF)
-#define STM32_PIN(X)  ((uint32_t)(X) & 0xF)
 
 namespace STM32LIB{
 /**
@@ -73,6 +71,15 @@ namespace STM32LIB{
         PF_7  = 0x57
     } PinName;
 
+    constexpr uint32_t STM32_PORT(PinName Pin){
+        return(((uint32_t)(Pin) >> 4) & 0xF);
+    }
+
+    constexpr uint32_t STM32_PIN(PinName Pin){
+        return(((uint32_t)(Pin) & 0xF));
+    }
+
+
 /** \brief GPIO Access class.
  *
  *  usage:
@@ -85,12 +92,14 @@ namespace STM32LIB{
 class GPIO{
 public:
     /**
-    *   Pin Direction
+    *   Pin Function
     */
     typedef enum{
         PIN_INPUT = 0x00,
-        PIN_OUTPUT = 0x01
-    } PinDirection;
+        PIN_OUTPUT = 0x01,
+        PIN_ALTERNATE = 0x02,
+        PIN_ANALOG = 0x03
+    } PinFunction;
 
     /**
     *   Pin Mode
@@ -124,45 +133,60 @@ public:
     } PinSpeed;
 
 private:
-    void* gpioX;
+    GPIO_TypeDef* gpioX;
     PinName pin;
     uint16_t pin_mask; //pin mask
-
 
 public:
 
     /** \brief GPIO initiation function
      *  \details Initiates a specific pin, enabling the peripheral clock and setting it's properties
      * \param pin_name The chip pin name
-     * \param dir The direction (input/output)
+     * \param func The function of the pin (one of the PinFunction)
      * \param mode The Pullup/Pulldown/OpenDrain of  the pin
      * \param speed The pin speed (more speed = more energy)
      * \return
      *
      */
-    void init(PinName pin_name, PinDirection dir, PinMode mode, PinSpeed speed){
-        uint16_t port, pin_m;
+    void init(PinName pin_name, PinFunction func, PinMode mode, PinSpeed speed){
+        uint16_t port,pin;
 
-        pin=pin_name;
+        this->pin=pin_name;
+
         port=STM32_PORT(pin_name);
-        pin_m=1<<STM32_PIN(pin_name);
+        pin=1<<STM32_PIN(pin_name);
+        this->pin_mask=pin;
 
         switch((PortName)port){
-        case PortA:
-            STM32LIB::REG::GPIOF::MODER_D.set();
-            struct STM32LIB::REG::GPIOF T;
-            T.MODER_D.set();
-            gpioX = &T;
-            //gpioX = reinterpret_cast<STM32LIB::REG::GPIOF*>(struct STM32LIB::REG::GPIOF);
-            static_cast<STM32LIB::REG::GPIOF*>(gpioX)->MODER_D.set();
-            // TO DO: CRIAR UMA STRUCT GENERICA PARA CADA TIPO DE STRUCT
+            case PortA:
+                gpioX=GPIOA;
+                ClockControl<PERIPHERAL_GPIOA>::on();
+                break;
+            case PortB:
+                gpioX=GPIOB;
+                ClockControl<PERIPHERAL_GPIOB>::on();
+                break;
+            case PortC:
+                gpioX=GPIOC;
+                ClockControl<PERIPHERAL_GPIOC>::on();
+                break;
+            case PortD:
+                gpioX=GPIOD;
+                ClockControl<PERIPHERAL_GPIOD>::on();
+                break;
+            case PortF:
+                gpioX=GPIOF;
+                ClockControl<PERIPHERAL_GPIOF>::on();
+                break;
         }
 
 
+        BIT_WRITE(gpioX->MODER,(3<<(2*pin)),func); //Pin Function
+        BIT_WRITE(gpioX->OSPEEDR,(3<<(2*pin)),speed); //Pin Speed
+        BIT_WRITE(gpioX->OTYPER,(1<<pin),mode==OpenDrain?1:0); //Pin Output type
+        BIT_WRITE(gpioX->PUPDR,(3<<(2*pin)),mode==OpenDrain?0:mode); //Pin PullUp/PullDown
 
-
-
-
+        return;
     }
 
     /** \brief Read the pin status
