@@ -1,44 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBitz_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="inc\stm32f0xx.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="inc\stm32f0xx.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="61417" topLine="965" />
+			<Cursor1 position="24165" topLine="362" />
 		</Cursor>
 	</File>
-	<File name="inc\stm32f0xx_conf.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="inc\stm32f0xx_conf.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="60" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="inc\system_stm32f0xx.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="315" topLine="0" />
+			<Cursor1 position="1967" topLine="81" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="443" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="startup_stm32f0xx.S" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7768" topLine="197" />
+		</Cursor>
+	</File>
+	<File name="stm32f030r8_flash.ld" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3587" topLine="156" />
+		</Cursor>
+	</File>
+	<File name="stm32f030r8_sram.ld" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="stm32Lib\cmsis\core_cm0.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="31040" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="stm32Lib\HAL\Include\Config\config.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="558" topLine="45" />
+			<Cursor1 position="635" topLine="117" />
 		</Cursor>
 	</File>
-	<File name="stm32Lib\HAL\Include\GPIO\GPIO.hpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="stm32Lib\HAL\Include\GPIO\GPIO.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4284" topLine="147" />
+			<Cursor1 position="326" topLine="202" />
 		</Cursor>
 	</File>
-	<File name="stm32Lib\HAL\Include\RCC\ClockControl.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="stm32Lib\HAL\Include\RCC\ClockControl.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="10060" topLine="197" />
+			<Cursor1 position="2653" topLine="96" />
 		</Cursor>
 	</File>
-	<File name="stm32Lib\HAL\Include\RCC\ClockSource.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="stm32Lib\HAL\Include\RCC\ClockSource.hpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2561" topLine="25" />
 		</Cursor>
 	</File>
-	<File name="system_stm32f0xx.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="stm32Lib\HAL\Include\Timer\TIMER.hpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="963" topLine="155" />
+			<Cursor1 position="0" topLine="79" />
+		</Cursor>
+	</File>
+	<File name="stm32Lib\HAL\Include\Timer\WAIT.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1607" topLine="46" />
+		</Cursor>
+	</File>
+	<File name="stm32Lib\HAL\src\GPIO\GPIO.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="364" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="stm32Lib\HAL\src\Timer\WAIT.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="366" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="system_stm32f0xx.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8841" topLine="218" />
 		</Cursor>
 	</File>
 </EmBitz_layout_file>

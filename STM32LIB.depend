@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1437439500 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1439494366 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
-	"RCC/ClockControl.hpp"
+	"GPIO/GPIO.hpp"
+	"Timer/WAIT.hpp"
 
-1437518949 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1439492259 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
 	"stm32f0xx_conf.h"
@@ -42,7 +43,7 @@
 	"Config/config.h"
 	"RCC/RCC.hpp"
 
-1434223862 source:c:\users\joao\documents\github\stm32lib\startup_stm32f0xx.s
+1439496933 source:c:\users\joao\documents\github\stm32lib\startup_stm32f0xx.s
 
 1434223862 source:c:\users\joao\documents\github\stm32lib\system_stm32f0xx.c
 	"stm32f0xx.h"
@@ -64,14 +65,26 @@
 1433277873 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cmfunc.h
 	<cmsis_iar.h>
 
-1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clocksource.hpp
+1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clocksource.hpp
 	"Config/config.h"
 	"RCC/ClockSource.hpp"
 
-1436284670 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
+1439493689 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
 	"Config/config.h"
+	"RCC/ClockControl.hpp"
 
 1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clockcontrol.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
+
+1439495206 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\timer\wait.hpp
+	"Config/config.h"
+	"core_cm0.h"
+
+1439497248 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\timer\wait.cpp
+	"TIMER/WAIT.hpp"
+
+1439495822 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
+	<cstdlib>
+	<sys/types.h>
 

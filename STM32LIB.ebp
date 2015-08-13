@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBitz_project_file>
-	<EmBitzVersion release="0.31" revision="0" />
+	<EmBitzVersion release="0.40" revision="0" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="STM32LIB" />
@@ -17,6 +17,10 @@
 					<Add option="-O0" />
 					<Add option="-g2" />
 				</Compiler>
+				<Cpp>
+					<Add option="-O0" />
+					<Add option="-g2" />
+				</Cpp>
 				<Assembler>
 					<Add option="--gdwarf-2" />
 				</Assembler>
@@ -25,6 +29,7 @@
 				<Option output="bin\Release\STM32LIB.elf" />
 				<Option object_output="obj\Release\" />
 				<Option type="0" />
+				<Option create_hex="1" />
 				<Option compiler="armgcc_eb" />
 				<Option projectDeviceOptionsRelation="0" />
 				<Compiler>
@@ -64,7 +69,6 @@
 			<Add directory=".\stm32Lib\cmsis" />
 			<Add directory=".\stm32Lib\HAL\Include" />
 			<Add directory=".\stm32Lib\HAL\src" />
-			<Add directory="stm32Lib\HAL\Include\RegisterAccess" />
 		</Compiler>
 		<Cpp>
 			<Add option="-fno-exceptions" />
@@ -73,6 +77,10 @@
 			<Add option="-fdata-sections" />
 			<Add option="-ffunction-sections" />
 		</Cpp>
+		<Linker>
+			<Add option="-Wl,--gc-sections" />
+			<Add option="-flto" />
+		</Linker>
 		<Unit filename="inc\stm32f0xx.h" />
 		<Unit filename="inc\stm32f0xx_conf.h" />
 		<Unit filename="inc\system_stm32f0xx.h" />
@@ -115,8 +123,14 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\Timer\TIMER.h" />
-		<Unit filename="stm32Lib\HAL\Include\Timer\WAIT.h" />
+		<Unit filename="stm32Lib\HAL\Include\Timer\TIMER.hpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\Timer\WAIT.hpp">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\src\GPIO\GPIO.cpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
@@ -129,15 +143,35 @@
 		</Unit>
 		<Unit filename="stm32Lib\HAL\src\Timer\WAIT.cpp">
 			<Option compilerVar="CC" />
-			<Option compile="0" />
-			<Option link="0" />
+		</Unit>
+		<Unit filename="stm32Lib\LibraryHacks.cpp">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="system_stm32f0xx.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<code_completion />
-			<debugger />
+			<debugger>
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="..\STM32LIB - Cópia\stm32Lib\HAL\RegisterAccess\MCU\svd\STM32F030.svd" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Release" active_interface="" />
+			</debugger>
 			<envvars />
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />

@@ -1,7 +1,9 @@
+#pragma once
+
 #ifndef WAIT_STM32LIB_H_INCLUDED
 #define WAIT_STM32LIB_H_INCLUDED
 
-#include "config.h"
+#include "Config/config.h"
 #include "core_cm0.h"
 
 //CHECK IT WITH
@@ -29,19 +31,34 @@ class WAIT{
         /**
          *  \brief Initiate the SysTick timer and sets the interrupts
          */
-        static void init(void);
+        static void init(void){
+            _Seconds=0;
+            _Milliseconds=0;
+            SystemCoreClockUpdate(); //Update SystemCoreClock variable to current clock speed
+            SysTick_Config(SystemCoreClock*1e-3); //Set up a systick interrupt every millisecond
+        }
 
         /**
          *  \brief Wait for ms milliseconds
          *  \param ms the number of milliseconds to wait
          */
-        static void wait_ms(uint32_t ms);
+        static void wait_ms(uint32_t ms){
+            volatile uint32_t MSStart = _Milliseconds;
+            while((_Milliseconds - MSStart)<ms){
+                asm volatile("nop");
+            }
+        }
 
         /**
          *  \brief Wait for ms seconds
          *  \param s the number of seconds to wait
          */
-        static void wait_s(uint32_t s);
+        static void wait_s(uint32_t s){
+            volatile uint32_t Ss = _Seconds;
+            while((_Seconds - Ss)<s) {
+                asm volatile("nop");
+            }
+        }
         //friend void __attribute__ ((weak,interrupt("IRQ"))) SysTick_Handler(void);
     public:
         /** \brief Internal milliseconds counter */
@@ -51,5 +68,6 @@ class WAIT{
         volatile static uint32_t _Seconds;
 };
 }
+
 
 #endif /* WAIT_STM32LIB_H_INCLUDED */

@@ -24,6 +24,17 @@
 //#define BIT_WRITE(c,p,m) (c ? bit_set(p,m) : bit_clear(p,m))
 #define BIT_WRITE(p,m,v) ((p) = ((v << GET_OFFSET(m)) & m))
 
+//! Create a bitmask of length len.
+#define BIT_MASK(len)           ( BIT(len)-1 )
+//! Create a bitfield mask of length starting at bit start.
+#define BF_MASK(start, len)     ( BIT_MASK(len)<<(start) )
+//! Prepare a bitmask for insertion or combining.
+#define BF_PREP(x, start, len)  ( ((x)&BIT_MASK(len)) << (start) )
+//! Extract a bitfield of length len starting at bit start from y.
+#define BF_GET(y, start, len)   ( ((y)>>(start)) & BIT_MASK(len) )
+//! Insert a new bitfield value x into y.
+#define BF_SET(y, x, start, len)    ( y= ((y) &~ BF_MASK(start, len)) | BF_PREP(x, start, len) )
+
 constexpr static const int Mod37BitPosition[] = // map a bit value mod 37 to its position
 {
   32, 0, 1, 26, 2, 23, 27, 0, 3, 16, 24, 30, 28, 11, 0, 13, 4,

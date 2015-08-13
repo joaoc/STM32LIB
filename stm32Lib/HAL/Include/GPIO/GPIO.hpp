@@ -3,6 +3,7 @@
 #define GPIO_STM32LIB_H_INCLUDED
 
 #include "Config/config.h"
+#include "RCC/ClockControl.hpp"
 
 
 namespace STM32LIB{
@@ -149,13 +150,13 @@ public:
      *
      */
     void init(PinName pin_name, PinFunction func, PinMode mode, PinSpeed speed){
-        uint16_t port,pin;
+        uint32_t port,pin;
 
         this->pin=pin_name;
 
         port=STM32_PORT(pin_name);
-        pin=1<<STM32_PIN(pin_name);
-        this->pin_mask=pin;
+        pin=STM32_PIN(pin_name);
+        this->pin_mask=1<<pin;
 
         switch((PortName)port){
             case PortA:
@@ -181,10 +182,10 @@ public:
         }
 
 
-        BIT_WRITE(gpioX->MODER,(3<<(2*pin)),func); //Pin Function
-        BIT_WRITE(gpioX->OSPEEDR,(3<<(2*pin)),speed); //Pin Speed
-        BIT_WRITE(gpioX->OTYPER,(1<<pin),mode==OpenDrain?1:0); //Pin Output type
-        BIT_WRITE(gpioX->PUPDR,(3<<(2*pin)),mode==OpenDrain?0:mode); //Pin PullUp/PullDown
+        BF_SET(gpioX->MODER, func, 2*pin, 2);//Pin Function
+        BF_SET(gpioX->OSPEEDR, speed, 2*pin, 2);//Pin Speed
+        BF_SET(gpioX->OTYPER, mode==OpenDrain?1:0, pin, 1);//Pin Output type
+        BF_SET(gpioX->PUPDR, mode==OpenDrain?0:mode, 2*pin, 2);//Pin PullUp/PullDown
 
         return;
     }
@@ -193,18 +194,28 @@ public:
      *
      * \return True if pin voltage = vcc, false otherwise
      */
-    bool read();
+    bool read(){
+        return(gpioX->IDR&pin_mask);
+    }
 
     /** \brief Write to the pin
      * \details Use atomic write
      * \param value The value to write to the pin
      */
-    void write(bool value);
+    void write(bool value){
+        if(value)
+            gpioX->BSRR=pin_mask;
+        else
+            gpioX->BRR=pin_mask;
+        return;
+    }
 
     /** \brief Toggle the pin status
      *  \details It uses a more slowly method than the read() function
     */
-    void toggle();
+    void toggle(){
+        gpioX->ODR^= pin_mask;
+    }
 };
 }
 
