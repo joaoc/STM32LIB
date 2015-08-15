@@ -16,6 +16,7 @@
 				<Compiler>
 					<Add option="-O0" />
 					<Add option="-g2" />
+					<Add symbol="SEMIHOSTING" />
 				</Compiler>
 				<Cpp>
 					<Add option="-O0" />
@@ -24,6 +25,9 @@
 				<Assembler>
 					<Add option="--gdwarf-2" />
 				</Assembler>
+				<Linker>
+					<Add option="-eb_use_semi" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin\Release\STM32LIB.elf" />
@@ -69,6 +73,8 @@
 			<Add directory=".\stm32Lib\cmsis" />
 			<Add directory=".\stm32Lib\HAL\Include" />
 			<Add directory=".\stm32Lib\HAL\src" />
+			<Add directory=".\stm32Lib\Utils\Include" />
+			<Add directory=".\stm32Lib\Utils\Src" />
 		</Compiler>
 		<Cpp>
 			<Add option="-fno-exceptions" />
@@ -78,6 +84,7 @@
 			<Add option="-ffunction-sections" />
 		</Cpp>
 		<Linker>
+			<Add option="-eb_lib=f" />
 			<Add option="-Wl,--gc-sections" />
 			<Add option="-flto" />
 		</Linker>
@@ -87,6 +94,16 @@
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="obj\Debug\main.d" />
+		<Unit filename="obj\Debug\startup_stm32f0xx.d" />
+		<Unit filename="obj\Debug\stm32Lib\HAL\src\Timer\wait.d" />
+		<Unit filename="obj\Debug\stm32Lib\libraryhacks.d" />
+		<Unit filename="obj\Debug\system_stm32f0xx.d" />
+		<Unit filename="obj\Release\main.d" />
+		<Unit filename="obj\Release\startup_stm32f0xx.d" />
+		<Unit filename="obj\Release\stm32Lib\HAL\src\Timer\wait.d" />
+		<Unit filename="obj\Release\stm32Lib\libraryhacks.d" />
+		<Unit filename="obj\Release\system_stm32f0xx.d" />
 		<Unit filename="startup_stm32f0xx.S">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -98,7 +115,17 @@
 		<Unit filename="stm32Lib\cmsis\core_cmFunc.h" />
 		<Unit filename="stm32Lib\cmsis\core_cmInstr.h" />
 		<Unit filename="stm32Lib\HAL\Include\Config\config.h" />
+		<Unit filename="stm32Lib\HAL\Include\Config\debug.hpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Config\Peripheral.h" />
+		<Unit filename="stm32Lib\HAL\Include\Debug\SemiHosting.hpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\event\fd\FastDelegate.h" />
 		<Unit filename="stm32Lib\HAL\Include\event\fd\FastDelegateBind.h" />
 		<Unit filename="stm32Lib\HAL\Include\event\signal.h" />
@@ -124,12 +151,17 @@
 			<Option link="0" />
 		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Timer\TIMER.hpp">
+			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Timer\WAIT.hpp">
+			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
+		</Unit>
+		<Unit filename="stm32Lib\HAL\src\Debug\SemiHosting.cpp">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="stm32Lib\HAL\src\GPIO\GPIO.cpp">
 			<Option compilerVar="CC" />
@@ -147,6 +179,10 @@
 		<Unit filename="stm32Lib\LibraryHacks.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="stm32Lib\Utils\Include\string\StringUtil.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32Lib\Utils\src\string\StringUtil.h" />
 		<Unit filename="system_stm32f0xx.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -160,7 +196,7 @@
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
 							<option opt_id="ID_RESET_TYPE" opt_value="System" />
 							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
-							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="1" />
 							<option opt_id="ID_RAM_EXEC" opt_value="0" />
 							<option opt_id="ID_VEC_TABLE" opt_value="1" />
 							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />

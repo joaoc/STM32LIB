@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1439494366 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1439657618 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
 	"GPIO/GPIO.hpp"
 	"Timer/WAIT.hpp"
+	"Config/debug.hpp"
 
-1439492259 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1439657383 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
 	"stm32f0xx_conf.h"
@@ -87,4 +88,22 @@
 1439495822 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
 	<cstdlib>
 	<sys/types.h>
+
+1439651753 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\debug\semihosting.cpp
+	"Config/Config.h"
+	"Debug/Semihosting.hpp"
+
+1439658645 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\debug\semihosting.hpp
+	<cstring>
+	<stdio.h>
+	<stdlib.h>
+	"string/StringUtil.h"
+
+1439656381 c:\users\joao\documents\github\stm32lib\stm32lib\utils\src\string\stringutil.h
+
+1439656415 source:c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\string\stringutil.cpp
+	"Config/Config.h"
+
+1439657383 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\debug.hpp
+	"Debug/Semihosting.hpp"
 
