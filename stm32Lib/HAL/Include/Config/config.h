@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CONFIG__STM32LIB_H_INCLUDED
 #define CONFIG__STM32LIB_H_INCLUDED
 

@@ -98,8 +98,8 @@ public:
     typedef enum{
         PIN_INPUT = 0x00,
         PIN_OUTPUT = 0x01,
-        PIN_ALTERNATE = 0x02,
-        PIN_ANALOG = 0x03
+        PIN_ALTERNATE = 0x02,   //will disappear?
+        PIN_ANALOG = 0x03       //will disappear?
     } PinFunction;
 
     /**
@@ -189,6 +189,24 @@ public:
 
         return;
     }
+
+    /** \brief Change the pin direction
+     * \details After the pin is initialized it allow to change the pin direction
+     * \param func The pin function as per PinFunction
+     */
+    void change_dir(PinFunction func){BF_SET(gpioX->MODER, func, 2*pin, 2);}                //Pin Function
+
+    /** \brief Change the pin speed
+     * \details After the pin is initialized it allow to change the pin speed
+     * \param func The pin speed as per PinSpeed
+     */
+    void change_speed(PinSpeed speed){BF_SET(gpioX->OSPEEDR, speed, 2*pin, 2);}             //Pin Speed
+
+    /** \brief Change the pin mode
+     * \details After the pin is initialized it allow to change the pin mode
+     * \param func The pin function as per PinMode
+     */
+    void change_mode(PinMode mode){BF_SET(gpioX->OTYPER, mode==OpenDrain?1:0, pin, 1);}     //Pin Output type
 
     /** \brief Read the pin status
      *

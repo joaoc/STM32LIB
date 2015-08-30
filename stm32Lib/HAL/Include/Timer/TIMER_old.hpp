@@ -1,31 +1,18 @@
 #ifndef TIMER_STM32LIB_H_INCLUDED
 #define TIMER_STM32LIB_H_INCLUDED
 
+#include "Config/config.h"
 #include "Peripheral.h"
 
-#include "stm32f0xx_tim.h"
-#include "stm32f0xx_rcc.h"
+
+#include "MCU/F0/stm32f0xx_tim.h"
 
 #include "event/signal.h"
 #include "event/slot.h"
 
 
-#ifdef STM32F0XX
-
-#define TIM1CLOCK RCC_APB2Periph_TIM1
-#define TIM2CLOCK RCC_APB1Periph_TIM2
-#define TIM3CLOCK RCC_APB1Periph_TIM3
-#define TIM6CLOCK RCC_APB1Periph_TIM6
-#define TIM7CLOCK RCC_APB1Periph_TIM7
-#define TIM14CLOCK RCC_APB1Periph_TIM14
-#define TIM15ClOCK RCC_APB2Periph_TIM15
-#define TIM16CLOCK RCC_APB2Periph_TIM16
-#define TIM17CLOCK RCC_APB2Periph_TIM17
 
 
-#endif /* STM32F0XX */
-
-typedef wink::signal<wink::slot<void (InterruptType)> > signal;
 
 namespace STM32LIB{
 
@@ -104,11 +91,12 @@ class TIMER{
             BREAK=TIM_IT_Break
         }InterruptType;
 
+        typedef wink::signal<wink::slot<void (InterruptType)> > signal;
 
         void init(TimerNum _timer, DevideClock Devide, CounterMode Mode, uint16_t Period, uint16_t Prescaler, uint16_t RepetitionCounter );
-        inline uint16_t get_value(void){return(TIM_GetCounter(TimerX));}
-        inline void start(void){TIM_Cmd(TimerX, ENABLE);}
-        inline void stop (void){TIM_Cmd(TimerX, DISABLE);}
+        inline uint16_t get_value(void){return(TimerX->CNT);}
+        inline void start(void){BIT_SET(TimerX->CR1,TIM_CR1_CEN);}
+        inline void stop (void){BIT_CLEAR(TimerX->CR1,TIM_CR1_CEN);}
         void enable_interrupt(InterruptType interrupt, FunctionalState state, uint16_t PreemptionPriority = 0, uint16_t SubPriority = 1);
 
         signal sig;

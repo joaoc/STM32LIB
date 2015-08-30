@@ -384,7 +384,7 @@ namespace STM32LIB {
       static int load_file(void **,unsigned *,const char *) { return 0; }
 
       SemiHosting& operator<<(const char*) { return *this; }
-      SemiHosting& operator<<(const DoublePrecision&) { return *this; }
+//      SemiHosting& operator<<(const DoublePrecision&) { return *this; }
       SemiHosting& operator<<(double) { return *this; }
       SemiHosting& operator<<(int32_t) { return *this; }
       SemiHosting& operator<<(uint32_t) { return *this; }

@@ -1,18 +1,19 @@
 # depslib dependency file v1.0
-1439657618 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1440758281 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
 	"GPIO/GPIO.hpp"
 	"Timer/WAIT.hpp"
 	"Config/debug.hpp"
 
-1439657383 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1440948325 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
 	"stm32f0xx_conf.h"
 	<system_stm32f0xx.h>
 	"stm32f0xx.h"
 
-1435688246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
+1440713909 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
+	"stm32f0xx.h"
 
 1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\mcu\hpp\stm32f030.hpp
 	"reg_t.hpp"
@@ -70,7 +71,7 @@
 	"Config/config.h"
 	"RCC/ClockSource.hpp"
 
-1439493689 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
+1440100277 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
 
@@ -93,7 +94,7 @@
 	"Config/Config.h"
 	"Debug/Semihosting.hpp"
 
-1439658645 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\debug\semihosting.hpp
+1440714513 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\debug\semihosting.hpp
 	<cstring>
 	<stdio.h>
 	<stdlib.h>
@@ -106,4 +107,17 @@
 
 1439657383 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\debug.hpp
 	"Debug/Semihosting.hpp"
+
+1439664798 source:c:\users\joao\documents\github\stm32lib\stm32lib\exemplos\gpio_semihosting.cpp
+	"Config/config.h"
+	"GPIO/GPIO.hpp"
+	"Timer/WAIT.hpp"
+	"Config/debug.hpp"
+
+1440956174 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\syscfg\syscfg.hpp
+	"Config/config.h"
+	"MCU/F0/stm32f0xx_syscfg.h"
+
+1440956096 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_syscfg.h
+	"stm32f0xx.h"
 

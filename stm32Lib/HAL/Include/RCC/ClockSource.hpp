@@ -16,7 +16,7 @@ namespace STM32LIB{
 
         using namespace STM32LIB;
 
-        ClockSource<I2C1>::set<ClockSource<I2C1>::SYSCLK>(); //Sets the I2C 1 clock to the SYSCLK
+        ClockSource<PERIPHERAL_I2C1>::set<ClockSource<PERIPHERAL_I2C1>::SYSCLK>(); //Sets the I2C 1 clock to the SYSCLK
 
         \endcode
      *

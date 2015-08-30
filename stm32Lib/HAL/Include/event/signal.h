@@ -27,12 +27,11 @@
 ///
 
 /**
- * In accordance with the above license I need to point out that this file is heavily modified
- * to not require the STL. We use a simple linked list instead.
+ * In accordance with the above license I need to point out that this file is modified to use the foward_list
  */
 
 #pragma once
-
+#include <forward_list>
 
 
 namespace wink {
@@ -42,7 +41,7 @@ namespace wink {
     protected:
 
       typedef Slot slot_type;
-      std::slist<slot_type> _slots;
+      std::forward_list<slot_type> _slots;
 
     public:
 

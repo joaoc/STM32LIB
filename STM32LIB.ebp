@@ -96,13 +96,18 @@
 		</Unit>
 		<Unit filename="obj\Debug\main.d" />
 		<Unit filename="obj\Debug\startup_stm32f0xx.d" />
+		<Unit filename="obj\Debug\stm32Lib\Exemplos\gpio_semihosting.d" />
+		<Unit filename="obj\Debug\stm32Lib\HAL\src\Debug\semihosting.d" />
 		<Unit filename="obj\Debug\stm32Lib\HAL\src\Timer\wait.d" />
 		<Unit filename="obj\Debug\stm32Lib\libraryhacks.d" />
+		<Unit filename="obj\Debug\stm32Lib\Utils\Include\string\stringutil.d" />
 		<Unit filename="obj\Debug\system_stm32f0xx.d" />
 		<Unit filename="obj\Release\main.d" />
 		<Unit filename="obj\Release\startup_stm32f0xx.d" />
+		<Unit filename="obj\Release\stm32Lib\HAL\src\Debug\semihosting.d" />
 		<Unit filename="obj\Release\stm32Lib\HAL\src\Timer\wait.d" />
 		<Unit filename="obj\Release\stm32Lib\libraryhacks.d" />
+		<Unit filename="obj\Release\stm32Lib\Utils\Include\string\stringutil.d" />
 		<Unit filename="obj\Release\system_stm32f0xx.d" />
 		<Unit filename="startup_stm32f0xx.S">
 			<Option compilerVar="CC" />
@@ -114,6 +119,11 @@
 		<Unit filename="stm32Lib\cmsis\core_cm0.h" />
 		<Unit filename="stm32Lib\cmsis\core_cmFunc.h" />
 		<Unit filename="stm32Lib\cmsis\core_cmInstr.h" />
+		<Unit filename="stm32Lib\Exemplos\GPIO_SemiHosting.cpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Config\config.h" />
 		<Unit filename="stm32Lib\HAL\Include\Config\debug.hpp">
 			<Option compilerVar="CC" />
@@ -135,6 +145,11 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\MCU\F0\stm32f0xx_syscfg.h" />
+		<Unit filename="stm32Lib\HAL\Include\MCU\F0\stm32f0xx_tim.h" />
+		<Unit filename="stm32Lib\HAL\Include\NVIC\NVIC.hpp">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Power\power.hpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
@@ -150,7 +165,15 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="stm32Lib\HAL\Include\Timer\TIMER.hpp">
+		<Unit filename="stm32Lib\HAL\Include\SYSCFG\SYSCFG.hpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\Timer\BaseTimer.hpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="stm32Lib\HAL\Include\Timer\TIMER_old.hpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
@@ -168,7 +191,7 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
-		<Unit filename="stm32Lib\HAL\src\Timer\TIMER.cpp">
+		<Unit filename="stm32Lib\HAL\src\Timer\TIMER_old.cpp">
 			<Option compilerVar="CC" />
 			<Option compile="0" />
 			<Option link="0" />
@@ -179,6 +202,7 @@
 		<Unit filename="stm32Lib\LibraryHacks.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="stm32Lib\Utils\Include\slist" />
 		<Unit filename="stm32Lib\Utils\Include\string\StringUtil.cpp">
 			<Option compilerVar="CC" />
 		</Unit>

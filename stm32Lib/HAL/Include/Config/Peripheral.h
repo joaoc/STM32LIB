@@ -3,6 +3,8 @@
 
 #ifdef STM32F030R8
 
+#include "stm32f0xx.h"
+
 //--------------TIMERS-------------------
 #define HAS_TIM1
 #define HAS_TIM3
@@ -10,6 +12,16 @@
 #define HAS_TIM15
 #define HAS_TIM16
 #define HAS_TIM17
+
+typedef enum{
+    TIMER1=TIM1_BASE,
+    TIMER3=TIM3_BASE,
+    TIMER6=TIM6_BASE,
+    TIMER14=TIM14_BASE,
+    TIMER15=TIM15_BASE,
+    TIMER16=TIM16_BASE,
+    TIMER17=TIM17_BASE
+}TIMERS;
 
 #endif /* STMF030R8 */
 
