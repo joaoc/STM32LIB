@@ -149,6 +149,8 @@
 		<Unit filename="stm32Lib\HAL\Include\MCU\F0\stm32f0xx_tim.h" />
 		<Unit filename="stm32Lib\HAL\Include\NVIC\NVIC.hpp">
 			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
 		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Power\power.hpp">
 			<Option compilerVar="CC" />
@@ -167,6 +169,8 @@
 		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\SYSCFG\SYSCFG.hpp">
 			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
 		</Unit>
 		<Unit filename="stm32Lib\HAL\Include\Timer\BaseTimer.hpp">
 			<Option compilerVar="CC" />

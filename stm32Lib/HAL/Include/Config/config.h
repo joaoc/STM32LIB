@@ -14,6 +14,8 @@
 #include <system_stm32f0xx.h>
 #include "stm32f0xx.h"
 
+#include "MCU/F0/stm32f0xx_syscfg.h"
+
 
 #endif /* STM32F0XX */
 
