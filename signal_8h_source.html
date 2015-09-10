@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>STM32LIB: stm32Lib/HAL/event/signal.h Source File</title>
+<title>STM32LIB: stm32Lib/HAL/Include/event/signal.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -81,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_5679a120c90cd9775d2b1b5c5f979dec.html">event</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_7c4a16add4c05d8ccd50d970dfd958ec.html">Include</a></li><li class="navelem"><a class="el" href="dir_27d88ffce5ca172f037616264619de5c.html">event</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -90,58 +91,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="signal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;forward_list&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacewink.html">   38</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewink.html">wink</a> {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> Slot&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html">   40</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwink_1_1signal.html">signal</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">   44</a></span>&#160;      <span class="keyword">typedef</span> Slot <a class="code" href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">slot_type</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a2ee38d7e8dc72decf3cd63699e08d132">   45</a></span>&#160;      std::slist&lt;slot_type&gt; <a class="code" href="structwink_1_1signal.html#a2ee38d7e8dc72decf3cd63699e08d132">_slots</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">   53</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">insertSubscriber</a>(<span class="keyword">const</span> slot_type&amp; <a class="code" href="structwink_1_1slot.html">slot</a>) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        _slots.push_front(slot);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">   61</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">removeSubscriber</a>(<span class="keyword">const</span> slot_type&amp; <a class="code" href="structwink_1_1slot.html">slot</a>) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it=_slots.begin();it!=_slots.end();it++) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keywordflow">if</span>(*it==slot) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            _slots.erase(it);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">template</span> &lt;<span class="keyword">class </span>...Args&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">   75</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">raiseEvent</a>(Args&amp;&amp;... args)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it=_slots.begin();it!=_slots.end();it++)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          (*it)(args...);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  };</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="ttc" id="structwink_1_1signal_html"><div class="ttname"><a href="structwink_1_1signal.html">wink::signal</a></div><div class="ttdef"><b>Definition:</b> signal.h:40</div></div>
-<div class="ttc" id="structwink_1_1signal_html_a233cf816d7ad7f5cd1cff3f2e6494614"><div class="ttname"><a href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">wink::signal::slot_type</a></div><div class="ttdeci">Slot slot_type</div><div class="ttdef"><b>Definition:</b> signal.h:44</div></div>
-<div class="ttc" id="structwink_1_1signal_html_a64de39084f7322e52dadfc44d461bc24"><div class="ttname"><a href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">wink::signal::removeSubscriber</a></div><div class="ttdeci">bool removeSubscriber(const slot_type &amp;slot)</div><div class="ttdef"><b>Definition:</b> signal.h:61</div></div>
-<div class="ttc" id="structwink_1_1signal_html_a2ee38d7e8dc72decf3cd63699e08d132"><div class="ttname"><a href="structwink_1_1signal.html#a2ee38d7e8dc72decf3cd63699e08d132">wink::signal::_slots</a></div><div class="ttdeci">std::slist&lt; slot_type &gt; _slots</div><div class="ttdef"><b>Definition:</b> signal.h:45</div></div>
-<div class="ttc" id="structwink_1_1signal_html_a2e0ae66f914350a5339f2f21d60a6ca3"><div class="ttname"><a href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">wink::signal::raiseEvent</a></div><div class="ttdeci">void raiseEvent(Args &amp;&amp;...args) const </div><div class="ttdef"><b>Definition:</b> signal.h:75</div></div>
-<div class="ttc" id="structwink_1_1signal_html_aa099e6decf02d7ffb6d1d30bb77b832c"><div class="ttname"><a href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">wink::signal::insertSubscriber</a></div><div class="ttdeci">void insertSubscriber(const slot_type &amp;slot)</div><div class="ttdef"><b>Definition:</b> signal.h:53</div></div>
-<div class="ttc" id="namespacewink_html"><div class="ttname"><a href="namespacewink.html">wink</a></div><div class="ttdef"><b>Definition:</b> signal.h:38</div></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacewink.html">   37</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacewink.html">wink</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">class</span> Slot&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html">   39</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structwink_1_1signal.html">signal</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">   43</a></span>&#160;      <span class="keyword">typedef</span> Slot <a class="code" href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">slot_type</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#aceeb9526054a652854d507f6facc83ad">   44</a></span>&#160;      std::forward_list&lt;slot_type&gt; <a class="code" href="structwink_1_1signal.html#aceeb9526054a652854d507f6facc83ad">_slots</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">   52</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">insertSubscriber</a>(<span class="keyword">const</span> slot_type&amp; <a class="code" href="structwink_1_1slot.html">slot</a>) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        _slots.push_front(slot);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">   60</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">removeSubscriber</a>(<span class="keyword">const</span> slot_type&amp; <a class="code" href="structwink_1_1slot.html">slot</a>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it=_slots.begin();it!=_slots.end();it++) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keywordflow">if</span>(*it==slot) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            _slots.erase(it);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">template</span> &lt;<span class="keyword">class </span>...Args&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">   74</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">raiseEvent</a>(Args&amp;&amp;... args)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it=_slots.begin();it!=_slots.end();it++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          (*it)(args...);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="structwink_1_1signal_html"><div class="ttname"><a href="structwink_1_1signal.html">wink::signal</a></div><div class="ttdef"><b>Definition:</b> signal.h:39</div></div>
+<div class="ttc" id="structwink_1_1signal_html_a233cf816d7ad7f5cd1cff3f2e6494614"><div class="ttname"><a href="structwink_1_1signal.html#a233cf816d7ad7f5cd1cff3f2e6494614">wink::signal::slot_type</a></div><div class="ttdeci">Slot slot_type</div><div class="ttdef"><b>Definition:</b> signal.h:43</div></div>
+<div class="ttc" id="structwink_1_1signal_html_a64de39084f7322e52dadfc44d461bc24"><div class="ttname"><a href="structwink_1_1signal.html#a64de39084f7322e52dadfc44d461bc24">wink::signal::removeSubscriber</a></div><div class="ttdeci">bool removeSubscriber(const slot_type &amp;slot)</div><div class="ttdef"><b>Definition:</b> signal.h:60</div></div>
+<div class="ttc" id="structwink_1_1signal_html_aceeb9526054a652854d507f6facc83ad"><div class="ttname"><a href="structwink_1_1signal.html#aceeb9526054a652854d507f6facc83ad">wink::signal::_slots</a></div><div class="ttdeci">std::forward_list&lt; slot_type &gt; _slots</div><div class="ttdef"><b>Definition:</b> signal.h:44</div></div>
+<div class="ttc" id="structwink_1_1signal_html_a2e0ae66f914350a5339f2f21d60a6ca3"><div class="ttname"><a href="structwink_1_1signal.html#a2e0ae66f914350a5339f2f21d60a6ca3">wink::signal::raiseEvent</a></div><div class="ttdeci">void raiseEvent(Args &amp;&amp;...args) const </div><div class="ttdef"><b>Definition:</b> signal.h:74</div></div>
+<div class="ttc" id="structwink_1_1signal_html_aa099e6decf02d7ffb6d1d30bb77b832c"><div class="ttname"><a href="structwink_1_1signal.html#aa099e6decf02d7ffb6d1d30bb77b832c">wink::signal::insertSubscriber</a></div><div class="ttdeci">void insertSubscriber(const slot_type &amp;slot)</div><div class="ttdef"><b>Definition:</b> signal.h:52</div></div>
+<div class="ttc" id="namespacewink_html"><div class="ttname"><a href="namespacewink.html">wink</a></div><div class="ttdef"><b>Definition:</b> signal.h:37</div></div>
 <div class="ttc" id="structwink_1_1slot_html"><div class="ttname"><a href="structwink_1_1slot.html">wink::slot</a></div><div class="ttdoc">Describes a slot that may be added to a signal, or used stand-alone for a call-back. </div><div class="ttdef"><b>Definition:</b> slot.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 13 2015 17:24:13 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 11 2015 00:01:17 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>STM32LIB: stm32Lib/HAL/Config/Peripheral.h Source File</title>
+<title>STM32LIB: stm32Lib/HAL/Include/Config/Peripheral.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -81,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_70dfea098abc1f364a22bcf466396f45.html">Config</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_7c4a16add4c05d8ccd50d970dfd958ec.html">Include</a></li><li class="navelem"><a class="el" href="dir_3af38491d8f4140f0416d10ea95c3588.html">Config</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -94,23 +95,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifdef STM32F030R8</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//--------------TIMERS-------------------</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define HAS_TIM1</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define HAS_TIM3</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define HAS_TIM14</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define HAS_TIM15</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define HAS_TIM16</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HAS_TIM17</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STMF030R8 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;stm32f0xx.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//--------------TIMERS-------------------</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define HAS_TIM1</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define HAS_TIM3</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define HAS_TIM14</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define HAS_TIM15</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define HAS_TIM16</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define HAS_TIM17</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//#define HAS_ADVANVED_TIM_IRQ</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PERIPHERAL_STM32LIB_H_INCLUDED */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    TIMER1=TIM1_BASE,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    TIMER3=TIM3_BASE,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    TIMER6=TIM6_BASE,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    TIMER14=TIM14_BASE,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    TIMER15=TIM15_BASE,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    TIMER16=TIM16_BASE,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    TIMER17=TIM17_BASE</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}TIMERS;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STMF030R8 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//#define HAS_ADVANVED_TIM_IRQ</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PERIPHERAL_STM32LIB_H_INCLUDED */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 13 2015 17:24:13 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 11 2015 00:01:16 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

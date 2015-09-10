@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -100,14 +101,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html" title="GPIO Access class. ">GPIO</a> Access class.  
  <a href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_g_p_i_o_8h_source.html">GPIO.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_g_p_i_o_8hpp_source.html">GPIO.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8d0cf3620e69cdcfab44e36d2cb771cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cc">PinDirection</a> { <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cca00efaa9377fed671475944bc9d1b9988">PIN_INPUT</a> = 0x00, 
-<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cca4748b2d40057e41a45bfbb98da639055">PIN_OUTPUT</a> = 0x01
+<tr class="memitem:a2ebb88b3c2a1394185ff3109a71398fc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">PinFunction</a> { <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fca00efaa9377fed671475944bc9d1b9988">PIN_INPUT</a> = 0x00, 
+<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fca4748b2d40057e41a45bfbb98da639055">PIN_OUTPUT</a> = 0x01, 
+<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fca250f9b7e30576a39d16b3bb00008cccd">PIN_ALTERNATE</a> = 0x02, 
+<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fcac4f50438727e0acf1a1056f4e02ce43f">PIN_ANALOG</a> = 0x03
  }</td></tr>
-<tr class="separator:a8d0cf3620e69cdcfab44e36d2cb771cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a2ebb88b3c2a1394185ff3109a71398fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a175e9f6b1501e887add745f4d4484db7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7">PinMode</a> { <br />
 &#160;&#160;<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7a3f52ca4a4fde6111e1925c90271e10ba">PullNone</a> = 0, 
 <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7ad8f7d1ea9774c553fe1609387f82db9f">PullUp</a> = 1, 
@@ -136,9 +139,18 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72c6e420449ce6a606740110b3c17550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a72c6e420449ce6a606740110b3c17550">init</a> (<a class="el" href="namespace_s_t_m32_l_i_b.html#a66e6384b04a82a4b16e99fdfec657918">PinName</a> pin_name, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cc">PinDirection</a> dir, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7">PinMode</a> mode, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938">PinSpeed</a> speed)</td></tr>
-<tr class="memdesc:a72c6e420449ce6a606740110b3c17550"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html" title="GPIO Access class. ">GPIO</a> initiation function.  <a href="#a72c6e420449ce6a606740110b3c17550">More...</a><br /></td></tr>
-<tr class="separator:a72c6e420449ce6a606740110b3c17550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195f8efa77443729d6de6fd4bd5e110c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a195f8efa77443729d6de6fd4bd5e110c">init</a> (<a class="el" href="namespace_s_t_m32_l_i_b.html#a66e6384b04a82a4b16e99fdfec657918">PinName</a> pin_name, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">PinFunction</a> func, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7">PinMode</a> mode, <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938">PinSpeed</a> speed)</td></tr>
+<tr class="memdesc:a195f8efa77443729d6de6fd4bd5e110c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html" title="GPIO Access class. ">GPIO</a> initiation function.  <a href="#a195f8efa77443729d6de6fd4bd5e110c">More...</a><br /></td></tr>
+<tr class="separator:a195f8efa77443729d6de6fd4bd5e110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e64e4a469195fe5fc3f952670bb818c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2e64e4a469195fe5fc3f952670bb818c">change_dir</a> (<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">PinFunction</a> func)</td></tr>
+<tr class="memdesc:a2e64e4a469195fe5fc3f952670bb818c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the pin direction.  <a href="#a2e64e4a469195fe5fc3f952670bb818c">More...</a><br /></td></tr>
+<tr class="separator:a2e64e4a469195fe5fc3f952670bb818c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8430a38a55a7dfe536ef114e2e0a6797"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8430a38a55a7dfe536ef114e2e0a6797">change_speed</a> (<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938">PinSpeed</a> speed)</td></tr>
+<tr class="memdesc:a8430a38a55a7dfe536ef114e2e0a6797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the pin speed.  <a href="#a8430a38a55a7dfe536ef114e2e0a6797">More...</a><br /></td></tr>
+<tr class="separator:a8430a38a55a7dfe536ef114e2e0a6797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a66cb357637eda45f551109efd8bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#aa8a66cb357637eda45f551109efd8bb7">change_mode</a> (<a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7">PinMode</a> mode)</td></tr>
+<tr class="memdesc:aa8a66cb357637eda45f551109efd8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the pin mode.  <a href="#aa8a66cb357637eda45f551109efd8bb7">More...</a><br /></td></tr>
+<tr class="separator:aa8a66cb357637eda45f551109efd8bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8314e24d6dc717f8d83c9979f1a84c72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8314e24d6dc717f8d83c9979f1a84c72">read</a> ()</td></tr>
 <tr class="memdesc:a8314e24d6dc717f8d83c9979f1a84c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the pin status.  <a href="#a8314e24d6dc717f8d83c9979f1a84c72">More...</a><br /></td></tr>
 <tr class="separator:a8314e24d6dc717f8d83c9979f1a84c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,23 +173,27 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html" title="GPIO Access class. ">GPIO</a> Access class. </p>
 <p>usage: </p><div class="fragment"><div class="line">GPIO LED;</div>
-<div class="line">LED.init(<a class="code" href="namespace_s_t_m32_l_i_b.html#a66e6384b04a82a4b16e99fdfec657918a8d187bd6e4f542164c93bb37cb67f260">PA_5</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cca4748b2d40057e41a45bfbb98da639055">GPIO::PIN_OUTPUT</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7a60d90280c3930b869f71df5acaa02f43">GPIO::PullDefault</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938ae1ceaa5b5a667cc07d985fa6573f4b3a">GPIO::Slow</a>);</div>
+<div class="line">LED.init(<a class="code" href="namespace_s_t_m32_l_i_b.html#a66e6384b04a82a4b16e99fdfec657918a8d187bd6e4f542164c93bb37cb67f260">PA_5</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fca4748b2d40057e41a45bfbb98da639055">GPIO::PIN_OUTPUT</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7a60d90280c3930b869f71df5acaa02f43">GPIO::PullDefault</a>,<a class="code" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938ae1ceaa5b5a667cc07d985fa6573f4b3a">GPIO::Slow</a>);</div>
 <div class="line">LED.toggle();</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a class="anchor" id="a8d0cf3620e69cdcfab44e36d2cb771cc"></a>
+<a class="anchor" id="a2ebb88b3c2a1394185ff3109a71398fc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cc">STM32LIB::GPIO::PinDirection</a></td>
+          <td class="memname">enum <a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">STM32LIB::GPIO::PinFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pin Direction </p>
+<p>Pin Function </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8d0cf3620e69cdcfab44e36d2cb771cca00efaa9377fed671475944bc9d1b9988"></a>PIN_INPUT&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2ebb88b3c2a1394185ff3109a71398fca00efaa9377fed671475944bc9d1b9988"></a>PIN_INPUT&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a8d0cf3620e69cdcfab44e36d2cb771cca4748b2d40057e41a45bfbb98da639055"></a>PIN_OUTPUT&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a2ebb88b3c2a1394185ff3109a71398fca4748b2d40057e41a45bfbb98da639055"></a>PIN_OUTPUT&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2ebb88b3c2a1394185ff3109a71398fca250f9b7e30576a39d16b3bb00008cccd"></a>PIN_ALTERNATE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2ebb88b3c2a1394185ff3109a71398fcac4f50438727e0acf1a1056f4e02ce43f"></a>PIN_ANALOG&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -255,12 +271,15 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a72c6e420449ce6a606740110b3c17550"></a>
+<a class="anchor" id="a195f8efa77443729d6de6fd4bd5e110c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void GPIO::init </td>
+          <td class="memname">void STM32LIB::GPIO::init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_s_t_m32_l_i_b.html#a66e6384b04a82a4b16e99fdfec657918">PinName</a>&#160;</td>
           <td class="paramname"><em>pin_name</em>, </td>
@@ -268,8 +287,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a8d0cf3620e69cdcfab44e36d2cb771cc">PinDirection</a>&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
+          <td class="paramtype"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">PinFunction</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -289,13 +308,18 @@ Private Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html" title="GPIO Access class. ">GPIO</a> initiation function. </p>
 <p>Initiates a specific pin, enabling the peripheral clock and setting it's properties </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pin_name</td><td>The chip pin name </td></tr>
-    <tr><td class="paramname">dir</td><td>The direction (input/output) </td></tr>
+    <tr><td class="paramname">func</td><td>The function of the pin (one of the PinFunction) </td></tr>
     <tr><td class="paramname">mode</td><td>The Pullup/Pulldown/OpenDrain of the pin </td></tr>
     <tr><td class="paramname">speed</td><td>The pin speed (more speed = more energy) </td></tr>
   </table>
@@ -305,9 +329,108 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a2e64e4a469195fe5fc3f952670bb818c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STM32LIB::GPIO::change_dir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a2ebb88b3c2a1394185ff3109a71398fc">PinFunction</a>&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the pin direction. </p>
+<p>After the pin is initialized it allow to change the pin direction </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The pin function as per PinFunction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8430a38a55a7dfe536ef114e2e0a6797"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STM32LIB::GPIO::change_speed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a9ba4ead8a574cc258aca5d1da2bf3938">PinSpeed</a>&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the pin speed. </p>
+<p>After the pin is initialized it allow to change the pin speed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The pin speed as per PinSpeed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa8a66cb357637eda45f551109efd8bb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STM32LIB::GPIO::change_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_t_m32_l_i_b_1_1_g_p_i_o.html#a175e9f6b1501e887add745f4d4484db7">PinMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the pin mode. </p>
+<p>After the pin is initialized it allow to change the pin mode </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The pin function as per PinMode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a8314e24d6dc717f8d83c9979f1a84c72"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool GPIO::read </td>
@@ -316,6 +439,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Read the pin status. </p>
@@ -326,6 +454,9 @@ Private Attributes</h2></td></tr>
 <a class="anchor" id="a6295600b457dd20feac56f65b91088d5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GPIO::write </td>
@@ -335,6 +466,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Write to the pin. </p>
@@ -350,6 +486,9 @@ Private Attributes</h2></td></tr>
 <a class="anchor" id="ad36f8821672043ef872c8e275496ff17"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GPIO::toggle </td>
@@ -358,6 +497,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Toggle the pin status. </p>
@@ -427,13 +571,13 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>stm32Lib/HAL/GPIO/<a class="el" href="_g_p_i_o_8h_source.html">GPIO.h</a></li>
-<li>stm32Lib/HAL/GPIO/<a class="el" href="_g_p_i_o_8cpp.html">GPIO.cpp</a></li>
+<li>stm32Lib/HAL/Include/GPIO/<a class="el" href="_g_p_i_o_8hpp_source.html">GPIO.hpp</a></li>
+<li>stm32Lib/HAL/src/GPIO/<a class="el" href="_g_p_i_o_8cpp.html">GPIO.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 13 2015 17:24:14 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 11 2015 00:01:18 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

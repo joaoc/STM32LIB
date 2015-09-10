@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>STM32LIB: stm32Lib/HAL/Config/config.h File Reference</title>
+<title>STM32LIB: stm32Lib/HAL/Include/Config/config.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -81,12 +82,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_70dfea098abc1f364a22bcf466396f45.html">Config</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_5c2abff356151a160826e43b45b59045.html">stm32Lib</a></li><li class="navelem"><a class="el" href="dir_60101f502127abcb7d130ba3bf8dfa60.html">HAL</a></li><li class="navelem"><a class="el" href="dir_7c4a16add4c05d8ccd50d970dfd958ec.html">Include</a></li><li class="navelem"><a class="el" href="dir_3af38491d8f4140f0416d10ea95c3588.html">Config</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">config.h File Reference</div>  </div>
 </div><!--header-->
@@ -101,11 +106,769 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_s_t_m32_l_i_b"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_s_t_m32_l_i_b.html">STM32LIB</a></td></tr>
 <tr class="memdesc:namespace_s_t_m32_l_i_b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A STM32F0xx library to ease the programming. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3f79203e976cd9fc1faceb05b9d357a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a3f79203e976cd9fc1faceb05b9d357a0">CONFIG__STM32LIB_H_INCLUDED</a></td></tr>
+<tr class="separator:a3f79203e976cd9fc1faceb05b9d357a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78af589096c13b37c9009e27894aef26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a78af589096c13b37c9009e27894aef26">BIT_GET</a>(p,  m)&#160;&#160;&#160;((p) &amp; (m))</td></tr>
+<tr class="separator:a78af589096c13b37c9009e27894aef26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0338f7133ffbb9192033a42ddd9d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#aff0338f7133ffbb9192033a42ddd9d5c">BIT_SET</a>(p,  m)&#160;&#160;&#160;((p) |= (m))</td></tr>
+<tr class="separator:aff0338f7133ffbb9192033a42ddd9d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a79317f31afe21753b264a099de8c03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a2a79317f31afe21753b264a099de8c03">BIT_CLEAR</a>(p,  m)&#160;&#160;&#160;((p) &amp;= ~(m))</td></tr>
+<tr class="separator:a2a79317f31afe21753b264a099de8c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d8d4db250c6183c501794b5f1f1ff1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ae9d8d4db250c6183c501794b5f1f1ff1">BIT_TOGGLE</a>(p,  m)&#160;&#160;&#160;((p) ^= (m))</td></tr>
+<tr class="separator:ae9d8d4db250c6183c501794b5f1f1ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7ff612fed37d001e3590fcd06c8a56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a2e7ff612fed37d001e3590fcd06c8a56">BIT_WRITE</a>(p,  m,  v)&#160;&#160;&#160;((p) = ((v &lt;&lt; <a class="el" href="config_8h.html#a40826e750726ecbf0c746a5df70bd709">GET_OFFSET</a>(m)) &amp; m))</td></tr>
+<tr class="separator:a2e7ff612fed37d001e3590fcd06c8a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554ced246cf0ab94852054a9bfa5f45b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len)&#160;&#160;&#160;( <a class="el" href="config_8h.html#a0f5432c9a9af3538be16740cc176152d">BIT</a>(len)-1 )</td></tr>
+<tr class="memdesc:a554ced246cf0ab94852054a9bfa5f45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bitmask of length len.  <a href="#a554ced246cf0ab94852054a9bfa5f45b">More...</a><br /></td></tr>
+<tr class="separator:a554ced246cf0ab94852054a9bfa5f45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fe7f31140ca1ed9a91ad2f8538dcc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab0fe7f31140ca1ed9a91ad2f8538dcc6">BF_MASK</a>(start,  len)&#160;&#160;&#160;( <a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len)&lt;&lt;(start) )</td></tr>
+<tr class="memdesc:ab0fe7f31140ca1ed9a91ad2f8538dcc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bitfield mask of length starting at bit start.  <a href="#ab0fe7f31140ca1ed9a91ad2f8538dcc6">More...</a><br /></td></tr>
+<tr class="separator:ab0fe7f31140ca1ed9a91ad2f8538dcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe62e44671213773c0f0057c684e5ac4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#afe62e44671213773c0f0057c684e5ac4">BF_PREP</a>(x,  start,  len)&#160;&#160;&#160;( ((x)&amp;<a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len)) &lt;&lt; (start) )</td></tr>
+<tr class="memdesc:afe62e44671213773c0f0057c684e5ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare a bitmask for insertion or combining.  <a href="#afe62e44671213773c0f0057c684e5ac4">More...</a><br /></td></tr>
+<tr class="separator:afe62e44671213773c0f0057c684e5ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6f3bbac7c5da8a3790395835ae25fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1c6f3bbac7c5da8a3790395835ae25fe">BF_GET</a>(y,  start,  len)&#160;&#160;&#160;( ((y)&gt;&gt;(start)) &amp; <a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len) )</td></tr>
+<tr class="memdesc:a1c6f3bbac7c5da8a3790395835ae25fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a bitfield of length len starting at bit start from y.  <a href="#a1c6f3bbac7c5da8a3790395835ae25fe">More...</a><br /></td></tr>
+<tr class="separator:a1c6f3bbac7c5da8a3790395835ae25fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab3ecca0afac83c67c02ed84c9deb75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#afab3ecca0afac83c67c02ed84c9deb75">BF_SET</a>(y,  x,  start,  len)&#160;&#160;&#160;( y= ((y) &amp;~ <a class="el" href="config_8h.html#ab0fe7f31140ca1ed9a91ad2f8538dcc6">BF_MASK</a>(start, len)) | <a class="el" href="config_8h.html#afe62e44671213773c0f0057c684e5ac4">BF_PREP</a>(x, start, len) )</td></tr>
+<tr class="memdesc:afab3ecca0afac83c67c02ed84c9deb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new bitfield value x into y.  <a href="#afab3ecca0afac83c67c02ed84c9deb75">More...</a><br /></td></tr>
+<tr class="separator:afab3ecca0afac83c67c02ed84c9deb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a3e12d4b23477e971b771eb98ae51d546"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546">PeripheralName</a> { <br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ac5dda73e6a2c5de35593a9ca91801884">PERIPHERAL_ADC1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a7f1080c5699ac2cd40039a6823e04818">PERIPHERAL_ADC2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aad970dd0181721bd6d9c6008a73b9722">PERIPHERAL_ADC3</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a2d63d306de545fab7a26e3243f181e98">PERIPHERAL_BACKUP</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a539536059e136e3b8f274aae1349d208">PERIPHERAL_CRC</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a549bf0725ea72037d340e918cac11996">PERIPHERAL_DAC1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a33b9d9bfc904d1c8411afa1f37742ffd">PERIPHERAL_DAC2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ac8a2e8b30b0bd6fa2633d16f82670b76">PERIPHERAL_DEBUG</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a96601f97450f93d4b6423b3b8336c114">PERIPHERAL_DMA1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a292b9fa838162a5230291c71bb50e544">PERIPHERAL_DMA2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a13fd6ac902e6f9e261507e6e06546b60">PERIPHERAL_FLASH</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a0772c2b348ecbd2da93452cb1bc8c73c">PERIPHERAL_FSMC</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aee318e22676bf5ad8d8377398e5112c3">PERIPHERAL_FMC</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a2e6e4f5c4cb87218f3c962f973ea38e4">PERIPHERAL_GPIOA</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546af7b39041fb63e3bdf0c03e9931c2f76a">PERIPHERAL_GPIOB</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546abf063e3baebd2b76bf9271176dcfb5e7">PERIPHERAL_GPIOC</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a232a70c402ea63b48ad0477b5142fdf1">PERIPHERAL_GPIOD</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546af4ac56d53e292e4006d516954fc264c6">PERIPHERAL_GPIOE</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ac2a8314bb3ac582d3659d4cb04ec1daa">PERIPHERAL_GPIOF</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa605c452f5346e5a06e0045ee48b0491">PERIPHERAL_HASH</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a4a91c5f74f78718668efd110930916bb">PERIPHERAL_I2C1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aebd44c4d6e17ced39760da9e81c02e22">PERIPHERAL_I2C2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a0a08393722458ae4a773864c33528459">PERIPHERAL_I2C3</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa07075838b806238f4e48880aa4c3ae0">PERIPHERAL_I2S2</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a75d7adf62e34720fd4453c6880998d9e">PERIPHERAL_I2S3</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ac199f4bbe3fdd2de9242a1e58325a5ee">PERIPHERAL_MAC</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546acba403a24d6706e70038b54e71785262">PERIPHERAL_MAC_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa173521e53d5a5b389663c3b58ff4626">PERIPHERAL_OTG_FS</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa7f963e5215b9f6f69777d48c5fc4601">PERIPHERAL_OTG_HS</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aac221f4e423c076b4ee85cd85a397ea5">PERIPHERAL_POWER</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a9abd33c66cb37401712a6ffbc57a5cdb">PERIPHERAL_RNG</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546afa66b52b8a5bb524e331d58c1de11862">PERIPHERAL_SDIO</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a3157fdaa39a2c5f78c7f87afee680700">PERIPHERAL_SPI1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a66d962f7b3aef12172a4d20ff5bdf49a">PERIPHERAL_SPI1_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a682b84cda112ed4adf6b37ed7ba38035">PERIPHERAL_SPI2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a541de8bb6f0139c2074e77f92502df74">PERIPHERAL_SPI3</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ab00881163c2223d8471ce8750a7b06d0">PERIPHERAL_SPI3_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ad81d82d01407dc5b23c49823bf586ad5">PERIPHERAL_SRAM</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a006e25956403e08600c847648fa92b65">PERIPHERAL_SYSCFG</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ade63fac355384013ea07a3055d0d6947">PERIPHERAL_TIMER1</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a0b2c084faea9d8215d1d24b9366e84f7">PERIPHERAL_TIMER2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a117c94a8966b2c6c0204edf0b14249d7">PERIPHERAL_TIMER3</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a0f2f0f8fa6097b30a07188b0ebcf4283">PERIPHERAL_TIMER4</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a10228c246c11e076fd04afd93c493965">PERIPHERAL_TIMER5</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a1bc065c5800dee6880df289d3ce57cea">PERIPHERAL_TIMER6</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a66a3da04c126d8c390a6ef702f19fd9e">PERIPHERAL_TIMER7</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a9aeba1bf5feba9865c5c40bd052a51da">PERIPHERAL_TIMER8</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a76cc9c361459a3666b5753c2e2182476">PERIPHERAL_TIMER9</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ac461fdc1bbd6e4a57696bbab53259803">PERIPHERAL_TIMER10</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aed4bb1745efe12105eb597330627381e">PERIPHERAL_TIMER11</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546adec7e9a8a25e8f75a984aaf9ebce459b">PERIPHERAL_TIMER12</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a8f9474cf31ac1d94bd71e02efb3a9e64">PERIPHERAL_TIMER13</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa1fc84a804ae4343a501a5d46d986654">PERIPHERAL_TIMER14</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a0d7c42574c96b69b18eb39fc888f2736">PERIPHERAL_TIMER15</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a6732c3d18f5d917d527c824b84f43dd8">PERIPHERAL_TIMER16</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aa06aa22f6008b55f12b0c91e26927b97">PERIPHERAL_TIMER17</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a7db435aaf7bc629f4a3f493b7829ccfd">PERIPHERAL_USART1</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ad253896e9aef0bc58eadf70cc224fdbe">PERIPHERAL_USART1_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a6c384ec20703a6e2f12e7de0f63d59ab">PERIPHERAL_USART2</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ab38eff748ddd537d772b16d211e33bb3">PERIPHERAL_USART2_REMAP</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a8f90d74c936e9e6fa9737b49b4cd8e08">PERIPHERAL_USART3</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ae7122d417500fefbef5d693fb37ac326">PERIPHERAL_USART3_PARTIAL_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a787341c100ff148fa01137571c0ea017">PERIPHERAL_USART3_FULL_REMAP</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546af6622e700d78b2d2f9480d87723c4c7c">PERIPHERAL_UART4</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546aabfebb84386e65b79312c89412f7aeb9">PERIPHERAL_UART5</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546ab540d72f1fade4e4197a017e80197e2c">PERIPHERAL_USART6</a>, 
+<a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546a79ae8eb42487e0068a206da1880e6aff">PERIPHERAL_WWD</a>
+<br />
+ }</td></tr>
+<tr class="separator:a3e12d4b23477e971b771eb98ae51d546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fe38353b1f2a6661a0f517252a6470"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470">ClockName</a> { <br />
+&#160;&#160;<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470aae2bb333077d91b3c2aa75978f89e084">HSI</a>, 
+<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470a744bf841212e605b891f8ced6e20eb43">HSE</a>, 
+<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470a04ee513a17d1e560d5eaaf356cb845f7">HSE_EXT</a>, 
+<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470a5c7fe827c28117f11dd14f9197d7d5a2">PLL</a>, 
+<br />
+&#160;&#160;<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470ac59b221b111954833c988555d5972f88">LSI</a>, 
+<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470aa07a47bdd221bde7ab7f08d41c03de40">LSE</a>, 
+<a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470a7801eda2dd4aa7cd7766747d8ae0125b">HSI14</a>
+<br />
+ }</td></tr>
+<tr class="separator:a05fe38353b1f2a6661a0f517252a6470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0f5432c9a9af3538be16740cc176152d"><td class="memItemLeft" align="right" valign="top">constexpr unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0f5432c9a9af3538be16740cc176152d">BIT</a> (uint8_t bit)</td></tr>
+<tr class="separator:a0f5432c9a9af3538be16740cc176152d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40826e750726ecbf0c746a5df70bd709"><td class="memItemLeft" align="right" valign="top">constexpr unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a40826e750726ecbf0c746a5df70bd709">GET_OFFSET</a> (uint32_t mask)</td></tr>
+<tr class="separator:a40826e750726ecbf0c746a5df70bd709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac8a41f7d9c682f0563776da03590bca7"><td class="memItemLeft" align="right" valign="top">static constexpr const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ac8a41f7d9c682f0563776da03590bca7">Mod37BitPosition</a> []</td></tr>
+<tr class="separator:ac8a41f7d9c682f0563776da03590bca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a3f79203e976cd9fc1faceb05b9d357a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG__STM32LIB_H_INCLUDED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a78af589096c13b37c9009e27894aef26"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_GET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((p) &amp; (m))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aff0338f7133ffbb9192033a42ddd9d5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_SET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((p) |= (m))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2a79317f31afe21753b264a099de8c03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_CLEAR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((p) &amp;= ~(m))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae9d8d4db250c6183c501794b5f1f1ff1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_TOGGLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((p) ^= (m))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e7ff612fed37d001e3590fcd06c8a56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_WRITE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((p) = ((v &lt;&lt; <a class="el" href="config_8h.html#a40826e750726ecbf0c746a5df70bd709">GET_OFFSET</a>(m)) &amp; m))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a554ced246cf0ab94852054a9bfa5f45b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BIT_MASK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len</td><td>)</td>
+          <td>&#160;&#160;&#160;( <a class="el" href="config_8h.html#a0f5432c9a9af3538be16740cc176152d">BIT</a>(len)-1 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a bitmask of length len. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab0fe7f31140ca1ed9a91ad2f8538dcc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BF_MASK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">start, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( <a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len)&lt;&lt;(start) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a bitfield mask of length starting at bit start. </p>
+
+</div>
+</div>
+<a class="anchor" id="afe62e44671213773c0f0057c684e5ac4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BF_PREP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">start, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((x)&amp;<a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len)) &lt;&lt; (start) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare a bitmask for insertion or combining. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1c6f3bbac7c5da8a3790395835ae25fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BF_GET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">start, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( ((y)&gt;&gt;(start)) &amp; <a class="el" href="config_8h.html#a554ced246cf0ab94852054a9bfa5f45b">BIT_MASK</a>(len) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract a bitfield of length len starting at bit start from y. </p>
+
+</div>
+</div>
+<a class="anchor" id="afab3ecca0afac83c67c02ed84c9deb75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BF_SET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">start, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;( y= ((y) &amp;~ <a class="el" href="config_8h.html#ab0fe7f31140ca1ed9a91ad2f8538dcc6">BF_MASK</a>(start, len)) | <a class="el" href="config_8h.html#afe62e44671213773c0f0057c684e5ac4">BF_PREP</a>(x, start, len) )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a new bitfield value x into y. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="config_8h.html#a3e12d4b23477e971b771eb98ae51d546">PeripheralName</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ac5dda73e6a2c5de35593a9ca91801884"></a>PERIPHERAL_ADC1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_ADC1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a7f1080c5699ac2cd40039a6823e04818"></a>PERIPHERAL_ADC2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_ADC2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aad970dd0181721bd6d9c6008a73b9722"></a>PERIPHERAL_ADC3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_ADC3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a2d63d306de545fab7a26e3243f181e98"></a>PERIPHERAL_BACKUP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_BACKUP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a539536059e136e3b8f274aae1349d208"></a>PERIPHERAL_CRC&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_CRC. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a549bf0725ea72037d340e918cac11996"></a>PERIPHERAL_DAC1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_DAC1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a33b9d9bfc904d1c8411afa1f37742ffd"></a>PERIPHERAL_DAC2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_DAC2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ac8a2e8b30b0bd6fa2633d16f82670b76"></a>PERIPHERAL_DEBUG&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_MCU_DEBUG. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a96601f97450f93d4b6423b3b8336c114"></a>PERIPHERAL_DMA1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_DMA1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a292b9fa838162a5230291c71bb50e544"></a>PERIPHERAL_DMA2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_DMA2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a13fd6ac902e6f9e261507e6e06546b60"></a>PERIPHERAL_FLASH&#160;</td><td class="fielddoc">
+<p>FLASH Interface. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a0772c2b348ecbd2da93452cb1bc8c73c"></a>PERIPHERAL_FSMC&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_FSMC. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aee318e22676bf5ad8d8377398e5112c3"></a>PERIPHERAL_FMC&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_FMC. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a2e6e4f5c4cb87218f3c962f973ea38e4"></a>PERIPHERAL_GPIOA&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOA. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546af7b39041fb63e3bdf0c03e9931c2f76a"></a>PERIPHERAL_GPIOB&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOB. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546abf063e3baebd2b76bf9271176dcfb5e7"></a>PERIPHERAL_GPIOC&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOC. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a232a70c402ea63b48ad0477b5142fdf1"></a>PERIPHERAL_GPIOD&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOD. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546af4ac56d53e292e4006d516954fc264c6"></a>PERIPHERAL_GPIOE&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOE. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ac2a8314bb3ac582d3659d4cb04ec1daa"></a>PERIPHERAL_GPIOF&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_GPIOF. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa605c452f5346e5a06e0045ee48b0491"></a>PERIPHERAL_HASH&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_HASH. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a4a91c5f74f78718668efd110930916bb"></a>PERIPHERAL_I2C1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_I2C1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aebd44c4d6e17ced39760da9e81c02e22"></a>PERIPHERAL_I2C2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_I2C2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a0a08393722458ae4a773864c33528459"></a>PERIPHERAL_I2C3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_I2C3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa07075838b806238f4e48880aa4c3ae0"></a>PERIPHERAL_I2S2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_I2S2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a75d7adf62e34720fd4453c6880998d9e"></a>PERIPHERAL_I2S3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_I2S3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ac199f4bbe3fdd2de9242a1e58325a5ee"></a>PERIPHERAL_MAC&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_MAC. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546acba403a24d6706e70038b54e71785262"></a>PERIPHERAL_MAC_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_MAC_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa173521e53d5a5b389663c3b58ff4626"></a>PERIPHERAL_OTG_FS&#160;</td><td class="fielddoc">
+<p>internal OTG FS PHY </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa7f963e5215b9f6f69777d48c5fc4601"></a>PERIPHERAL_OTG_HS&#160;</td><td class="fielddoc">
+<p>internal OTG HS PHY </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aac221f4e423c076b4ee85cd85a397ea5"></a>PERIPHERAL_POWER&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_POWER. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a9abd33c66cb37401712a6ffbc57a5cdb"></a>PERIPHERAL_RNG&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_RNG. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546afa66b52b8a5bb524e331d58c1de11862"></a>PERIPHERAL_SDIO&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SDIO. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a3157fdaa39a2c5f78c7f87afee680700"></a>PERIPHERAL_SPI1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SPI1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a66d962f7b3aef12172a4d20ff5bdf49a"></a>PERIPHERAL_SPI1_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SPI1_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a682b84cda112ed4adf6b37ed7ba38035"></a>PERIPHERAL_SPI2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SPI2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a541de8bb6f0139c2074e77f92502df74"></a>PERIPHERAL_SPI3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SPI3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ab00881163c2223d8471ce8750a7b06d0"></a>PERIPHERAL_SPI3_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SPI3_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ad81d82d01407dc5b23c49823bf586ad5"></a>PERIPHERAL_SRAM&#160;</td><td class="fielddoc">
+<p>SRAM INTERFACE. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a006e25956403e08600c847648fa92b65"></a>PERIPHERAL_SYSCFG&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_SYSCFG. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ade63fac355384013ea07a3055d0d6947"></a>PERIPHERAL_TIMER1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a0b2c084faea9d8215d1d24b9366e84f7"></a>PERIPHERAL_TIMER2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a117c94a8966b2c6c0204edf0b14249d7"></a>PERIPHERAL_TIMER3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a0f2f0f8fa6097b30a07188b0ebcf4283"></a>PERIPHERAL_TIMER4&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a10228c246c11e076fd04afd93c493965"></a>PERIPHERAL_TIMER5&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a1bc065c5800dee6880df289d3ce57cea"></a>PERIPHERAL_TIMER6&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a66a3da04c126d8c390a6ef702f19fd9e"></a>PERIPHERAL_TIMER7&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER7. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a9aeba1bf5feba9865c5c40bd052a51da"></a>PERIPHERAL_TIMER8&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER8. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a76cc9c361459a3666b5753c2e2182476"></a>PERIPHERAL_TIMER9&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER9. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ac461fdc1bbd6e4a57696bbab53259803"></a>PERIPHERAL_TIMER10&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER10. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aed4bb1745efe12105eb597330627381e"></a>PERIPHERAL_TIMER11&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER11. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546adec7e9a8a25e8f75a984aaf9ebce459b"></a>PERIPHERAL_TIMER12&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER12. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a8f9474cf31ac1d94bd71e02efb3a9e64"></a>PERIPHERAL_TIMER13&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER13. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa1fc84a804ae4343a501a5d46d986654"></a>PERIPHERAL_TIMER14&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER14. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a0d7c42574c96b69b18eb39fc888f2736"></a>PERIPHERAL_TIMER15&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER15. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a6732c3d18f5d917d527c824b84f43dd8"></a>PERIPHERAL_TIMER16&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER16. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aa06aa22f6008b55f12b0c91e26927b97"></a>PERIPHERAL_TIMER17&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_TIMER17. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a7db435aaf7bc629f4a3f493b7829ccfd"></a>PERIPHERAL_USART1&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ad253896e9aef0bc58eadf70cc224fdbe"></a>PERIPHERAL_USART1_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART1_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a6c384ec20703a6e2f12e7de0f63d59ab"></a>PERIPHERAL_USART2&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ab38eff748ddd537d772b16d211e33bb3"></a>PERIPHERAL_USART2_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART2_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a8f90d74c936e9e6fa9737b49b4cd8e08"></a>PERIPHERAL_USART3&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ae7122d417500fefbef5d693fb37ac326"></a>PERIPHERAL_USART3_PARTIAL_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART3_PARTIAL_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a787341c100ff148fa01137571c0ea017"></a>PERIPHERAL_USART3_FULL_REMAP&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART3_FULL_REMAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546af6622e700d78b2d2f9480d87723c4c7c"></a>PERIPHERAL_UART4&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_UART4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546aabfebb84386e65b79312c89412f7aeb9"></a>PERIPHERAL_UART5&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_UART5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546ab540d72f1fade4e4197a017e80197e2c"></a>PERIPHERAL_USART6&#160;</td><td class="fielddoc">
+<p>PERIPHERAL_USART6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3e12d4b23477e971b771eb98ae51d546a79ae8eb42487e0068a206da1880e6aff"></a>PERIPHERAL_WWD&#160;</td><td class="fielddoc">
+<p>Windows WatchDog. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="config_8h.html#a05fe38353b1f2a6661a0f517252a6470">ClockName</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470aae2bb333077d91b3c2aa75978f89e084"></a>HSI&#160;</td><td class="fielddoc">
+<p>HSI 8 MHz RC oscillator clock </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470a744bf841212e605b891f8ced6e20eb43"></a>HSE&#160;</td><td class="fielddoc">
+<p>HSE oscillator clock </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470a04ee513a17d1e560d5eaaf356cb845f7"></a>HSE_EXT&#160;</td><td class="fielddoc">
+<p>External HSE oscillator clock (HSE Bypass) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470a5c7fe827c28117f11dd14f9197d7d5a2"></a>PLL&#160;</td><td class="fielddoc">
+<p>PLL CLOCK </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470ac59b221b111954833c988555d5972f88"></a>LSI&#160;</td><td class="fielddoc">
+<p>40 kHz low speed internal RC (LSI RC) which drives the independent watchdog and optionally the RTC used for Auto-wakeup from Stop/Standby mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470aa07a47bdd221bde7ab7f08d41c03de40"></a>LSE&#160;</td><td class="fielddoc">
+<p>32.768 kHz low speed external crystal (LSE crystal) which optionally drives the realtime clock (RTCCLK) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a05fe38353b1f2a6661a0f517252a6470a7801eda2dd4aa7cd7766747d8ae0125b"></a>HSI14&#160;</td><td class="fielddoc">
+<p>14 MHz high speed internal RC (HSI14) dedicated for ADC. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a0f5432c9a9af3538be16740cc176152d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr unsigned long BIT </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40826e750726ecbf0c746a5df70bd709"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr unsigned long GET_OFFSET </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ac8a41f7d9c682f0563776da03590bca7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const int Mod37BitPosition[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<div class="line">{</div>
+<div class="line">  32, 0, 1, 26, 2, 23, 27, 0, 3, 16, 24, 30, 28, 11, 0, 13, 4,</div>
+<div class="line">  7, 17, 0, 25, 22, 31, 15, 29, 10, 12, 6, 0, 21, 14, 9, 5,</div>
+<div class="line">  20, 8, 19, 18</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 13 2015 17:24:14 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 11 2015 00:01:17 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

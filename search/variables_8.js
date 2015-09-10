@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../classcreate__reg_1_1__chip.html#a9766ceea4b156466db4b49e3f086232d',1,'create_reg._chip.name()'],['../classcreate__reg_1_1___peripheral.html#a645dc04946a8549b164cec9f12dd06e1',1,'create_reg._Peripheral.name()'],['../classcreate__reg_1_1__register.html#a0f072b9f00390a4d473d1e65a6bda159',1,'create_reg._register.name()'],['../classcreate__reg_1_1__field.html#a56c135b3ae7e23b523f49c591534ce9d',1,'create_reg._field.name()']]]
+  ['shost',['shost',['../namespace_s_t_m32_l_i_b.html#a4299179d0dced09760c819d336515e08',1,'STM32LIB']]],
+  ['sig',['sig',['../class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ad036b0d6a56b13f93e11c7c0eaaa05cd',1,'STM32LIB::TIMER']]],
+  ['single_5fmemfuncptr_5fsize',['SINGLE_MEMFUNCPTR_SIZE',['../namespacefastdelegate_1_1detail.html#aeff845afd539c488ef6cc4702f765c44',1,'fastdelegate::detail']]]
 ];

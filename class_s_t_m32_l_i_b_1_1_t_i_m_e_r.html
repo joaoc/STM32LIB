@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -101,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html" title="TIMER class. ">TIMER</a> class.  
  <a href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_t_i_m_e_r_8h_source.html">TIMER.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_t_i_m_e_r__old_8hpp_source.html">TIMER_old.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -135,6 +136,8 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ae47e2972979b8da8c05074a8d7670eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4ab69668fa4b344366e31a14954be2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structwink_1_1signal.html">wink::signal</a>&lt; <a class="el" href="structwink_1_1slot.html">wink::slot</a>&lt; void(<a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ae47e2972979b8da8c05074a8d7670eb6">InterruptType</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#aae4ab69668fa4b344366e31a14954be2">signal</a></td></tr>
+<tr class="separator:aae4ab69668fa4b344366e31a14954be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,7 +154,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad036b0d6a56b13f93e11c7c0eaaa05cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_t_i_m_e_r_8h.html#aeb37c55e00d6f84819db8906d8e217e5">signal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ad036b0d6a56b13f93e11c7c0eaaa05cd">sig</a></td></tr>
+<tr class="memitem:ad036b0d6a56b13f93e11c7c0eaaa05cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#aae4ab69668fa4b344366e31a14954be2">signal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ad036b0d6a56b13f93e11c7c0eaaa05cd">sig</a></td></tr>
 <tr class="separator:ad036b0d6a56b13f93e11c7c0eaaa05cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -178,7 +181,20 @@ Code example: </p><div class="fragment"><div class="line">TIMER <a class="code" 
 </div>
 <p> The timer run with a frequency equals to <img class="formulaInl" alt="$ \frac{Clock\_frequency}{Prescaller} $" src="form_0.png"/>. Its possible to divide even more the clock using the <a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#a20c3b9bf186d11c4b3b36c30219425fd">DevideClock</a> option. <br />
 The timer counts between the reload counter and the period value, creating a update interrupt each time it overflows. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="aae4ab69668fa4b344366e31a14954be2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="structwink_1_1signal.html">wink::signal</a>&lt;<a class="el" href="structwink_1_1slot.html">wink::slot</a>&lt;void (<a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ae47e2972979b8da8c05074a8d7670eb6">InterruptType</a>)&gt; &gt; <a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#aae4ab69668fa4b344366e31a14954be2">STM32LIB::TIMER::signal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a20c3b9bf186d11c4b3b36c30219425fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +448,7 @@ The timer counts between the reload counter and the period value, creating a upd
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_t_i_m_e_r_8h.html#aeb37c55e00d6f84819db8906d8e217e5">signal</a> STM32LIB::TIMER::sig</td>
+          <td class="memname"><a class="el" href="class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#aae4ab69668fa4b344366e31a14954be2">signal</a> STM32LIB::TIMER::sig</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -480,13 +496,13 @@ The timer counts between the reload counter and the period value, creating a upd
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>stm32Lib/HAL/Timer/<a class="el" href="_t_i_m_e_r_8h_source.html">TIMER.h</a></li>
-<li>stm32Lib/HAL/Timer/<a class="el" href="_t_i_m_e_r_8cpp.html">TIMER.cpp</a></li>
+<li>stm32Lib/HAL/Include/Timer/<a class="el" href="_t_i_m_e_r__old_8hpp_source.html">TIMER_old.hpp</a></li>
+<li>stm32Lib/HAL/src/Timer/<a class="el" href="_t_i_m_e_r__old_8cpp.html">TIMER_old.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 13 2015 17:24:14 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 11 2015 00:01:18 for STM32LIB by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

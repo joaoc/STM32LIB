@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['fastdelegate_2eh',['FastDelegate.h',['../_fast_delegate_8h.html',1,'']]],
-  ['fastdelegatebind_2eh',['FastDelegateBind.h',['../_fast_delegate_bind_8h.html',1,'']]]
+  ['clockcontrol_2ehpp',['ClockControl.hpp',['../_clock_control_8hpp.html',1,'']]],
+  ['clocksource_2ehpp',['ClockSource.hpp',['../_clock_source_8hpp.html',1,'']]],
+  ['config_2eh',['config.h',['../config_8h.html',1,'']]]
 ];
