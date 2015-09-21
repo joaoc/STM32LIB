@@ -1,16 +1,20 @@
 # depslib dependency file v1.0
-1440758281 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1442670834 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
 	"GPIO/GPIO.hpp"
 	"Timer/WAIT.hpp"
 	"Config/debug.hpp"
+	"EXTI/EXTI_IRQ.hpp"
+	"NVIC/NVIC.hpp"
 
-1440948325 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1442095654 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
 	"stm32f0xx_conf.h"
 	<system_stm32f0xx.h>
 	"stm32f0xx.h"
+	"MCU/F0/stm32f0xx_syscfg.h"
+	"MCU/F0/stm32f0xx_exti.h"
 
 1440713909 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
 	"stm32f0xx.h"
@@ -71,9 +75,13 @@
 	"Config/config.h"
 	"RCC/ClockSource.hpp"
 
-1440100277 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
+1442671246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
+	"EXTI/EXTI.hpp"
+	"EXTI/EXTI_IRQ.hpp"
+	"NVIC/NVIC.hpp"
+	"event/slot.h"
 
 1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clockcontrol.hpp
 	"Config/config.h"
@@ -86,7 +94,7 @@
 1439497248 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\timer\wait.cpp
 	"TIMER/WAIT.hpp"
 
-1439495822 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
+1442862701 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
 	<cstdlib>
 	<sys/types.h>
 
@@ -120,4 +128,34 @@
 
 1440956096 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_syscfg.h
 	"stm32f0xx.h"
+
+1442087770 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_exti.h
+	"stm32f0xx.h"
+
+1442669309 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti.hpp
+	"Config/config.h"
+	"SYSCFG/SYSCFG.hpp"
+
+1442149536 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti_irq.hpp
+	"Config/config.h"
+	"EXTI/EXTI.hpp"
+	"event/signal.h"
+	"event/slot.h"
+
+1440006775 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\signal.h
+	<forward_list>
+
+1435688246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\slot.h
+	"fd/FastDelegate.h"
+
+1440006650 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\fd\fastdelegate.h
+	<string.h>
+
+1442147233 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\nvic\nvic.hpp
+	"Config/config.h"
+	"RCC/ClockControl.hpp"
+	"SYSCFG/SYSCFG.hpp"
+
+1442670330 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\syscfg\syscfg.hpp
+	"Config/config.h"
 

@@ -11,6 +11,7 @@ namespace STM32LIB{
 /** \brief NVIC interface class.
  */
 class NVIC_CONTROLER{
+    public:
 
     /** \brief Allow changing the IRQ funtions
      *  \details Changes the memory mapping at 0x0000 0000 to the SRAM and copies the interrupt vector
@@ -39,13 +40,13 @@ class NVIC_CONTROLER{
      * \return
      * \note Must firts call the remapIrq() function!
      */
-    static void newIrqHandler(IRQn_Type IRQ, volatile uint32_t* newHandler){
+    static void newIrqHandler(IRQn_Type IRQ, __IO uint32_t newHandler){
         uint32_t addr=SRAM_BASE+0x40+ (0x4*IRQ); //the new handler is located at the beginning of the SRAM and the ADDR for IRQ=0 is 0x40
         __IO uint32_t* handler= (__IO uint32_t *)addr;
 
         //Atomic operation
         disableAllInterrupts();
-        *handler=*newHandler;
+        *handler=newHandler;
         enableAllInterrupts(); //if you are using this you will want the interrupts enable so its ok to do this...
     }
 

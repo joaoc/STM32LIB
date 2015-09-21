@@ -4,6 +4,10 @@
 
 #include "Config/config.h"
 #include "RCC/ClockControl.hpp"
+#include "EXTI/EXTI.hpp"
+#include "EXTI/EXTI_IRQ.hpp"
+#include "NVIC/NVIC.hpp"
+#include "event/slot.h"
 
 
 namespace STM32LIB{
@@ -233,6 +237,61 @@ public:
     */
     void toggle(){
         gpioX->ODR^= pin_mask;
+    }
+
+    void enableInterrupt(EXTI_CONTROLER::_Mode mode,EXTI_CONTROLER::_Trigger trigger){
+        //find the IRQ number.
+        uint8_t IRQ;
+        uint16_t line=STM32_PIN(pin);
+        uint16_t port=STM32_PORT(pin);
+
+        if(line<=1)
+            IRQ=EXTI0_1_IRQn;
+        else if(line <=3)
+            IRQ=EXTI2_3_IRQn;
+        else if(line <=15)
+            IRQ=EXTI4_15_IRQn;
+
+        switch(IRQ){
+            case EXTI0_1_IRQn:
+                NVIC_CONTROLER::newIrqHandler(EXTI0_1_IRQn,(__IO uint32_t)&EXTI_IRQ<EXTI0_1>::GetInstance().IRQ );
+                break;
+            case EXTI2_3_IRQn:
+                NVIC_CONTROLER::newIrqHandler(EXTI2_3_IRQn,(__IO uint32_t)&EXTI_IRQ<EXTI2_3>::GetInstance().IRQ );
+                break;
+            case EXTI4_15_IRQn:
+                NVIC_CONTROLER::newIrqHandler(EXTI4_15_IRQn,(__IO uint32_t)&EXTI_IRQ<EXTI4_15>::GetInstance().IRQ );
+                break;
+        }
+
+        NVIC_CONTROLER::configureIrq(IRQ);
+        EXTI_CONTROLER::init(line,port,mode,trigger);
+
+    }
+
+    void disableInterrupt(void){
+        uint8_t IRQ;
+        uint16_t line=STM32_PIN(pin);
+        if(line<=1)
+            IRQ=EXTI0_1_IRQn;
+        else if(line <=3)
+            IRQ=EXTI2_3_IRQn;
+        else if(line <=15)
+            IRQ=EXTI4_15_IRQn;
+
+        EXTI_CONTROLER::init(line,0,EXTI_CONTROLER::_Mode::Interrupt,EXTI_CONTROLER::_Trigger::Falling,DISABLE); //doesn't mater which mode or trigger
+        NVIC_CONTROLER::configureIrq(IRQ,DISABLE);
+    }
+
+    void bind(wink::slot<void (uint16_t)> handler){
+        uint8_t IRQ;
+        uint16_t line=STM32_PIN(pin);
+        if(line<=1)
+            EXTI_IRQ<EXTI0_1>::GetInstance().signal.insertSubscriber(handler);
+        else if(line <=3)
+            EXTI_IRQ<EXTI2_3>::GetInstance().signal.insertSubscriber(handler);
+        else if(line <=15)
+            EXTI_IRQ<EXTI4_15>::GetInstance().signal.insertSubscriber(handler);
     }
 };
 }

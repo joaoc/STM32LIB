@@ -22,6 +22,20 @@ public:
         BF_SET(SYSCFG->CFGR1,mode,0,2);
     }
 
+    static inline void ExtiLineSel(uint16_t line, uint16_t port){
+        uint32_t reg;
+        uint16_t temp;
+
+        if(line<=3)
+            BF_SET(SYSCFG->EXTICR[0],port,4*(line%4),4);
+        else if(line <=7)
+            BF_SET(SYSCFG->EXTICR[1],port,4*(line%4),4);
+        else if(line <=11)
+           BF_SET(SYSCFG->EXTICR[2],port,4*(line%4),4);
+        else if(line <=15)
+            BF_SET(SYSCFG->EXTICR[3],port,4*(line%4),4);
+    }
+
 
 };
 

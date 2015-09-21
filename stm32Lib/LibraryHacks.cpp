@@ -74,22 +74,34 @@ extern "C" void __wrap___aeabi_unwind_cpp_pr2() {}
  * sbrk function for getting space for malloc and friends
  */
 
-extern int  _end;
+//extern int  _end;
+//
+//extern "C" {
+//  caddr_t _sbrk ( int incr ) {
+//
+//    static unsigned char *heap = NULL;
+//    unsigned char *prev_heap;
+//
+//    if (heap == NULL) {
+//      heap = (unsigned char *)&_end;
+//    }
+//    prev_heap = heap;
+//    /* check removed to show basic approach */
+//
+//    heap += incr;
+//
+//    return (caddr_t) prev_heap;
+//  }
+//}
 
-extern "C" {
-  caddr_t _sbrk ( int incr ) {
-
-    static unsigned char *heap = NULL;
-    unsigned char *prev_heap;
-
-    if (heap == NULL) {
-      heap = (unsigned char *)&_end;
-    }
-    prev_heap = heap;
-    /* check removed to show basic approach */
-
-    heap += incr;
-
-    return (caddr_t) prev_heap;
-  }
-}
+//__extension__ typedef int __guard __attribute__((mode (__DI__)));
+//
+//extern "C" int __cxa_guard_acquire(__guard *);
+//extern "C" void __cxa_guard_release (__guard *);
+//extern "C" void __cxa_guard_abort (__guard *);
+//extern "C" void * __dso_handle = nullptr;
+//
+//
+//int __cxa_guard_acquire(__guard *g) {return !*(char *)(g);};
+//void __cxa_guard_release (__guard *g) {*(char *)g = 1;};
+//void __cxa_guard_abort (__guard *) {};

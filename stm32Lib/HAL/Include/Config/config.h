@@ -15,6 +15,7 @@
 #include "stm32f0xx.h"
 
 #include "MCU/F0/stm32f0xx_syscfg.h"
+#include "MCU/F0/stm32f0xx_exti.h"
 
 
 #endif /* STM32F0XX */
@@ -132,6 +133,7 @@ enum ClockName {
     LSE,                /**< 32.768 kHz low speed external crystal (LSE crystal) which optionally drives the realtime clock (RTCCLK) */
     HSI14               /**< 14 MHz high speed internal RC (HSI14) dedicated for ADC. */
 };
+
 
 
 #endif /* CONFIG__STM32LIB_H_INCLUDED */
