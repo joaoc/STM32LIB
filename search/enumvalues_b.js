@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['up',['UP',['../class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#a6aa7fe94e2ca508a16959c26ca350793a4bb5d0729ab12fce0a00a60feecc5222',1,'STM32LIB::TIMER']]],
-  ['update',['UPDATE',['../class_s_t_m32_l_i_b_1_1_base_timer.html#a27f9c7ae85b35bfbcdc67fbf74126353a024cfb15d89207128dc2608ff652751f',1,'STM32LIB::BaseTimer::UPDATE()'],['../class_s_t_m32_l_i_b_1_1_t_i_m_e_r.html#ae47e2972979b8da8c05074a8d7670eb6a6573648a4cb0d1556b3796ebdaa5f9ab',1,'STM32LIB::TIMER::UPDATE()']]]
+  ['rising',['Rising',['../class_s_t_m32_l_i_b_1_1_e_x_t_i___c_o_n_t_r_o_l_e_r.html#a8b9c4bbac151363162e7ba832ce4ad21a8dc2719c333d791e5ee50d5b59893177',1,'STM32LIB::EXTI_CONTROLER']]],
+  ['rising_5ffalling',['Rising_Falling',['../class_s_t_m32_l_i_b_1_1_e_x_t_i___c_o_n_t_r_o_l_e_r.html#a8b9c4bbac151363162e7ba832ce4ad21abb287a0605238d3e23b35e422827ef29',1,'STM32LIB::EXTI_CONTROLER']]]
 ];

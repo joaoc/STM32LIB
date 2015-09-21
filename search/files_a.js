@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wait_2ecpp',['WAIT.cpp',['../_w_a_i_t_8cpp.html',1,'']]],
-  ['wait_2ehpp',['WAIT.hpp',['../_w_a_i_t_8hpp.html',1,'']]]
+  ['timer_5fold_2ecpp',['TIMER_old.cpp',['../_t_i_m_e_r__old_8cpp.html',1,'']]],
+  ['timer_5fold_2ehpp',['TIMER_old.hpp',['../_t_i_m_e_r__old_8hpp.html',1,'']]]
 ];
