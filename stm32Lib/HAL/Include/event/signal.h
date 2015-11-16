@@ -31,7 +31,9 @@
  */
 
 #pragma once
-#include <forward_list>
+
+
+#include <slist>
 
 
 namespace wink {
@@ -41,7 +43,7 @@ namespace wink {
     protected:
 
       typedef Slot slot_type;
-      std::forward_list<slot_type> _slots;
+      std::slist<slot_type> _slots;
 
     public:
 

@@ -2,13 +2,17 @@
 #ifndef CONFIG__STM32LIB_H_INCLUDED
 #define CONFIG__STM32LIB_H_INCLUDED
 
+#define STM32LIB_BUILD
+
 #include <stdint.h>
 #include "Peripheral.h"
 
 //For the STM32F0
 #ifdef STM32F0XX
 
-//#include "RegisterAccess/MCU/HPP/STM32F030.hpp"
+
+
+#include <iterator>
 
 #include "stm32f0xx_conf.h"
 #include <system_stm32f0xx.h>

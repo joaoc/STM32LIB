@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1442670834 source:c:\users\joao\documents\github\stm32lib\main.cpp
+1447192264 source:c:\users\joao\documents\github\stm32lib\main.cpp
 	"Config/config.h"
 	"GPIO/GPIO.hpp"
 	"Timer/WAIT.hpp"
@@ -7,75 +7,54 @@
 	"EXTI/EXTI_IRQ.hpp"
 	"NVIC/NVIC.hpp"
 
-1442095654 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
+1447199882 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\config.h
 	<stdint.h>
 	"Peripheral.h"
+	<iterator>
 	"stm32f0xx_conf.h"
 	<system_stm32f0xx.h>
 	"stm32f0xx.h"
 	"MCU/F0/stm32f0xx_syscfg.h"
 	"MCU/F0/stm32f0xx_exti.h"
 
-1440713909 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\peripheral.h
 	"stm32f0xx.h"
 
-1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\mcu\hpp\stm32f030.hpp
-	"reg_t.hpp"
-	"rw_t.hpp"
-	"ro_t.hpp"
-	"wo_t.hpp"
+1434574263 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx_conf.h
 
-1436284821 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\reg_t.hpp
-	"generate_mask_t.hpp"
-	<limits>
-
-1432672085 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\generate_mask_t.hpp
-	"generate_unshifted_mask_t.hpp"
-
-1432672116 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\generate_unshifted_mask_t.hpp
-
-1436284641 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\rw_t.hpp
-	"ro_t.hpp"
-
-1436284651 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\ro_t.hpp
-
-1436284660 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\registeraccess\wo_t.hpp
-
-1435688246 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx_conf.h
-
-1435688246 c:\users\joao\documents\github\stm32lib\inc\system_stm32f0xx.h
+1434571802 c:\users\joao\documents\github\stm32lib\inc\system_stm32f0xx.h
 
 1436279780 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\rcc.hpp
 	"Config/config.h"
 	"RCC/RCC.hpp"
 
-1439496933 source:c:\users\joao\documents\github\stm32lib\startup_stm32f0xx.s
+1447192264 source:c:\users\joao\documents\github\stm32lib\startup_stm32f0xx.s
 
-1434223862 source:c:\users\joao\documents\github\stm32lib\system_stm32f0xx.c
+1436276180 source:c:\users\joao\documents\github\stm32lib\system_stm32f0xx.c
 	"stm32f0xx.h"
 
-1437411305 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx.h
+1447192264 c:\users\joao\documents\github\stm32lib\inc\stm32f0xx.h
 	"core_cm0.h"
 	"system_stm32f0xx.h"
 	<stdint.h>
 	"stm32f0xx_conf.h"
 
-1433277873 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cm0.h
+1433194712 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cm0.h
 	<stdint.h>
 	"core_cmInstr.h"
 	"core_cmFunc.h"
 
-1433277873 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cminstr.h
+1433194712 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cminstr.h
 	<cmsis_iar.h>
 
-1433277873 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cmfunc.h
+1433194712 c:\users\joao\documents\github\stm32lib\stm32lib\cmsis\core_cmfunc.h
 	<cmsis_iar.h>
 
 1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clocksource.hpp
 	"Config/config.h"
 	"RCC/ClockSource.hpp"
 
-1442671246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\gpio\gpio.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
 	"EXTI/EXTI.hpp"
@@ -83,37 +62,37 @@
 	"NVIC/NVIC.hpp"
 	"event/slot.h"
 
-1437434087 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clockcontrol.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\rcc\clockcontrol.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
 
-1439495206 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\timer\wait.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\timer\wait.hpp
 	"Config/config.h"
 	"core_cm0.h"
 
-1439497248 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\timer\wait.cpp
+1447192264 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\timer\wait.cpp
 	"TIMER/WAIT.hpp"
 
-1442862701 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
+1447192264 source:c:\users\joao\documents\github\stm32lib\stm32lib\libraryhacks.cpp
 	<cstdlib>
 	<sys/types.h>
 
-1439651753 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\debug\semihosting.cpp
+1447192264 source:c:\users\joao\documents\github\stm32lib\stm32lib\hal\src\debug\semihosting.cpp
 	"Config/Config.h"
 	"Debug/Semihosting.hpp"
 
-1440714513 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\debug\semihosting.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\debug\semihosting.hpp
 	<cstring>
 	<stdio.h>
 	<stdlib.h>
 	"string/StringUtil.h"
 
-1439656381 c:\users\joao\documents\github\stm32lib\stm32lib\utils\src\string\stringutil.h
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\utils\src\string\stringutil.h
 
-1439656415 source:c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\string\stringutil.cpp
+1447192264 source:c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\string\stringutil.cpp
 	"Config/Config.h"
 
-1439657383 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\debug.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\config\debug.hpp
 	"Debug/Semihosting.hpp"
 
 1439664798 source:c:\users\joao\documents\github\stm32lib\stm32lib\exemplos\gpio_semihosting.cpp
@@ -126,36 +105,129 @@
 	"Config/config.h"
 	"MCU/F0/stm32f0xx_syscfg.h"
 
-1440956096 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_syscfg.h
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_syscfg.h
 	"stm32f0xx.h"
 
-1442087770 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_exti.h
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\mcu\f0\stm32f0xx_exti.h
 	"stm32f0xx.h"
 
-1442669309 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti.hpp
 	"Config/config.h"
 	"SYSCFG/SYSCFG.hpp"
 
-1442149536 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti_irq.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\exti\exti_irq.hpp
 	"Config/config.h"
 	"EXTI/EXTI.hpp"
 	"event/signal.h"
 	"event/slot.h"
 
-1440006775 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\signal.h
-	<forward_list>
+1447199932 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\signal.h
+	<slist>
 
-1435688246 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\slot.h
+1433194712 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\slot.h
 	"fd/FastDelegate.h"
 
-1440006650 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\fd\fastdelegate.h
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\event\fd\fastdelegate.h
 	<string.h>
 
-1442147233 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\nvic\nvic.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\nvic\nvic.hpp
 	"Config/config.h"
 	"RCC/ClockControl.hpp"
 	"SYSCFG/SYSCFG.hpp"
 
-1442670330 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\syscfg\syscfg.hpp
+1447192264 c:\users\joao\documents\github\stm32lib\stm32lib\hal\include\syscfg\syscfg.hpp
 	"Config/config.h"
+
+1436281338 source:c:\users\joao\documents\github\stm32lib\obj\debug\main.s
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\iterator
+	<stl_config.h>
+	<stl_relops.h>
+	<stddef.h>
+	<iosfwd>
+	<iostream.h>
+	<stl_iterator_base.h>
+	<stl_iterator.h>
+
+1447193973 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_config.h
+	<stm32_config.h>
+	<standards.h>
+	<yvals.h>
+	<stdio.h>
+
+1443125528 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stm32_config.h
+	<cstdio>
+	<cstdlib>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_relops.h
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\iosfwd
+	<basic_definitions>
+	<char_traits.h>
+	<stl_alloc.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\basic_definitions
+
+1447194413 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\char_traits.h
+	<string.h>
+	<wchar.h>
+	<iosfwd>
+
+1447194413 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_alloc.h
+	<stdio.h>
+	<stdlib.h>
+	<new>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stl_threads.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\new
+	<cstddef>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\cstddef
+	<stddef.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_iterator_base.h
+	<concept_checks.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\concept_checks.h
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_iterator.h
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\slist
+	<stl_algobase.h>
+	<stl_alloc.h>
+	<stl_construct.h>
+	<stl_uninitialized.h>
+	<stl_slist.h>
+
+1447194413 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_algobase.h
+	<stl_config.h>
+	<stl_relops.h>
+	<stl_pair.h>
+	<type_traits.h>
+	<string.h>
+	<limits.h>
+	<stdlib.h>
+	<stddef.h>
+	<new>
+	<iosfwd>
+	<iostream.h>
+	<stl_iterator_base.h>
+	<stl_iterator.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_pair.h
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\type_traits.h
+	<stl_config.h>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_construct.h
+	<new>
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_uninitialized.h
+
+1443088156 c:\users\joao\documents\github\stm32lib\stm32lib\utils\include\stl\stl_slist.h
+	<concept_checks.h>
 
